@@ -30,7 +30,9 @@ const fCat = document.getElementById('prodCat');
 const fPrice = document.getElementById('prodPrice');
 const fImage = document.getElementById('prodImage');
 const imagePreview = document.getElementById('imagePreview');
-const imagePreviewContainerText = document.querySelector('#imagePreviewContainer span');
+const imagePreviewContainer = document.getElementById('imagePreviewContainer');
+const dropzone = document.getElementById('dropzone');
+const dropzoneContent = document.getElementById('dropzoneContent');
 
 // State
 let products = [];
@@ -171,7 +173,8 @@ function openModal(editData = null) {
     productForm.reset();
     existingImageUrl = null;
     imagePreview.style.display = 'none';
-    imagePreviewContainerText.style.display = 'block';
+    imagePreviewContainer.style.display = 'none';
+    dropzoneContent.style.display = 'flex';
     
     if (editData) {
         modalTitle.textContent = 'Edit Produk';
@@ -185,7 +188,8 @@ function openModal(editData = null) {
             existingImageUrl = editData.image_url;
             imagePreview.src = existingImageUrl;
             imagePreview.style.display = 'block';
-            imagePreviewContainerText.style.display = 'none';
+            imagePreviewContainer.style.display = 'flex';
+            dropzoneContent.style.display = 'none';
         }
     } else {
         modalTitle.textContent = 'Tambah Produk Baru';
@@ -199,23 +203,34 @@ function closeModal() {
     productModal.style.display = 'none';
 }
 
-// Preview Gambar Saat Dipilih
-fImage.addEventListener('change', (e) => {
-    const file = e.target.files[0];
+// Fungsi Handle File Gambar (Browse & Paste)
+function handleFile(file) {
     if (file) {
         if (file.size > 2 * 1024 * 1024) {
             alert('Ukuran file terlalu besar! Maksimal 2MB.');
             fImage.value = '';
             return;
         }
+
+        // Memasukkan file ke input secara programatis agar terbaca saat disubmit
+        const dt = new DataTransfer();
+        dt.items.add(file);
+        fImage.files = dt.files;
+
         const reader = new FileReader();
         reader.onload = (e) => {
             imagePreview.src = e.target.result;
             imagePreview.style.display = 'block';
-            imagePreviewContainerText.style.display = 'none';
+            imagePreviewContainer.style.display = 'flex';
+            dropzoneContent.style.display = 'none';
         };
         reader.readAsDataURL(file);
     }
+}
+
+// Preview Gambar Saat Dipilih Manual
+fImage.addEventListener('change', (e) => {
+    handleFile(e.target.files[0]);
 });
 
 // Simpan Data (Tambah / Edit)
@@ -305,3 +320,21 @@ productModal.addEventListener('click', (e) => {
 
 // Eksekusi saat start
 init();
+
+// Handle Paste Gambar dari Clipboard (Ctrl+V)
+document.addEventListener('paste', (e) => {
+    // Hanya proses paste jika modal sedang terbuka
+    if (productModal.style.display === 'flex') {
+        const items = e.clipboardData.items;
+        for (let i = 0; i < items.length; i++) {
+            if (items[i].type.indexOf('image') !== -1) {
+                const file = items[i].getAsFile();
+                if (file) {
+                    e.preventDefault(); // Mencegah paste default jika terdeteksi gambar
+                    handleFile(file);
+                    break; // Hanya ambil satu gambar
+                }
+            }
+        }
+    }
+});
