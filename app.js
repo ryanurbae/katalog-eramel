@@ -161,7 +161,7 @@ function renderProducts() {
                 <p class="cart-item-brand">${p.brand}</p>
                 <div style="flex-grow: 1;"></div>
                 <p class="product-price">${formatRupiah(p.price)}</p>
-                <button class="btn-gradient add-cart-btn" data-id="${p.id}">Tambah ke Keranjang</button>
+                <button class="btn-gradient add-cart-btn" data-id="${p.id}">Add to Cart</button>
             </div>
         </div>
     `).join('');
