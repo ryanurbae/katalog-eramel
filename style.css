@@ -240,8 +240,8 @@ header {
 /* --- Product Grid & Card --- */
 .product-grid {
     display: grid;
-    gap: 1.5rem;
-    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .product-card {
@@ -292,7 +292,7 @@ header {
     font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: 1.25rem;
-    background: var(--gradient-text);
+    background: white;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -548,13 +548,19 @@ header {
 
 /* --- Breakpoints --- */
 @media (min-width: 768px) {
-    .product-grid { grid-template-columns: repeat(2, 1fr); }
+    .product-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
 }
-@media (max-width: 768px) {
-    .categories { padding-bottom: 4px; }
+@media (max-width: 767px) {
+    .product-img { height: 100px; }
+    .product-info { padding: 0.6rem; }
+    .product-name { font-size: 0.7rem; margin-bottom: 0.25rem; }
+    .product-price { font-size: 0.75rem; margin-bottom: 0.5rem; }
+    .badge { font-size: 0.6rem; padding: 0.2rem 0.4rem; margin-bottom: 0.4rem; }
+    .btn-gradient { padding: 0.4rem; font-size: 0.7rem; }
+    .cart-item-brand { display: none; }
 }
 @media (min-width: 1024px) {
-    .product-grid { grid-template-columns: repeat(3, 1fr); }
+    .product-grid { grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
 }
 
 /* --- Custom Alert Modal --- */
