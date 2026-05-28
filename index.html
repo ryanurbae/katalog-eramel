@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Eramel</title>
+    
+    <!-- Menggunakan font dan CSS eksternal -->
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        #particle-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Place it behind all content */
+        }
+    </style>
+    <script>
+        function scrollFilter(id, amount) {
+            document.getElementById(id).scrollBy({ left: amount, behavior: 'smooth' });
+        }
+    </script>
+</head>
+<body>
+    <canvas id="particle-canvas"></canvas>
+
+    <header>
+        <img src="./logo.png" alt="Eramel Logo" class="header-logo" />
+        <h2 class="header-title">ERAMEL LABS</h2>
+        <button class="cart-btn" id="cartOpenBtn">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+    </header>
+
+    <main class="container">
+        <div class="filter-section">
+            <div class="search-container">
+                <i class="fa-solid fa-search search-icon"></i>
+                <input type="text" id="searchInput" class="search-input" placeholder="Cari produk...">
+            </div>
+            <div class="brand-wrapper">
+                <div class="categories" id="brandContainer"></div>
+            </div>
+            <div class="categories-wrapper">
+                <button class="scroll-btn" onclick="scrollFilter('categoryContainer', -200)">&#8249;</button>
+                <div class="categories" id="categoryContainer"></div>
+                <button class="scroll-btn" onclick="scrollFilter('categoryContainer', 200)">&#8250;</button>
+            </div>
+        </div>
+        
+        <div class="product-grid" id="productGrid">
+            <!-- Kartu Produk Dimuat di Sini -->
+        </div>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Keranjang Belanja</h2>
+            <button class="close-cart" id="cartCloseBtn"><i class="fa-solid fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItemsContainer"></div>
+        <div class="cart-footer" id="cartFooter" style="display: none;">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotalValue">Rp 0</span>
+            </div>
+            <div class="cart-form">
+                <div class="form-group-cart">
+                    <label for="custName">Nama</label>
+                    <input type="text" id="custName" class="cart-input" placeholder="Nama kamu" required>
+                </div>
+                <div class="form-group-cart">
+                    <label for="custOutlet">Outlet</label>
+                    <input type="text" id="custOutlet" class="cart-input" placeholder="Nama outlet/cabang" required>
+                </div>
+                <div class="form-group-cart">
+                    <label for="custNotes">Notes</label>
+                    <textarea id="custNotes" class="cart-input" rows="2" placeholder="Catatan tambahan... (opsional)"></textarea>
+                </div>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn" disabled>Pesan</button>
+        </div>
+    </div>
+
+    <!-- Checkout Prompt Modal -->
+    <div class="custom-alert-overlay" id="checkoutPromptOverlay">
+        <div class="custom-alert-box">
+            <h3 class="alert-title" style="margin-bottom: 1.5rem;">Lengkapi Data Pesanan</h3>
+            <div class="cart-form" style="margin-bottom: 0;">
+                <div class="form-group-cart">
+                    <label for="promptName">Nama Kamu</label>
+                    <input type="text" id="promptName" class="cart-input" placeholder="Masukkan nama..." required>
+                </div>
+                <div class="form-group-cart">
+                    <label for="promptOutlet">Outlet / Cabang</label>
+                    <input type="text" id="promptOutlet" class="cart-input" placeholder="Masukkan outlet..." required>
+                </div>
+            </div>
+            <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                <button class="alert-close-btn btn-cancel" id="promptCancelBtn" style="flex: 1;">Batal</button>
+                <button class="alert-close-btn" id="promptSubmitBtn" style="flex: 1;">Lanjut</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Alert Modal -->
+    <div class="custom-alert-overlay" id="customAlertOverlay">
+        <div class="custom-alert-box">
+            <i class="fa-solid fa-circle-exclamation alert-icon"></i>
+            <h3 class="alert-title">Perhatian</h3>
+            <p class="alert-message" id="customAlertMessage">Pesan error di sini.</p>
+            <button class="alert-close-btn" id="customAlertCloseBtn">Mengerti</button>
+        </div>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+    <script>
+        // Particle background script
+        const canvas = document.getElementById('particle-canvas');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        let particlesArray;
+
+        class Particle {
+            constructor(x, y, directionY, size, color) {
+                this.x = x;
+                this.y = y;
+                this.directionY = directionY;
+                this.size = size;
+                this.color = color;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+            }
+            update() {
+                this.y += this.directionY;
+                if (this.y < 0) {
+                    this.y = canvas.height + 10;
+                    this.x = Math.random() * canvas.width;
+                }
+                this.draw();
+            }
+        }
+
+        function initParticles() {
+            particlesArray = [];
+            let numberOfParticles = 120;
+            for (let i = 0; i < numberOfParticles; i++) {
+                let size = (Math.random() * 1.5) + 0.5;
+                let x = Math.random() * canvas.width;
+                let y = Math.random() * canvas.height;
+                let directionY = (Math.random() * -0.3) - 0.1;
+                let color = `rgba(255, 255, 255, ${Math.random() * 0.4 + 0.2})`;
+                particlesArray.push(new Particle(x, y, directionY, size, color));
+            }
+        }
+
+        function animateParticles() {
+            requestAnimationFrame(animateParticles);
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let i = 0; i < particlesArray.length; i++) {
+                particlesArray[i].update();
+            }
+        }
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            initParticles();
+        });
+
+        initParticles();
+        animateParticles();
+    </script>
+</body>
+</html>
