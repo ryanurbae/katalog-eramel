@@ -638,3 +638,19 @@ header {
 .btn-cancel:hover {
     background: rgba(255, 255, 255, 0.1);
 }
+
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.product-img {
+  pointer-events: none;
+}
+
+@media print {
+  body {
+    display: none;
+  }
+}
