@@ -293,7 +293,7 @@ promptSubmitBtn.addEventListener('click', () => {
 
 // --- Checkout via WhatsApp ---
 checkoutBtn.addEventListener('click', () => {
-    const phone = "62881080611461"; // TODO: Ganti nomor WA Admin
+    const phone = "62881080611461";
     
     const nameVal = custName.value.trim();
     const outletVal = custOutlet.value.trim();
@@ -305,31 +305,29 @@ checkoutBtn.addEventListener('click', () => {
         return;
     }
 
-    let message = `Halo! Saya ingin memesan:\n\n`;
+    let message = 'Halo! Saya ingin memesan:\n\n';
     
-    cart.forEach((item) => {
-        message += `- ${item.name} (${item.brand}) x${item.qty} = ${formatRupiah(item.price * item.qty)}\n`;
+    cart.forEach((item, index) => {
+        const subtotal = Math.round(item.price * item.qty);
+        message += (index + 1) + '. ' + item.name + ' (' + item.brand + ') x' + item.qty + ' = Rp ' + subtotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') + '\n';
     });
 
     const total = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
-    message += `\nTotal: ${formatRupiah(total)}\n\n`;
+    message += '\nTotal: Rp ' + Math.round(total).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') + '\n\n';
+    message += 'Nama: ' + nameVal + '\n';
+    message += 'Outlet: ' + outletVal + '\n';
+    message += 'Notes: ' + (custNotes.value.trim() || '-');
 
-    message += `Nama: ${nameVal}\n`;
-    message += `Outlet: ${outletVal}\n`;
-    message += `Notes: ${custNotes.value.trim() || "-"}`;
-
-    const waLink = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    const waLink = 'https://wa.me/' + phone + '?text=' + encodeURIComponent(message);
     window.open(waLink, '_blank');
 
     custName.value = '';
     custOutlet.value = '';
     custNotes.value = '';
-    
-    cart = []; // Kosongkan array keranjang
-    localStorage.setItem('cart', JSON.stringify(cart)); // Perbarui localStorage
+    cart = [];
+    localStorage.setItem('cart', JSON.stringify(cart));
     validateCheckout();
-    updateCartUI(); // Perbarui UI keranjang
+    updateCartUI();
 });
-
 // --- Jalankan Script ---
 init();
