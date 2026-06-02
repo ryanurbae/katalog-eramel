@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/editors-note">
     <style>
         #particle-canvas {
             position: fixed;
@@ -62,8 +62,16 @@
     setTimeout(() => waLabel.classList.remove('visible'), 5500);
 </script>
 <body>
+<div class="aurora">
+    <div class="aurora-1"></div>
+    <div class="aurora-2"></div>
+    <div class="aurora-3"></div>
+</div>
+
+
     <canvas id="particle-canvas"></canvas>
 
+    
 <header>
     <div class="header-left">
         <a href="#" onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;">
@@ -84,7 +92,35 @@
     </div>
 </header>
 
-    <main class="container">
+<div class="hero-logo">
+    <img src="./EA KOTAK.png" alt="EA Logo">
+</div>
+
+<section class="hero">
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+
+    <div class="hero-content">
+            <h1 class="hero-title">
+                All-encompassing solutions
+                <br>
+                for your <span class="editorial">everyday</span> needs
+            </h1>
+
+            <p class="hero-subtitle">
+                Your <span class="editorial">all-in-one</span> labs,
+                always served with <span class="editorial">passion</span>
+            </p>
+
+        <div class="hero-buttons">
+                <a href="#" id="scrollToCatalog" class="hero-btn primary">
+                    Pesan Sekarang
+                </a>
+        </div>
+    </div>
+</section>
+
+<main class="container">
         <div class="filter-section">
             <div class="brand-wrapper">
                 <div class="categories" id="brandContainer"></div>

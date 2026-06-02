@@ -14,6 +14,129 @@
     --gradient-active: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
 }
 
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    padding: 0 24px;
+}
+
+.hero-content {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    transform: translateY(-100px);
+}
+
+.hero-title {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 200;
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    color: white;
+    font-size: clamp(3rem, 7vw, 7rem);
+    line-height: 0.95;
+    letter-spacing: -0.06em;
+    font-weight: 300;
+    text-align: center;
+}
+
+.hero-subtitle {
+    margin-top: 24px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: rgba(255,255,255,0.7);
+    margin: 2rem auto;
+    text-align: center;
+    max-width: 700px;
+}
+
+.editorial {
+    font-family: "Editors Note", serif;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0;
+    font-size: 1.08em;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:16px;
+    margin-top:40px;
+}
+
+.hero-btn{
+    padding:16px 32px;
+    border-radius:999px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.hero-btn.primary{
+    color:white;
+    border:1px solid rgba(255,255,255,.25);
+    background:rgba(255,255,255,.04);
+    backdrop-filter:blur(20px);
+}
+
+
+.hero-btn:hover{
+    transform:translateY(-4px);
+
+    color:white;
+
+    background:
+    linear-gradient(
+           135deg,
+    #2446FF 0%,
+    #5B5EFF 35%,
+    #B86CFF 70%,
+    #FF4FD8 100%
+);
+
+    border-color:transparent;
+
+    box-shadow:
+        0 0 15px rgba(26,41,245,.45),
+        0 0 30px rgba(238,160,254,.30);
+
+    transition:.35s ease;
+}
+
+.hero-logo{
+    display:flex;
+    justify-content:center;
+    transform:translateY(75px);
+}
+
+.hero-logo img{
+    width:120px;
+    height:120px;
+    object-fit:contain;
+
+    filter:
+        drop-shadow(0 0 10px rgba(255,0,180,.5))
+        drop-shadow(0 0 10px rgba(0,100,255,.3));
+
+    animation: logoFloat 5s ease-in-out infinite;
+}
+
+@keyframes logoFloat{
+    50%{
+        transform:translateY(-16px);
+    }
+}
+
+
 /* Reset & Scrollbar */
 *,
 *::before,
@@ -45,6 +168,18 @@ body {
 
 a { text-decoration: none; color: inherit; }
 button { font-family: inherit; cursor: pointer; outline: none; border: none; background: none; }
+
+
+.reveal{
+    opacity:0;
+    transform:translateY(60px);
+    transition:1s ease;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:none;
+}
 
 /* --- Header --- */
 header {
@@ -203,7 +338,11 @@ header {
     margin-top: calc(64px + 2rem); /* sebelumnya: margin: 2rem auto */
     padding: 0 5%;
     position: relative;
-    z-index: 1;
+    z-index: 5;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 /* --- Search Bar --- */
@@ -566,7 +705,7 @@ header {
     color: var(--primary-purple);
     font-size: 0.75rem;
     font-weight: 500;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
     text-align: center;
 }
 .cart-input {

@@ -36,8 +36,6 @@ const promptSubmitBtn = document.getElementById('promptSubmitBtn');
 // Elemen untuk Toast Notifikasi
 let toastTimeout;
 const toastEl = document.createElement('div');
-toastEl.className = 'toast-notification';
-toastEl.textContent = '✓ Ditambahkan ke keranjang';
 document.body.appendChild(toastEl);
 
 // --- Inisialisasi Aplikasi ---
@@ -147,6 +145,47 @@ function renderSkeleton(count) {
         `;
     }
 }
+const reveals = document.querySelectorAll('.reveal');
+
+function revealOnScroll(){
+
+    reveals.forEach(el=>{
+
+        const top = el.getBoundingClientRect().top;
+
+        if(top < window.innerHeight - 100){
+            el.classList.add('active');
+        }
+
+    });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
+
+document
+.getElementById("scrollToCatalog")
+.addEventListener("click", (e) => {
+
+    e.preventDefault();
+
+    const target =
+        document.querySelector(".filter-section");
+
+    const offset = 100;
+
+    const top =
+        target.getBoundingClientRect().top +
+        window.pageYOffset -
+        offset;
+
+    window.scrollTo({
+        top,
+        behavior: "smooth"
+    });
+
+});
+
 
 function renderProducts() {
     // Filter di sisi Client
