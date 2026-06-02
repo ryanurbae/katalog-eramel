@@ -71,6 +71,7 @@ async function fetchProducts() {
         const { data, error } = await supabase
             .from('products')
             .select('*')
+            .eq('is_hidden', false)
             .order('brand')
             .order('category');
 

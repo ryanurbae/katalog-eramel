@@ -74,6 +74,10 @@
         .image-preview { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #fff; z-index: 5; display: flex; justify-content: center; align-items: center; overflow: hidden; }
         .image-preview img { width: 100%; height: 100%; object-fit: cover; }
         .modal-footer { margin-top: 2rem; display: flex; justify-content: flex-end; gap: 1rem; }
+        .badge-visible { background: rgba(16,185,129,0.15); color: #10b981; padding: 4px 8px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; }
+        .badge-hidden { background: rgba(239,68,68,0.15); color: #ef4444; padding: 4px 8px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; }
+        .btn-success { background: #10b981; }
+        .btn-secondary { background: #64748b; }
     </style>
 <link rel="icon" type="image/png" href="./32x32.png">
 </head>
@@ -116,6 +120,13 @@
                 <button class="btn btn-primary" id="openAddModalBtn"><i class="fa-solid fa-plus"></i> Tambah Produk</button>
             </div>
             
+            <div class="brand-visibility-section" style="margin-bottom: 2rem; background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                <h3 style="margin-bottom: 1rem; font-size: 1.1rem;">Kelola Visibilitas Brand</h3>
+                <div id="brandVisibilityContainer" style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                    <!-- Brand visibility cards will be loaded here -->
+                </div>
+            </div>
+            
             <div class="filter-bar">
                 <label for="brandFilter" style="font-weight: 500;">Filter Brand:</label>
                 <select id="brandFilter" class="form-control" style="width: 250px;">
@@ -137,6 +148,7 @@
                             <th>Nama Produk</th>
                             <th>Kategori</th>
                             <th>Harga (Rp)</th>
+                            <th>Status</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>

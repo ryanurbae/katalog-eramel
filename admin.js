@@ -97,7 +97,7 @@ logoutBtn.addEventListener('click', async () => {
 
 // --- Dashboard Logic ---
 async function fetchProducts() {
-    productTableBody.innerHTML = '<tr><td colspan="6" style="text-align:center;">Memuat data...</td></tr>';
+    productTableBody.innerHTML = '<tr><td colspan="7" style="text-align:center;">Memuat data...</td></tr>';
     
     const { data, error } = await supabase
         .from('products')
@@ -112,8 +112,35 @@ async function fetchProducts() {
     }
     
     products = data || [];
+    renderBrandVisibility();
     renderTable();
     updateCategoryDatalist();
+}
+
+function renderBrandVisibility() {
+    const brandVisibilityContainer = document.getElementById('brandVisibilityContainer');
+    
+    const brands = [...new Set(products.map(p => p.brand).filter(Boolean))];
+    
+    brandVisibilityContainer.innerHTML = brands.map(brand => {
+        const brandProducts = products.filter(p => p.brand === brand);
+        const isAllHidden = brandProducts.length > 0 && brandProducts.every(p => p.is_hidden);
+        
+        const badgeClass = isAllHidden ? 'badge-hidden' : 'badge-visible';
+        const badgeText = isAllHidden ? 'Tersembunyi' : 'Tampil';
+        
+        return `
+            <div style="border: 1px solid var(--border); padding: 1rem; border-radius: 8px; display: flex; flex-direction: column; gap: 0.5rem; min-width: 200px;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <strong>${brand}</strong>
+                    <span class="${badgeClass}">${badgeText}</span>
+                </div>
+                <button class="btn ${isAllHidden ? 'btn-success' : 'btn-danger'} btn-block" style="margin-top: 0.5rem; font-size: 1rem;" onclick="window.toggleBrandVisibility('${brand}', ${!isAllHidden})">
+                    ${isAllHidden ? '<i class="fa-solid fa-eye"></i> Tampilkan' : '<i class="fa-solid fa-eye-slash"></i> Sembunyikan'}
+                </button>
+            </div>
+        `;
+    }).join('');
 }
 
 function renderTable() {
@@ -128,23 +155,29 @@ function renderTable() {
     }
 
     if (filteredProducts.length === 0) {
-        productTableBody.innerHTML = '<tr><td colspan="6" style="text-align:center; color:#888;">Belum ada produk untuk filter ini.</td></tr>';
+        productTableBody.innerHTML = '<tr><td colspan="7" style="text-align:center; color:#888;">Belum ada produk untuk filter ini.</td></tr>';
         return;
     }
 
-    productTableBody.innerHTML = filteredProducts.map(product => `
+    productTableBody.innerHTML = filteredProducts.map(product => {
+        const badgeClass = product.is_hidden ? 'badge-hidden' : 'badge-visible';
+        const badgeText = product.is_hidden ? 'Tersembunyi' : 'Tampil';
+        
+        return `
         <tr>
             <td><img src="${product.image_url || 'https://via.placeholder.com/50'}" class="prod-thumb" alt="${product.name}"></td>
             <td>${product.brand || '-'}</td>
             <td><strong>${product.name}</strong></td>
             <td><span style="background:#e2e8f0; padding:4px 8px; border-radius:4px; font-size:0.85rem;">${product.category || '-'}</span></td>
             <td>${formatRupiah(product.price)}</td>
+            <td><span class="${badgeClass}">${badgeText}</span></td>
             <td class="action-btns">
+                <button class="btn-icon ${product.is_hidden ? 'btn-success' : 'btn-secondary'}" onclick="window.toggleProductVisibility('${product.id}', ${product.is_hidden})" title="${product.is_hidden ? 'Tampilkan' : 'Sembunyikan'}"><i class="fa-solid ${product.is_hidden ? 'fa-eye' : 'fa-eye-slash'}"></i></button>
                 <button class="btn-icon btn-edit" onclick="window.editProduct('${product.id}')" title="Edit"><i class="fa-solid fa-pen"></i></button>
                 <button class="btn-icon btn-danger" onclick="window.deleteProduct('${product.id}')" title="Hapus"><i class="fa-solid fa-trash"></i></button>
             </td>
         </tr>
-    `).join('');
+    `}).join('');
 }
 
 brandFilter.addEventListener('change', renderTable);
@@ -302,6 +335,39 @@ window.deleteProduct = async (id) => {
             console.error('Gagal menghapus produk: ', error);
             alert('Terjadi kesalahan saat menghapus produk.');
         }
+    }
+};
+
+window.toggleBrandVisibility = async (brand, hide) => {
+    try {
+        const { error } = await supabase
+            .from('products')
+            .update({ is_hidden: hide })
+            .eq('brand', brand);
+            
+        if (error) throw error;
+        
+        alert(`Brand ${brand} berhasil ${hide ? 'disembunyikan' : 'ditampilkan'}`);
+        fetchProducts(); // Refresh the list
+    } catch (error) {
+        console.error('Error toggling brand visibility:', error);
+        alert('Gagal mengubah visibilitas brand.');
+    }
+};
+
+window.toggleProductVisibility = async (id, currentStatus) => {
+    try {
+        const { error } = await supabase
+            .from('products')
+            .update({ is_hidden: !currentStatus })
+            .eq('id', id);
+            
+        if (error) throw error;
+        
+        fetchProducts(); // Refresh the list
+    } catch (error) {
+        console.error('Error toggling product visibility:', error);
+        alert('Gagal mengubah visibilitas produk.');
     }
 };
 
