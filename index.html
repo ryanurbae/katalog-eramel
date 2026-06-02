@@ -270,27 +270,13 @@
         initParticles();
         animateParticles();
 
-        // --- Intersection Observer untuk Header ---
-        const header = document.querySelector('header');
-        const heroSection = document.querySelector('.hero');
-        
-        const headerObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                // Jika Hero section terlihat kurang dari 20%, tampilkan header
-                if (entry.intersectionRatio < 0.2) {
-                    header.classList.add('header-visible');
-                } else {
-                    header.classList.remove('header-visible');
-                }
-            });
-        }, { 
-            threshold: [0, 0.2] // Trigger saat rasio visibilitas Hero menyentuh 0% dan 20%
-        });
-        
-        headerObserver.observe(heroSection);
-
-        // --- Scroll Observer untuk Tombol Scroll-To-Top ---
         window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 150) {
+                header.classList.add('header-visible');
+            } else {
+                header.classList.remove('header-visible');
+            }
             const scrollBtn = document.getElementById('scrollTopBtn');
             scrollBtn.classList.toggle('visible', window.scrollY > 200);
         });
