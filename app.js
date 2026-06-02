@@ -156,7 +156,26 @@ function renderProducts() {
     if (searchQuery !== '') filtered = filtered.filter(p => p.name.toLowerCase().includes(searchQuery));
 
     if (filtered.length === 0) {
-        productGrid.innerHTML = '<p style="text-align:center; grid-column:1/-1; color: var(--text-muted);">Menunya Gaada nih, Coba Kontak Admin.</p>';
+        productGrid.innerHTML = `
+    <div style="text-align:center; grid-column:1/-1; color: var(--text-muted); line-height: 2;">
+        <p>Menunya Gaada? Coba Kontak</p>
+        <a 
+            href="https://wa.me/62881080611461?text=Halo%20MinMel%2C%20saya%20mau%20tanya%20menu%20dong!" 
+            target="_blank"
+            style="
+                color: #ffffff;
+                font-weight: 600;
+                text-shadow: 0 0 8px rgba(255,255,255,0.8), 0 0 20px rgba(238,160,254,0.6);
+                text-decoration: none;
+                border-bottom: 1px solid rgba(255,255,255,0.3);
+                padding-bottom: 1px;
+                transition: text-shadow 0.3s ease;
+            "
+            onmouseover="this.style.textShadow='0 0 12px rgba(255,255,255,1), 0 0 30px rgba(238,160,254,0.9)'"
+            onmouseout="this.style.textShadow='0 0 8px rgba(255,255,255,0.8), 0 0 20px rgba(238,160,254,0.6)'"
+        >MinMel</a>
+    </div>
+`;
         return;
     }
 
