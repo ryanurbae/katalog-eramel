@@ -156,7 +156,7 @@ function renderProducts() {
     if (searchQuery !== '') filtered = filtered.filter(p => p.name.toLowerCase().includes(searchQuery));
 
     if (filtered.length === 0) {
-        productGrid.innerHTML = '<p style="text-align:center; grid-column:1/-1; color: var(--text-muted);">Tidak ada produk yang sesuai dengan filter.</p>';
+        productGrid.innerHTML = '<p style="text-align:center; grid-column:1/-1; color: var(--text-muted);">Menunya Gaada nih, Coba Kontak Admin.</p>';
         return;
     }
 

@@ -48,38 +48,53 @@ button { font-family: inherit; cursor: pointer; outline: none; border: none; bac
 
 /* --- Header --- */
 header {
-    background: rgba(10, 10, 15, 0.8);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: rgba(10, 10, 15, 0.75);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
     color: var(--text-main);
-    padding: 1.25rem 5%;
-    display: flex;
-    justify-content: space-between;
+    padding: 0 5%;
+    height: 64px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    position: sticky;
-    top: 0;
+    position: fixed;
+    top: 0; left: 0; right: 0;
     z-index: 100;
     border-bottom: 1px solid var(--border-glow-1);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
 }
-
+header.scrolled {
+    background: rgba(10, 10, 15, 0.95);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+}
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+.header-center {
+    display: flex;
+    align-items: center;
+    width: 360px;
+}
+.header-right {
+    display: flex;
+    justify-content: flex-end;
+}
 .header-title {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     font-family: 'Sora', sans-serif;
-    font-weight: 700; /* Sora Bold */
-    background: linear-gradient(90deg, #1a29f5, #00d2ff, #eea0fe); /* Biru, Biru Muda, Pink */
+    font-weight: 700;
+    font-size: 1rem;
+    background: #ffffff;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
-    filter: drop-shadow(0 0 8px rgba(0, 210, 255, 0.4)) drop-shadow(0 0 15px rgba(26, 41, 245, 0.3));
+    white-space: nowrap;
 }
-
 .header-logo {
-    height: 40px;
+    height: 32px;
     width: auto;
-     filter: drop-shadow(0 0 8px rgba(238, 160, 254, 0.6))
+    filter: drop-shadow(0 0 8px rgba(238, 160, 254, 0.6))
             drop-shadow(0 0 20px rgba(26, 41, 245, 0.4));
     animation: logo-glow 2s ease-in-out infinite alternate;
 }
@@ -97,6 +112,26 @@ header {
 }
 .cart-btn {
     color: #ffffff;
+    position: relative;
+    font-size: 1.15rem;
+    padding: 0.4rem;
+    display: flex;
+    align-items: center;
+}
+.cart-badge {
+    position: absolute;
+    top: -4px;
+    right: -6px;
+    background: var(--primary-blue);
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .cart-btn.has-items {
@@ -115,7 +150,8 @@ header {
 /* --- Main Container --- */
 .container {
     max-width: 1200px;
-    margin: 2rem auto;
+    margin: 0 auto;
+    margin-top: calc(64px + 2rem); /* sebelumnya: margin: 2rem auto */
     padding: 0 5%;
     position: relative;
     z-index: 1;
@@ -125,30 +161,33 @@ header {
 .search-container {
     position: relative;
     width: 100%;
-    max-width: 500px;
-    margin: 0 auto 1.5rem auto;
 }
 .search-icon {
     position: absolute;
-    left: 15px;
+    left: 14px;
     top: 50%;
     transform: translateY(-50%);
     color: var(--text-muted);
+    font-size: 0.8rem;
+    pointer-events: none;
 }
 .search-input {
     width: 100%;
-    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    padding: 0.55rem 1rem 0.55rem 2.25rem;
     border-radius: 25px;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--text-main);
     font-family: inherit;
+    font-size: 0.85rem;
     transition: all 0.3s ease;
     outline: none;
 }
+.search-input::placeholder { color: var(--text-muted); }
 .search-input:focus {
     border-color: var(--primary-purple);
-    box-shadow: 0 0 10px rgba(238, 160, 254, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 12px rgba(238, 160, 254, 0.15);
 }
 
 /* --- Brand Wrapper --- */
