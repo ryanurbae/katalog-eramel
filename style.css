@@ -49,8 +49,8 @@ button { font-family: inherit; cursor: pointer; outline: none; border: none; bac
 /* --- Header --- */
 header {
     background: rgba(10, 10, 15, 0.75);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
     color: var(--text-main);
     padding: 0 5%;
     height: 64px;
