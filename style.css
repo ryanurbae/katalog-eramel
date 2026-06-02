@@ -50,12 +50,11 @@
 }
 
 .hero-subtitle {
-    margin-top: 24px;
     font-family: 'Inter', sans-serif;
     font-size: 1.3rem;
     font-weight: 400;
     color: rgba(255,255,255,0.7);
-    margin: 2rem auto;
+    margin: 1.5rem auto;
     text-align: center;
     max-width: 700px;
 }
@@ -72,7 +71,7 @@
     display:flex;
     justify-content:center;
     gap:16px;
-    margin-top:40px;
+    margin-top:16px;
 }
 
 .hero-btn{
@@ -184,17 +183,28 @@ button { font-family: inherit; cursor: pointer; outline: none; border: none; bac
 
 /* --- Header --- */
 header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     background: transparent;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
     padding: 0.75rem 2%;
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
     gap: 0.75rem;
-    position: sticky;
+    position: fixed;
+    width: 100%;
+    left: 0;
     top: 0;
     z-index: 100;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.5s ease, visibility 0.5s ease;
+}
+
+header.header-visible {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
 }
 
 .header-left {
@@ -293,7 +303,7 @@ header {
     animation: logo-glow 2s ease-in-out infinite alternate;
 }
 
-@media (max-width: 767px){
+@mediga (max-width: 767px){
 
     .hero-logo{
         margin-bottom:20px;
