@@ -698,3 +698,86 @@ body {
 .toast-notification.show {
     right: 20px;
 }
+
+/* Floating WhatsApp Button */
+.wa-float {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    animation: wa-pulse 3s ease-in-out infinite;
+    overflow: visible; 
+
+}
+
+.wa-float svg {
+    width: 24px;
+    height: 24px;
+    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
+}
+
+.wa-float:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(238, 160, 254, 0.5);
+    color: #ffffff;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(238, 160, 254, 0.3),
+                0 0 40px rgba(26, 41, 245, 0.2);
+}
+
+.wa-float:hover svg {
+    filter: drop-shadow(0 0 8px rgba(238, 160, 254, 0.8));
+}
+
+@keyframes wa-pulse {
+    0%, 100% {
+        box-shadow: 0 0 8px rgba(255, 255, 255, 0.1),
+                    0 0 0 0 rgba(238, 160, 254, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 12px rgba(255, 255, 255, 0.2),
+                    0 0 16px rgba(238, 160, 254, 0.2);
+    }
+}
+
+@media (max-width: 767px) {
+    .wa-float {
+        bottom: 20px;
+        right: 16px;
+        width: 46px;
+        height: 46px;
+    }
+}
+.wa-label {
+    position: absolute;
+    right: 62px;
+    white-space: nowrap;
+    background: rgba(10, 10, 20, 0.9);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(238, 160, 254, 0.25);
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 20px;
+    opacity: 0;
+    transform: translateX(8px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none;
+}
+
+.wa-label.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
