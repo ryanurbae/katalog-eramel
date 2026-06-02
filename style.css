@@ -654,3 +654,47 @@ body {
     display: none;
   }
 }
+
+/* --- Add to Cart Animations --- */
+.fly-dot {
+    position: fixed;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1a29f5, #eea0fe);
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.6s ease-in, opacity 0.6s ease-in;
+}
+
+@keyframes badge-bounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.4); }
+    100% { transform: scale(1); }
+}
+
+.badge-bounce {
+    animation: badge-bounce 0.2s ease-out;
+}
+
+.toast-notification {
+    position: fixed;
+    top: 20px;
+    right: -300px;
+    background: linear-gradient(135deg, #1a29f5, #eea0fe);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    z-index: 9999;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: right 0.3s ease-in-out;
+    pointer-events: none;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.toast-notification.show {
+    right: 20px;
+}

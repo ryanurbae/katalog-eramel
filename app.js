@@ -33,6 +33,13 @@ const promptOutlet = document.getElementById('promptOutlet');
 const promptCancelBtn = document.getElementById('promptCancelBtn');
 const promptSubmitBtn = document.getElementById('promptSubmitBtn');
 
+// Elemen untuk Toast Notifikasi
+let toastTimeout;
+const toastEl = document.createElement('div');
+toastEl.className = 'toast-notification';
+toastEl.textContent = '✓ Ditambahkan ke keranjang';
+document.body.appendChild(toastEl);
+
 // --- Inisialisasi Aplikasi ---
 async function init() {
     renderSkeleton(6);
@@ -168,12 +175,12 @@ function renderProducts() {
     `).join('');
 
     document.querySelectorAll('.add-cart-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => addToCart(e.target.dataset.id));
+        btn.addEventListener('click', (e) => addToCart(e.currentTarget.dataset.id, e));
     });
 }
 
 // --- Fungsi Keranjang (Cart) ---
-function addToCart(productId) {
+function addToCart(productId, event) {
     const product = products.find(p => p.id == productId);
     if (!product) return;
 
@@ -186,7 +193,42 @@ function addToCart(productId) {
 
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartUI();
-    toggleCart(true);
+    
+    // 1. Munculkan Toast Notifikasi
+    toastEl.classList.add('show');
+    clearTimeout(toastTimeout);
+    toastTimeout = setTimeout(() => {
+        toastEl.classList.remove('show');
+    }, 1500);
+
+    // 2. Animasi fly to cart (Titik terbang ke ikon)
+    if (event) {
+        const btn = event.currentTarget;
+        const btnRect = btn.getBoundingClientRect();
+        const cartRect = cartOpenBtn.getBoundingClientRect();
+
+        const startX = btnRect.left + (btnRect.width / 2);
+        const startY = btnRect.top + (btnRect.height / 2);
+        const endX = cartRect.left + (cartRect.width / 2);
+        const endY = cartRect.top + (cartRect.height / 2);
+
+        const dot = document.createElement('div');
+        dot.className = 'fly-dot';
+        dot.style.left = `${startX - 6}px`;
+        dot.style.top = `${startY - 6}px`;
+        document.body.appendChild(dot);
+
+        dot.getBoundingClientRect(); // Trigger browser reflow
+        dot.style.transform = `translate(${endX - startX}px, ${endY - startY}px)`;
+        dot.style.opacity = '0.5';
+
+        setTimeout(() => {
+            dot.remove();
+            cartBadge.classList.remove('badge-bounce');
+            void cartBadge.offsetWidth; // Trigger browser reflow untuk reset animasi
+            cartBadge.classList.add('badge-bounce');
+        }, 600);
+    }
 }
 
 function validateCheckout() {
