@@ -590,6 +590,20 @@ header.scrolled {
     .product-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
 }
 @media (max-width: 767px) {
+    header {
+        grid-template-columns: auto 1fr auto;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+    .header-center {
+        width: 100%;
+    }
+    .header-title {
+        display: none;
+    }
+    .header-logo {
+        height: 28px;
+    }
     .product-img { height: 100px; }
     .product-info { padding: 0.6rem; }
     .product-name { font-size: 0.7rem; margin-bottom: 0.25rem; }
