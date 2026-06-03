@@ -6,6 +6,7 @@ let cart = JSON.parse(localStorage.getItem('cart')) || [];
 let activeBrand = 'Semua';
 let activeCategory = 'Semua';
 let searchQuery = '';
+let appliedVoucher = JSON.parse(localStorage.getItem('appliedVoucher')) || null;
 
 // Elemen DOM
 const productGrid = document.getElementById('productGrid');
@@ -18,6 +19,13 @@ const cartOverlay = document.getElementById('cartOverlay');
 const cartItemsContainer = document.getElementById('cartItemsContainer');
 const cartFooter = document.getElementById('cartFooter');
 const cartBadge = document.getElementById('cartBadge');
+
+const cartSubtotalValue = document.getElementById('cartSubtotalValue');
+const cartDiscountValue = document.getElementById('cartDiscountValue');
+const voucherDiscountLabel = document.getElementById('voucherDiscountLabel');
+const cartVoucher = document.getElementById('cartVoucher');
+const applyVoucherBtn = document.getElementById('applyVoucherBtn');
+
 const cartTotalValue = document.getElementById('cartTotalValue');
 const custName = document.getElementById('custName');
 const custOutlet = document.getElementById('custOutlet');
@@ -329,8 +337,20 @@ function updateCartUI() {
         </div>
     `).join('');
 
-    const total = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+    const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+    const discountPercent = appliedVoucher ? appliedVoucher.discount_percent : 0;
+    const discountAmount = Math.round(subtotal * (discountPercent / 100));
+    const total = subtotal - discountAmount;
+
+    cartSubtotalValue.textContent = formatRupiah(subtotal);
+    voucherDiscountLabel.textContent = discountPercent + '%';
+    cartDiscountValue.textContent = '- ' + formatRupiah(discountAmount);
     cartTotalValue.textContent = formatRupiah(total);
+    
+    if (appliedVoucher) {
+        cartVoucher.value = appliedVoucher.code;
+    }
+
     validateCheckout();
 }
 
@@ -392,8 +412,48 @@ promptSubmitBtn.addEventListener('click', () => {
     checkoutBtn.click(); // Trigger checkout again
 });
 
+// --- Voucher Apply Logic ---
+applyVoucherBtn.addEventListener('click', async () => {
+    const code = cartVoucher.value.trim().toUpperCase();
+    
+    if (!code) {
+        appliedVoucher = null;
+        localStorage.removeItem('appliedVoucher');
+        updateCartUI();
+        showCustomAlert("Voucher dilepas.");
+        return;
+    }
+
+    applyVoucherBtn.disabled = true;
+    applyVoucherBtn.textContent = '...';
+
+    try {
+        const { data, error } = await supabase.from('vouchers').select('*').eq('code', code).single();
+
+        if (error || !data) {
+            showCustomAlert("Voucher tidak ditemukan atau tidak valid.");
+            appliedVoucher = null;
+            localStorage.removeItem('appliedVoucher');
+        } else if (!data.is_active) {
+            showCustomAlert("Voucher saat ini tidak aktif.");
+            appliedVoucher = null;
+            localStorage.removeItem('appliedVoucher');
+        } else {
+            showCustomAlert("Voucher berhasil digunakan!");
+            appliedVoucher = data;
+            localStorage.setItem('appliedVoucher', JSON.stringify(appliedVoucher));
+        }
+    } catch (err) {
+        showCustomAlert("Terjadi kesalahan sistem saat mengecek voucher.");
+    } finally {
+        updateCartUI();
+        applyVoucherBtn.disabled = false;
+        applyVoucherBtn.textContent = 'Apply';
+    }
+});
+
 // --- Checkout via WhatsApp ---
-checkoutBtn.addEventListener('click', () => {
+checkoutBtn.addEventListener('click', async () => {
     const phone = "62881080611461";
     
     const nameVal = custName.value.trim();
@@ -405,6 +465,25 @@ checkoutBtn.addEventListener('click', () => {
         checkoutPromptOverlay.classList.add('show');
         return;
     }
+    
+        // Re-validasi voucher saat checkout
+    if (appliedVoucher) {
+        const { data: voucherCheck } = await supabase
+            .from('vouchers')
+            .select('is_active')
+            .eq('code', appliedVoucher.code)
+            .single();
+        
+        if (!voucherCheck || !voucherCheck.is_active) {
+            showCustomAlert('Voucher ' + appliedVoucher.code + ' sudah tidak aktif. Pesanan dilanjutkan tanpa diskon.');
+            appliedVoucher = null;
+            // reset tampilan diskon
+            document.getElementById('voucherDiscountLabel').textContent = '0%';
+            document.getElementById('cartDiscountValue').textContent = '- Rp 0';
+            updateCartUI();
+            return; // stop, biarkan user review ulang sebelum pesan
+        }
+    }
 
     let message = 'Halo! Saya ingin memesan:\n\n';
     
@@ -413,8 +492,21 @@ checkoutBtn.addEventListener('click', () => {
         message += (index + 1) + '. ' + item.name + ' (' + item.brand + ') x' + item.qty + ' = Rp ' + subtotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') + '\n';
     });
 
-    const total = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
-    message += '\nTotal: Rp ' + Math.round(total).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') + '\n\n';
+    const subtotalCalc = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+    const discountAmountCalc = appliedVoucher ? Math.round(subtotalCalc * (appliedVoucher.discount_percent / 100)) : 0;
+    const finalTotal = subtotalCalc - discountAmountCalc;
+
+    message += '\nSubtotal: Rp ' + Math.round(subtotalCalc).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') + '\n';
+    
+    if (appliedVoucher) {
+        message += 'Voucher: ' + appliedVoucher.code + '\n';
+        message += 'Diskon: ' + appliedVoucher.discount_percent + '%\n';
+        message += 'Potongan: - Rp ' + Math.round(discountAmountCalc).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') + '\n';
+        message += 'Total Setelah Diskon: Rp ' + Math.round(finalTotal).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') + '\n\n';
+    } else {
+        message += 'Total: Rp ' + Math.round(finalTotal).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') + '\n\n';
+    }
+
     message += 'Nama: ' + nameVal + '\n';
     message += 'Outlet: ' + outletVal + '\n';
     message += 'Notes: ' + (custNotes.value.trim() || '-');
@@ -425,6 +517,10 @@ checkoutBtn.addEventListener('click', () => {
     custName.value = '';
     custOutlet.value = '';
     custNotes.value = '';
+    cartVoucher.value = '';
+    appliedVoucher = null;
+    localStorage.removeItem('appliedVoucher');
+
     cart = [];
     localStorage.setItem('cart', JSON.stringify(cart));
     validateCheckout();

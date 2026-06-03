@@ -13,6 +13,14 @@ const openAddModalBtn = document.getElementById('openAddModalBtn');
 const brandFilter = document.getElementById('brandFilter');
 const categoryFilter = document.getElementById('categoryFilter');
 
+// DOM Elements - Vouchers
+const menuProducts = document.getElementById('menuProducts');
+const menuVouchers = document.getElementById('menuVouchers');
+const productsDashboard = document.getElementById('productsDashboard');
+const vouchersDashboard = document.getElementById('vouchersDashboard');
+const voucherTableBody = document.getElementById('voucherTableBody');
+const openAddVoucherModalBtn = document.getElementById('openAddVoucherModalBtn');
+
 // Modal Elements
 const productModal = document.getElementById('productModal');
 const productForm = document.getElementById('productForm');
@@ -34,8 +42,21 @@ const imagePreviewContainer = document.getElementById('imagePreviewContainer');
 const dropzone = document.getElementById('dropzone');
 const dropzoneContent = document.getElementById('dropzoneContent');
 
+// Voucher Modal Elements
+const voucherModal = document.getElementById('voucherModal');
+const voucherForm = document.getElementById('voucherForm');
+const voucherModalTitle = document.getElementById('voucherModalTitle');
+const closeVoucherModalBtn = document.getElementById('closeVoucherModalBtn');
+const cancelVoucherModalBtn = document.getElementById('cancelVoucherModalBtn');
+const saveVoucherBtn = document.getElementById('saveVoucherBtn');
+const vId = document.getElementById('voucherId');
+const vCode = document.getElementById('vCode');
+const vDiscount = document.getElementById('vDiscount');
+const vStatus = document.getElementById('vStatus');
+
 // State
 let products = [];
+let vouchers = [];
 let existingImageUrl = null;
 
 // --- Helpers ---
@@ -93,6 +114,21 @@ loginForm.addEventListener('submit', async (e) => {
 logoutBtn.addEventListener('click', async () => {
     await supabase.auth.signOut();
     showLogin();
+});
+
+// --- Menu Navigation ---
+menuProducts.addEventListener('click', () => {
+    menuProducts.classList.add('active');
+    menuVouchers.classList.remove('active');
+    productsDashboard.style.display = 'block';
+    vouchersDashboard.style.display = 'none';
+});
+menuVouchers.addEventListener('click', () => {
+    menuVouchers.classList.add('active');
+    menuProducts.classList.remove('active');
+    productsDashboard.style.display = 'none';
+    vouchersDashboard.style.display = 'block';
+    fetchVouchers();
 });
 
 // --- Dashboard Logic ---
@@ -404,3 +440,110 @@ document.addEventListener('paste', (e) => {
         }
     }
 });
+
+// --- Voucher Management Logic ---
+async function fetchVouchers() {
+    voucherTableBody.innerHTML = '<tr><td colspan="4" style="text-align:center;">Memuat data...</td></tr>';
+    const { data, error } = await supabase.from('vouchers').select('*').order('code');
+    if (error) {
+        console.error(error);
+        alert('Gagal mengambil data voucher!');
+        return;
+    }
+    vouchers = data || [];
+    renderVoucherTable();
+}
+
+function renderVoucherTable() {
+    if (vouchers.length === 0) {
+        voucherTableBody.innerHTML = '<tr><td colspan="4" style="text-align:center; color:#888;">Belum ada voucher.</td></tr>';
+        return;
+    }
+    voucherTableBody.innerHTML = vouchers.map(v => {
+        const badgeClass = v.is_active ? 'badge-visible' : 'badge-hidden';
+        const badgeText = v.is_active ? 'Aktif' : 'Nonaktif';
+        return `
+        <tr>
+            <td><strong>${v.code}</strong></td>
+            <td>${v.discount_percent}%</td>
+            <td><span class="${badgeClass}">${badgeText}</span></td>
+            <td class="action-btns">
+                <button class="btn-icon ${v.is_active ? 'btn-success' : 'btn-secondary'}" onclick="window.toggleVoucher('${v.id}', ${v.is_active})" title="${v.is_active ? 'Nonaktifkan' : 'Aktifkan'}"><i class="fa-solid ${v.is_active ? 'fa-check' : 'fa-power-off'}"></i></button>
+                <button class="btn-icon btn-edit" onclick="window.editVoucher('${v.id}')" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                <button class="btn-icon btn-danger" onclick="window.deleteVoucher('${v.id}')" title="Hapus"><i class="fa-solid fa-trash"></i></button>
+            </td>
+        </tr>
+    `}).join('');
+}
+
+function openVoucherModal(editData = null) {
+    voucherForm.reset();
+    if (editData) {
+        voucherModalTitle.textContent = 'Edit Voucher';
+        vId.value = editData.id;
+        vCode.value = editData.code;
+        vDiscount.value = editData.discount_percent;
+        vStatus.value = editData.is_active.toString();
+    } else {
+        voucherModalTitle.textContent = 'Tambah Voucher';
+        vId.value = '';
+        vStatus.value = 'true';
+    }
+    voucherModal.style.display = 'flex';
+}
+
+function closeVoucherModal() {
+    voucherModal.style.display = 'none';
+}
+
+voucherForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    saveVoucherBtn.disabled = true;
+    saveVoucherBtn.textContent = 'Menyimpan...';
+    const id = vId.value;
+    const code = vCode.value.trim().toUpperCase();
+    const discount_percent = parseInt(vDiscount.value);
+    const is_active = vStatus.value === 'true';
+    const payload = { code, discount_percent, is_active };
+    try {
+        if (id) {
+            const { error } = await supabase.from('vouchers').update(payload).eq('id', id);
+            if (error) throw error;
+        } else {
+            const { error } = await supabase.from('vouchers').insert([payload]);
+            if (error) throw error;
+        }
+        closeVoucherModal();
+        fetchVouchers();
+    } catch (error) {
+        console.error(error);
+        if (error.code === '23505') alert('Kode voucher sudah ada!');
+        else alert('Gagal menyimpan voucher: ' + (error.message || 'Error tidak diketahui dari database.'));
+    } finally {
+        saveVoucherBtn.disabled = false;
+        saveVoucherBtn.textContent = 'Simpan Data';
+    }
+});
+
+window.deleteVoucher = async (id) => {
+    if (confirm('Yakin ingin menghapus voucher ini?')) {
+        const { error } = await supabase.from('vouchers').delete().eq('id', id);
+        if (error) alert('Gagal menghapus voucher.');
+        else fetchVouchers();
+    }
+};
+
+window.toggleVoucher = async (id, currentStatus) => {
+    const { error } = await supabase.from('vouchers').update({ is_active: !currentStatus }).eq('id', id);
+    if (error) alert('Gagal mengubah status voucher.');
+    else fetchVouchers();
+};
+
+window.editVoucher = (id) => {
+    const v = vouchers.find(x => x.id == id);
+    if (v) openVoucherModal(v);
+};
+
+openAddVoucherModalBtn.addEventListener('click', () => openVoucherModal());
+closeVoucherModalBtn.addEventListener('click', closeVoucherModal);
+cancelVoucherModalBtn.addEventListener('click', closeVoucherModal);
