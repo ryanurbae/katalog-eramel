@@ -428,7 +428,7 @@ html{
 }
 
 #brandContainer {
-    justify-content: center;
+    justify-content: safe center;
     flex-wrap: nowrap;
 }
 
