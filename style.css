@@ -1119,3 +1119,25 @@ body {
         height: 46px;
     }
 }
+
+@keyframes blurIn {
+    0% {
+        opacity: 0;
+        filter: blur(20px);
+        transform: translateY(8px);
+    }
+    100% {
+        opacity: 1;
+        filter: blur(0px);
+        transform: translateY(0);
+    }
+}
+
+.blur-in {
+    animation: blurIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.blur-in-1 { animation-delay: 0.05s; }
+.blur-in-2 { animation-delay: 0.25s; }
+.blur-in-3 { animation-delay: 0.45s; }
+.blur-in-4 { animation-delay: 0.65s; }
