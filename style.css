@@ -418,13 +418,18 @@ html{
     border-radius: 30px;
     padding: 0.5rem;
     display: flex;
-    justify-content: center;
-    width: fit-content;
-    max-width: 100%;
+    width: 65%;
     margin: 0 auto 1.5rem auto;
+    overflow-x: auto;
+    scrollbar-width: none;
 }
+.brand-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
 #brandContainer {
     justify-content: center;
+    flex-wrap: nowrap;
 }
 
 /* --- Filter Wrapper & Scroll Buttons --- */
