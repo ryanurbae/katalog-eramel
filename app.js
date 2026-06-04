@@ -313,19 +313,17 @@ function renderTicker(tickers) {
 
     tickerEl.style.display = 'flex';
 
-    const singleLoop = tickers.map(t => t.message).join(' · ') + ' · ';
-    const repeated = singleLoop.repeat(5);
+    const singleLoop = tickers.map(t => t.message).join(' • ') + ' • ';
+    const repeatedCount = Math.max(10, Math.ceil(150 / Math.max(1, singleLoop.length)));
+    const repeated = singleLoop.repeat(repeatedCount);
 
     tickerContent.innerHTML =
         '<span class="ticker-text">' + repeated + '</span>' +
         '<span class="ticker-text">' + repeated + '</span>';
 
-    const duration = Math.max(20, singleLoop.length * 0.12);
-
-    document.querySelectorAll('.ticker-text').forEach((el, i) => {
-        el.style.animationDuration = duration + 's';
-        el.style.animationDelay = i === 0 ? '0s' : '-' + (duration / 2) + 's';
-    });
+    // Terapkan durasi animasi ke container pembungkusnya
+    const duration = repeated.length * 0.15;
+    tickerContent.style.animationDuration = duration + 's';
 }
 
 // --- Fungsi Keranjang (Cart) ---

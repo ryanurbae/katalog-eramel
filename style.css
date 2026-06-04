@@ -1225,20 +1225,16 @@ body {
 }
 
 .ticker-content {
-    display: flex;
+    display: inline-flex;
     width: max-content;
-    white-space: nowrap;
-    position: static;
-    animation: none;
+    animation: ticker-scroll linear infinite;
 }
 
 .ticker-text {
-    display: inline-block;
     white-space: nowrap;
     color: rgba(255, 255, 255, 0.8);
     font-size: 0.9rem;
     font-weight: 800;
-    animation: ticker-scroll linear infinite;
 }
 
 @keyframes ticker-scroll {
