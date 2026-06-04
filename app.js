@@ -593,7 +593,14 @@ checkoutBtn.addEventListener('click', async () => {
     message += 'Notes: ' + (custNotes.value.trim() || '-');
 
     const waLink = 'https://wa.me/' + phone + '?text=' + encodeURIComponent(message);
-    window.open(waLink, '_blank');
+    
+    // Menggunakan window.location.href di perangkat mobile agar tidak diblokir oleh popup blocker
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    if (isMobile) {
+        window.location.href = waLink;
+    } else {
+        window.open(waLink, '_blank');
+    }
 
     custName.value = '';
     custOutlet.value = '';
