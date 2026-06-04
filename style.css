@@ -153,6 +153,7 @@ body {
     color: var(--text-main);
     line-height: 1.5;
     overflow-x: hidden;
+    padding-bottom: 36px;
 }
 
 ::-webkit-scrollbar {
@@ -983,7 +984,7 @@ body {
 /* Floating WhatsApp Button */
 .wa-float {
     position: fixed;
-    bottom: 28px;
+    bottom: 46px;
     right: 28px;
     width: 52px;
     height: 52px;
@@ -1066,7 +1067,7 @@ body {
 /* Scroll to Top Button */
 .scroll-top-btn {
     position: fixed;
-    bottom: 28px;
+    bottom: 46px;
     left: 28px;
     width: 52px;
     height: 52px;
@@ -1141,3 +1142,106 @@ body {
 .blur-in-2 { animation-delay: 0.25s; }
 .blur-in-3 { animation-delay: 0.45s; }
 .blur-in-4 { animation-delay: 0.65s; }
+
+/* --- FITUR 1: Brand Banner --- */
+.brand-banner {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(238, 160, 254, 0.4);
+    border-radius: 12px;
+    padding: 0.6rem 1.5rem;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+    width: fit-content;
+    margin: 0 auto 1.5rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    animation: banner-pulse 2s infinite alternate;
+}
+
+.brand-banner.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.banner-icon {
+    color: #eea0fe;
+}
+
+@keyframes banner-pulse {
+    from {
+        box-shadow: 0 0 16px rgba(238, 160, 254, 0.3),
+                    0 0 32px rgba(26, 41, 245, 0.15);
+    }
+    to {
+        box-shadow: 0 0 24px rgba(238, 160, 254, 0.5),
+                    0 0 48px rgba(26, 41, 245, 0.3);
+    }
+}
+
+/* --- FITUR 2: News Ticker --- */
+.news-ticker {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 998;
+    height: 36px;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(238, 160, 254, 0.15);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.ticker-label {
+    background: linear-gradient(135deg, #1a29f5, #eea0fe);
+    padding: 0 12px;
+    height: 100%;
+    font-size: 0.7rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+.ticker-scroll-area {
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.ticker-content {
+    display: flex;
+    width: max-content;
+    white-space: nowrap;
+    position: static;
+    animation: none;
+}
+
+.ticker-text {
+    display: inline-block;
+    white-space: nowrap;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    font-weight: 800;
+    animation: ticker-scroll linear infinite;
+}
+
+@keyframes ticker-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}

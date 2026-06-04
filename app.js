@@ -7,6 +7,8 @@ let activeBrand = 'Semua';
 let activeCategory = 'Semua';
 let searchQuery = '';
 let appliedVoucher = JSON.parse(localStorage.getItem('appliedVoucher')) || null;
+let brandBanners = [];
+let newsTickers = [];
 
 // Elemen DOM
 const productGrid = document.getElementById('productGrid');
@@ -50,10 +52,16 @@ document.body.appendChild(toastEl);
 async function init() {
     renderSkeleton(6);
     updateCartUI();
-    await fetchProducts();
+    await Promise.all([
+        fetchProducts(),
+        fetchBrandBanners(),
+        fetchNewsTickers()
+    ]);
     renderBrandFilter();
     renderCategoryFilter();
     renderProducts();
+    updateBrandBanner();
+    renderTicker(newsTickers);
 }
 
 // Event Listener Pencarian
@@ -96,6 +104,27 @@ async function fetchProducts() {
     }
 }
 
+async function fetchBrandBanners() {
+    try {
+        const { data, error } = await supabase
+            .from('brand_banners')
+            .select('*')
+            .eq('is_active', true);
+        if (!error) brandBanners = data || [];
+    } catch (error) { console.error('Error fetching brand banners:', error); }
+}
+
+async function fetchNewsTickers() {
+    try {
+        const { data, error } = await supabase
+            .from('news_ticker')
+            .select('*')
+            .eq('is_active', true)
+            .order('sort_order');
+        if (!error) newsTickers = data || [];
+    } catch (error) { console.error('Error fetching news tickers:', error); }
+}
+
 // --- Logika Filter Level 1 (Brand) ---
 function renderBrandFilter() {
     const brandsList = getUniqueBrands(products);
@@ -112,6 +141,7 @@ function renderBrandFilter() {
             renderBrandFilter();
             renderCategoryFilter();
             renderProducts();
+            updateBrandBanner();
         });
     });
 }
@@ -242,6 +272,59 @@ function renderProducts() {
 
     document.querySelectorAll('.add-cart-btn').forEach(btn => {
         btn.addEventListener('click', (e) => addToCart(e.currentTarget.dataset.id, e));
+    });
+}
+
+function updateBrandBanner() {
+    const bannerEl = document.getElementById('brandBanner');
+    const textEl = document.getElementById('brandBannerText');
+    if (!bannerEl || !textEl) return;
+
+    if (activeBrand === 'Semua') {
+        bannerEl.classList.remove('show');
+        setTimeout(() => {
+            if (!bannerEl.classList.contains('show')) bannerEl.style.display = 'none';
+        }, 300);
+        return;
+    }
+
+    const banner = brandBanners.find(b => b.brand === activeBrand);
+    if (banner) {
+        textEl.textContent = banner.message;
+        bannerEl.style.display = 'flex';
+        void bannerEl.offsetWidth; // Trigger reflow agar animasi jalan
+        bannerEl.classList.add('show');
+    } else {
+        bannerEl.classList.remove('show');
+        setTimeout(() => {
+            if (!bannerEl.classList.contains('show')) bannerEl.style.display = 'none';
+        }, 300);
+    }
+}
+
+function renderTicker(tickers) {
+    const tickerEl = document.getElementById('newsTicker');
+    const tickerContent = document.getElementById('tickerContent');
+    
+    if (!tickers || tickers.length === 0) {
+        tickerEl.style.display = 'none';
+        return;
+    }
+
+    tickerEl.style.display = 'flex';
+
+    const singleLoop = tickers.map(t => t.message).join(' · ') + ' · ';
+    const repeated = singleLoop.repeat(5);
+
+    tickerContent.innerHTML =
+        '<span class="ticker-text">' + repeated + '</span>' +
+        '<span class="ticker-text">' + repeated + '</span>';
+
+    const duration = Math.max(20, singleLoop.length * 0.12);
+
+    document.querySelectorAll('.ticker-text').forEach((el, i) => {
+        el.style.animationDuration = duration + 's';
+        el.style.animationDelay = i === 0 ? '0s' : '-' + (duration / 2) + 's';
     });
 }
 
@@ -526,5 +609,6 @@ checkoutBtn.addEventListener('click', async () => {
     validateCheckout();
     updateCartUI();
 });
+
 // --- Jalankan Script ---
 init();

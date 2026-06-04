@@ -54,9 +54,44 @@ const vCode = document.getElementById('vCode');
 const vDiscount = document.getElementById('vDiscount');
 const vStatus = document.getElementById('vStatus');
 
+// DOM Elements - Banners
+const menuBanners = document.getElementById('menuBanners');
+const bannersDashboard = document.getElementById('bannersDashboard');
+const bannerTableBody = document.getElementById('bannerTableBody');
+const openAddBannerModalBtn = document.getElementById('openAddBannerModalBtn');
+const bannerModal = document.getElementById('bannerModal');
+const bannerForm = document.getElementById('bannerForm');
+const bannerModalTitle = document.getElementById('bannerModalTitle');
+const closeBannerModalBtn = document.getElementById('closeBannerModalBtn');
+const cancelBannerModalBtn = document.getElementById('cancelBannerModalBtn');
+const saveBannerBtn = document.getElementById('saveBannerBtn');
+const bId = document.getElementById('bannerId');
+const bBrand = document.getElementById('bBrand');
+const bMessage = document.getElementById('bMessage');
+const bStatus = document.getElementById('bStatus');
+const bannerBrandList = document.getElementById('bannerBrandList');
+
+// DOM Elements - Tickers
+const menuTickers = document.getElementById('menuTickers');
+const tickersDashboard = document.getElementById('tickersDashboard');
+const tickerTableBody = document.getElementById('tickerTableBody');
+const openAddTickerModalBtn = document.getElementById('openAddTickerModalBtn');
+const tickerModal = document.getElementById('tickerModal');
+const tickerForm = document.getElementById('tickerForm');
+const tickerModalTitle = document.getElementById('tickerModalTitle');
+const closeTickerModalBtn = document.getElementById('closeTickerModalBtn');
+const cancelTickerModalBtn = document.getElementById('cancelTickerModalBtn');
+const saveTickerBtn = document.getElementById('saveTickerBtn');
+const tId = document.getElementById('tickerId');
+const tMessage = document.getElementById('tMessage');
+const tOrder = document.getElementById('tOrder');
+const tStatus = document.getElementById('tStatus');
+
 // State
 let products = [];
 let vouchers = [];
+let banners = [];
+let tickers = [];
 let existingImageUrl = null;
 
 // --- Helpers ---
@@ -117,18 +152,27 @@ logoutBtn.addEventListener('click', async () => {
 });
 
 // --- Menu Navigation ---
+function switchTab(activeMenu, activeDashboard, fetchCallback) {
+    [menuProducts, menuVouchers, menuBanners, menuTickers].forEach(menu => menu.classList.remove('active'));
+    activeMenu.classList.add('active');
+    
+    [productsDashboard, vouchersDashboard, bannersDashboard, tickersDashboard].forEach(dash => dash.style.display = 'none');
+    activeDashboard.style.display = 'block';
+    
+    if(fetchCallback) fetchCallback();
+}
+
 menuProducts.addEventListener('click', () => {
-    menuProducts.classList.add('active');
-    menuVouchers.classList.remove('active');
-    productsDashboard.style.display = 'block';
-    vouchersDashboard.style.display = 'none';
+    switchTab(menuProducts, productsDashboard, fetchProducts);
 });
 menuVouchers.addEventListener('click', () => {
-    menuVouchers.classList.add('active');
-    menuProducts.classList.remove('active');
-    productsDashboard.style.display = 'none';
-    vouchersDashboard.style.display = 'block';
-    fetchVouchers();
+    switchTab(menuVouchers, vouchersDashboard, fetchVouchers);
+});
+menuBanners.addEventListener('click', () => {
+    switchTab(menuBanners, bannersDashboard, fetchBanners);
+});
+menuTickers.addEventListener('click', () => {
+    switchTab(menuTickers, tickersDashboard, fetchTickers);
 });
 
 // --- Dashboard Logic ---
@@ -233,6 +277,7 @@ function updateCategoryDatalist() {
     // Update datalist for modal
     const brandDatalist = document.getElementById('brandList');
     brandDatalist.innerHTML = brands.filter(b => b !== 'Semua').map(brand => `<option value="${brand}"></option>`).join('');
+    bannerBrandList.innerHTML = brands.filter(b => b !== 'Semua').map(brand => `<option value="${brand}"></option>`).join('');
     categoryList.innerHTML = categories.filter(c => c !== 'Semua').map(cat => `<option value="${cat}"></option>`).join('');
 }
 
@@ -547,3 +592,216 @@ window.editVoucher = (id) => {
 openAddVoucherModalBtn.addEventListener('click', () => openVoucherModal());
 closeVoucherModalBtn.addEventListener('click', closeVoucherModal);
 cancelVoucherModalBtn.addEventListener('click', closeVoucherModal);
+
+// --- Banner Management Logic ---
+async function fetchBanners() {
+    bannerTableBody.innerHTML = '<tr><td colspan="4" style="text-align:center;">Memuat data...</td></tr>';
+    const { data, error } = await supabase.from('brand_banners').select('*').order('brand');
+    if (error) {
+        console.error(error);
+        alert('Gagal mengambil data banner!');
+        return;
+    }
+    banners = data || [];
+    renderBannerTable();
+}
+
+function renderBannerTable() {
+    if (banners.length === 0) {
+        bannerTableBody.innerHTML = '<tr><td colspan="4" style="text-align:center; color:#888;">Belum ada banner.</td></tr>';
+        return;
+    }
+    bannerTableBody.innerHTML = banners.map(b => {
+        const badgeClass = b.is_active ? 'badge-visible' : 'badge-hidden';
+        const badgeText = b.is_active ? 'Aktif' : 'Nonaktif';
+        return `
+        <tr>
+            <td><strong>${b.brand}</strong></td>
+            <td>${b.message}</td>
+            <td><span class="${badgeClass}">${badgeText}</span></td>
+            <td class="action-btns">
+                <button class="btn-icon ${b.is_active ? 'btn-success' : 'btn-secondary'}" onclick="window.toggleBanner('${b.id}', ${b.is_active})" title="${b.is_active ? 'Nonaktifkan' : 'Aktifkan'}"><i class="fa-solid ${b.is_active ? 'fa-check' : 'fa-power-off'}"></i></button>
+                <button class="btn-icon btn-edit" onclick="window.editBanner('${b.id}')" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                <button class="btn-icon btn-danger" onclick="window.deleteBanner('${b.id}')" title="Hapus"><i class="fa-solid fa-trash"></i></button>
+            </td>
+        </tr>
+    `}).join('');
+}
+
+function openBannerModal(editData = null) {
+    bannerForm.reset();
+    if (editData) {
+        bannerModalTitle.textContent = 'Edit Banner';
+        bId.value = editData.id;
+        bBrand.value = editData.brand;
+        bMessage.value = editData.message;
+        bStatus.value = editData.is_active.toString();
+    } else {
+        bannerModalTitle.textContent = 'Tambah Banner';
+        bId.value = '';
+        bStatus.value = 'true';
+    }
+    bannerModal.style.display = 'flex';
+}
+
+function closeBannerModal() {
+    bannerModal.style.display = 'none';
+}
+
+bannerForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    saveBannerBtn.disabled = true;
+    saveBannerBtn.textContent = 'Menyimpan...';
+    const id = bId.value;
+    const brand = bBrand.value.trim();
+    const message = bMessage.value.trim();
+    const is_active = bStatus.value === 'true';
+    const payload = { brand, message, is_active };
+    try {
+        if (id) {
+            const { error } = await supabase.from('brand_banners').update(payload).eq('id', id);
+            if (error) throw error;
+        } else {
+            const { error } = await supabase.from('brand_banners').insert([payload]);
+            if (error) throw error;
+        }
+        closeBannerModal();
+        fetchBanners();
+    } catch (error) {
+        console.error(error);
+        alert('Gagal menyimpan banner: ' + (error.message || 'Error tidak diketahui.'));
+    } finally {
+        saveBannerBtn.disabled = false;
+        saveBannerBtn.textContent = 'Simpan Data';
+    }
+});
+
+window.deleteBanner = async (id) => {
+    if (confirm('Yakin ingin menghapus banner ini?')) {
+        const { error } = await supabase.from('brand_banners').delete().eq('id', id);
+        if (error) alert('Gagal menghapus banner.');
+        else fetchBanners();
+    }
+};
+
+window.toggleBanner = async (id, currentStatus) => {
+    const { error } = await supabase.from('brand_banners').update({ is_active: !currentStatus }).eq('id', id);
+    if (error) alert('Gagal mengubah status banner.');
+    else fetchBanners();
+};
+
+window.editBanner = (id) => {
+    const b = banners.find(x => x.id == id);
+    if (b) openBannerModal(b);
+};
+
+openAddBannerModalBtn.addEventListener('click', () => openBannerModal());
+closeBannerModalBtn.addEventListener('click', closeBannerModal);
+cancelBannerModalBtn.addEventListener('click', closeBannerModal);
+
+// --- Ticker Management Logic ---
+async function fetchTickers() {
+    tickerTableBody.innerHTML = '<tr><td colspan="4" style="text-align:center;">Memuat data...</td></tr>';
+    const { data, error } = await supabase.from('news_ticker').select('*').order('sort_order');
+    if (error) {
+        console.error(error);
+        alert('Gagal mengambil data ticker!');
+        return;
+    }
+    tickers = data || [];
+    renderTickerTable();
+}
+
+function renderTickerTable() {
+    if (tickers.length === 0) {
+        tickerTableBody.innerHTML = '<tr><td colspan="4" style="text-align:center; color:#888;">Belum ada pesan ticker.</td></tr>';
+        return;
+    }
+    tickerTableBody.innerHTML = tickers.map(t => {
+        const badgeClass = t.is_active ? 'badge-visible' : 'badge-hidden';
+        const badgeText = t.is_active ? 'Aktif' : 'Nonaktif';
+        return `
+        <tr>
+            <td><strong>${t.sort_order}</strong></td>
+            <td>${t.message}</td>
+            <td><span class="${badgeClass}">${badgeText}</span></td>
+            <td class="action-btns">
+                <button class="btn-icon ${t.is_active ? 'btn-success' : 'btn-secondary'}" onclick="window.toggleTicker('${t.id}', ${t.is_active})" title="${t.is_active ? 'Nonaktifkan' : 'Aktifkan'}"><i class="fa-solid ${t.is_active ? 'fa-check' : 'fa-power-off'}"></i></button>
+                <button class="btn-icon btn-edit" onclick="window.editTicker('${t.id}')" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                <button class="btn-icon btn-danger" onclick="window.deleteTicker('${t.id}')" title="Hapus"><i class="fa-solid fa-trash"></i></button>
+            </td>
+        </tr>
+    `}).join('');
+}
+
+function openTickerModal(editData = null) {
+    tickerForm.reset();
+    if (editData) {
+        tickerModalTitle.textContent = 'Edit Pesan Ticker';
+        tId.value = editData.id;
+        tMessage.value = editData.message;
+        tOrder.value = editData.sort_order;
+        tStatus.value = editData.is_active.toString();
+    } else {
+        tickerModalTitle.textContent = 'Tambah Pesan Ticker';
+        tId.value = '';
+        tOrder.value = tickers.length > 0 ? Math.max(...tickers.map(t => t.sort_order)) + 1 : 1;
+        tStatus.value = 'true';
+    }
+    tickerModal.style.display = 'flex';
+}
+
+function closeTickerModal() {
+    tickerModal.style.display = 'none';
+}
+
+tickerForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    saveTickerBtn.disabled = true;
+    saveTickerBtn.textContent = 'Menyimpan...';
+    const id = tId.value;
+    const message = tMessage.value.trim();
+    const sort_order = parseInt(tOrder.value);
+    const is_active = tStatus.value === 'true';
+    const payload = { message, sort_order, is_active };
+    try {
+        if (id) {
+            const { error } = await supabase.from('news_ticker').update(payload).eq('id', id);
+            if (error) throw error;
+        } else {
+            const { error } = await supabase.from('news_ticker').insert([payload]);
+            if (error) throw error;
+        }
+        closeTickerModal();
+        fetchTickers();
+    } catch (error) {
+        console.error(error);
+        alert('Gagal menyimpan ticker: ' + (error.message || 'Error tidak diketahui.'));
+    } finally {
+        saveTickerBtn.disabled = false;
+        saveTickerBtn.textContent = 'Simpan Data';
+    }
+});
+
+window.deleteTicker = async (id) => {
+    if (confirm('Yakin ingin menghapus pesan ticker ini?')) {
+        const { error } = await supabase.from('news_ticker').delete().eq('id', id);
+        if (error) alert('Gagal menghapus ticker.');
+        else fetchTickers();
+    }
+};
+
+window.toggleTicker = async (id, currentStatus) => {
+    const { error } = await supabase.from('news_ticker').update({ is_active: !currentStatus }).eq('id', id);
+    if (error) alert('Gagal mengubah status ticker.');
+    else fetchTickers();
+};
+
+window.editTicker = (id) => {
+    const t = tickers.find(x => x.id == id);
+    if (t) openTickerModal(t);
+};
+
+openAddTickerModalBtn.addEventListener('click', () => openTickerModal());
+closeTickerModalBtn.addEventListener('click', closeTickerModal);
+cancelTickerModalBtn.addEventListener('click', closeTickerModal);
