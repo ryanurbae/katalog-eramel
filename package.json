@@ -4,7 +4,8 @@
   "description": "",
   "main": "admin.js",
   "scripts": {
-    "build": "npx @tailwindcss/cli -i ./input.css -o ./output.css --watch"
+    "dev": "npx @tailwindcss/cli -i ./input.css -o ./output.css --watch",
+    "build": "npx @tailwindcss/cli -i ./input.css -o ./output.css --minify"
   },
   "repository": {
     "type": "git",
