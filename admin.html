@@ -134,13 +134,24 @@
             
             <div class="filter-bar">
                 <label for="brandFilter" style="font-weight: 500;">Filter Brand:</label>
-                <select id="brandFilter" class="form-control" style="width: 250px;">
+                <select id="brandFilter" class="form-control" style="width: 200px;">
                     <option value="Semua">Semua Brand</option>
                 </select>
                 
                 <label for="categoryFilter" style="font-weight: 500; margin-left: 1rem;">Filter Kategori:</label>
-                <select id="categoryFilter" class="form-control" style="width: 250px;">
+                <select id="categoryFilter" class="form-control" style="width: 200px;">
                     <option value="Semua">Semua Kategori</option>
+                </select>
+
+                <label for="sortFilter" style="font-weight: 500; margin-left: 1rem;">Urutkan:</label>
+                <select id="sortFilter" class="form-control" style="width: 200px;">
+                    <option value="default">Default</option>
+                    <option value="name_asc">Nama (A-Z)</option>
+                    <option value="name_desc">Nama (Z-A)</option>
+                    <option value="price_asc">Harga (Termurah)</option>
+                    <option value="price_desc">Harga (Termahal)</option>
+                    <option value="date_desc">Terbaru</option>
+                    <option value="date_asc">Terlama</option>
                 </select>
             </div>
             

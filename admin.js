@@ -12,6 +12,7 @@ const productTableBody = document.getElementById('productTableBody');
 const openAddModalBtn = document.getElementById('openAddModalBtn');
 const brandFilter = document.getElementById('brandFilter');
 const categoryFilter = document.getElementById('categoryFilter');
+const sortFilter = document.getElementById('sortFilter');
 
 // DOM Elements - Vouchers
 const menuProducts = document.getElementById('menuProducts');
@@ -224,14 +225,29 @@ function renderBrandVisibility() {
 }
 
 function renderTable() {
-    let filteredProducts = products;
+    let filteredProducts = [...products];
     
     if (brandFilter.value !== 'Semua') {
-        filteredProducts = products.filter(p => p.brand === brandFilter.value);
+        filteredProducts = filteredProducts.filter(p => p.brand === brandFilter.value);
     }
     
     if (categoryFilter.value !== 'Semua') {
         filteredProducts = filteredProducts.filter(p => p.category === categoryFilter.value);
+    }
+
+    const sortValue = sortFilter.value;
+    if (sortValue === 'name_asc') {
+        filteredProducts.sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+    } else if (sortValue === 'name_desc') {
+        filteredProducts.sort((a, b) => (b.name || '').localeCompare(a.name || ''));
+    } else if (sortValue === 'price_asc') {
+        filteredProducts.sort((a, b) => (a.price || 0) - (b.price || 0));
+    } else if (sortValue === 'price_desc') {
+        filteredProducts.sort((a, b) => (b.price || 0) - (a.price || 0));
+    } else if (sortValue === 'date_desc') {
+        filteredProducts.sort((a, b) => new Date(b.created_at || 0) - new Date(a.created_at || 0));
+    } else if (sortValue === 'date_asc') {
+        filteredProducts.sort((a, b) => new Date(a.created_at || 0) - new Date(b.created_at || 0));
     }
 
     if (filteredProducts.length === 0) {
@@ -262,6 +278,7 @@ function renderTable() {
 
 brandFilter.addEventListener('change', renderTable);
 categoryFilter.addEventListener('change', renderTable);
+sortFilter.addEventListener('change', renderTable);
 
 function updateCategoryDatalist() {
     const brands = ['Semua', ...new Set(products.map(p => p.brand).filter(Boolean))];
