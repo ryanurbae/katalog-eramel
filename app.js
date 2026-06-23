@@ -33,6 +33,10 @@ const custName = document.getElementById('custName');
 const custOutlet = document.getElementById('custOutlet');
 const custNotes = document.getElementById('custNotes');
 const checkoutBtn = document.getElementById('checkoutBtn');
+const btnPickup = document.getElementById('btnPickup');
+const btnDelivery = document.getElementById('btnDelivery');
+
+let orderMethod = '';
 const customAlertOverlay = document.getElementById('customAlertOverlay');
 const customAlertMessage = document.getElementById('customAlertMessage');
 const customAlertCloseBtn = document.getElementById('customAlertCloseBtn');
@@ -379,7 +383,7 @@ function addToCart(productId, event) {
 }
 
 function validateCheckout() {
-    if (cart.length > 0) {
+    if (cart.length > 0 && orderMethod !== '') {
         checkoutBtn.disabled = false;
     } else {
         checkoutBtn.disabled = true;
@@ -388,6 +392,20 @@ function validateCheckout() {
 
 custName.addEventListener('input', validateCheckout);
 custOutlet.addEventListener('input', validateCheckout);
+
+btnPickup.addEventListener('click', () => {
+    orderMethod = 'Pickup';
+    btnPickup.classList.add('active');
+    btnDelivery.classList.remove('active');
+    validateCheckout();
+});
+
+btnDelivery.addEventListener('click', () => {
+    orderMethod = 'Delivery';
+    btnDelivery.classList.add('active');
+    btnPickup.classList.remove('active');
+    validateCheckout();
+});
 
 function updateCartUI() {
     const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
@@ -590,6 +608,7 @@ checkoutBtn.addEventListener('click', async () => {
 
     message += 'Nama: ' + nameVal + '\n';
     message += 'Outlet: ' + outletVal + '\n';
+    message += 'Metode: ' + orderMethod + '\n';
     message += 'Notes: ' + (custNotes.value.trim() || '-');
 
     const waLink = 'https://wa.me/' + phone + '?text=' + encodeURIComponent(message);
@@ -608,6 +627,9 @@ checkoutBtn.addEventListener('click', async () => {
     cartVoucher.value = '';
     appliedVoucher = null;
     localStorage.removeItem('appliedVoucher');
+    orderMethod = '';
+    btnPickup.classList.remove('active');
+    btnDelivery.classList.remove('active');
 
     cart = [];
     localStorage.setItem('cart', JSON.stringify(cart));

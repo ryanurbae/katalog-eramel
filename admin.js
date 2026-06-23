@@ -20,14 +20,11 @@ const menuVouchers = document.getElementById('menuVouchers');
 const productsDashboard = document.getElementById('productsDashboard');
 const vouchersDashboard = document.getElementById('vouchersDashboard');
 const voucherTableBody = document.getElementById('voucherTableBody');
-const openAddVoucherModalBtn = document.getElementById('openAddVoucherModalBtn');
 
 // Modal Elements
 const productModal = document.getElementById('productModal');
 const productForm = document.getElementById('productForm');
 const modalTitle = document.getElementById('modalTitle');
-const closeModalBtn = document.getElementById('closeModalBtn');
-const cancelModalBtn = document.getElementById('cancelModalBtn');
 const saveProductBtn = document.getElementById('saveProductBtn');
 const categoryList = document.getElementById('categoryList');
 
@@ -47,8 +44,6 @@ const dropzoneContent = document.getElementById('dropzoneContent');
 const voucherModal = document.getElementById('voucherModal');
 const voucherForm = document.getElementById('voucherForm');
 const voucherModalTitle = document.getElementById('voucherModalTitle');
-const closeVoucherModalBtn = document.getElementById('closeVoucherModalBtn');
-const cancelVoucherModalBtn = document.getElementById('cancelVoucherModalBtn');
 const saveVoucherBtn = document.getElementById('saveVoucherBtn');
 const vId = document.getElementById('voucherId');
 const vCode = document.getElementById('vCode');
@@ -59,12 +54,9 @@ const vStatus = document.getElementById('vStatus');
 const menuBanners = document.getElementById('menuBanners');
 const bannersDashboard = document.getElementById('bannersDashboard');
 const bannerTableBody = document.getElementById('bannerTableBody');
-const openAddBannerModalBtn = document.getElementById('openAddBannerModalBtn');
 const bannerModal = document.getElementById('bannerModal');
 const bannerForm = document.getElementById('bannerForm');
 const bannerModalTitle = document.getElementById('bannerModalTitle');
-const closeBannerModalBtn = document.getElementById('closeBannerModalBtn');
-const cancelBannerModalBtn = document.getElementById('cancelBannerModalBtn');
 const saveBannerBtn = document.getElementById('saveBannerBtn');
 const bId = document.getElementById('bannerId');
 const bBrand = document.getElementById('bBrand');
@@ -76,12 +68,9 @@ const bannerBrandList = document.getElementById('bannerBrandList');
 const menuTickers = document.getElementById('menuTickers');
 const tickersDashboard = document.getElementById('tickersDashboard');
 const tickerTableBody = document.getElementById('tickerTableBody');
-const openAddTickerModalBtn = document.getElementById('openAddTickerModalBtn');
 const tickerModal = document.getElementById('tickerModal');
 const tickerForm = document.getElementById('tickerForm');
 const tickerModalTitle = document.getElementById('tickerModalTitle');
-const closeTickerModalBtn = document.getElementById('closeTickerModalBtn');
-const cancelTickerModalBtn = document.getElementById('cancelTickerModalBtn');
 const saveTickerBtn = document.getElementById('saveTickerBtn');
 const tId = document.getElementById('tickerId');
 const tMessage = document.getElementById('tMessage');
@@ -118,7 +107,6 @@ function showLogin() {
 function showDashboard() {
     loginView.style.display = 'none';
     dashboardView.style.display = 'flex';
-
     fetchProducts();
 }
 
@@ -154,31 +142,43 @@ logoutBtn.addEventListener('click', async () => {
 
 // --- Menu Navigation ---
 function switchTab(activeMenu, activeDashboard, fetchCallback) {
-    [menuProducts, menuVouchers, menuBanners, menuTickers].forEach(menu => menu.classList.remove('active'));
-    activeMenu.classList.add('active');
+    const menus = [menuProducts, menuVouchers, menuBanners, menuTickers];
+    menus.forEach(menu => {
+        menu.classList.remove('bg-slate-800', 'text-white', 'border-blue-600');
+        menu.classList.add('text-slate-400', 'border-transparent');
+    });
+    activeMenu.classList.remove('text-slate-400', 'border-transparent');
+    activeMenu.classList.add('bg-slate-800', 'text-white', 'border-blue-600');
     
-    [productsDashboard, vouchersDashboard, bannersDashboard, tickersDashboard].forEach(dash => dash.style.display = 'none');
+    const dashboards = [productsDashboard, vouchersDashboard, bannersDashboard, tickersDashboard];
+    dashboards.forEach(dash => {
+        if (dash !== activeDashboard) {
+            dash.classList.add('hidden', 'opacity-0');
+            dash.classList.remove('opacity-100');
+            dash.style.display = 'none';
+        }
+    });
+    
     activeDashboard.style.display = 'block';
+    activeDashboard.classList.remove('hidden');
+    
+    // Trigger reflow before adding opacity for animation
+    void activeDashboard.offsetWidth;
+    
+    activeDashboard.classList.add('transition-opacity', 'duration-500', 'opacity-100');
+    activeDashboard.classList.remove('opacity-0');
     
     if(fetchCallback) fetchCallback();
 }
 
-menuProducts.addEventListener('click', () => {
-    switchTab(menuProducts, productsDashboard, fetchProducts);
-});
-menuVouchers.addEventListener('click', () => {
-    switchTab(menuVouchers, vouchersDashboard, fetchVouchers);
-});
-menuBanners.addEventListener('click', () => {
-    switchTab(menuBanners, bannersDashboard, fetchBanners);
-});
-menuTickers.addEventListener('click', () => {
-    switchTab(menuTickers, tickersDashboard, fetchTickers);
-});
+menuProducts.addEventListener('click', () => switchTab(menuProducts, productsDashboard, fetchProducts));
+menuVouchers.addEventListener('click', () => switchTab(menuVouchers, vouchersDashboard, fetchVouchers));
+menuBanners.addEventListener('click', () => switchTab(menuBanners, bannersDashboard, fetchBanners));
+menuTickers.addEventListener('click', () => switchTab(menuTickers, tickersDashboard, fetchTickers));
 
 // --- Dashboard Logic ---
 async function fetchProducts() {
-    productTableBody.innerHTML = '<tr><td colspan="7" style="text-align:center;">Memuat data...</td></tr>';
+    productTableBody.innerHTML = '<tr><td colspan="7" class="text-center py-4 text-slate-500">Memuat data...</td></tr>';
     
     const { data, error } = await supabase
         .from('products')
@@ -200,23 +200,22 @@ async function fetchProducts() {
 
 function renderBrandVisibility() {
     const brandVisibilityContainer = document.getElementById('brandVisibilityContainer');
-    
     const brands = [...new Set(products.map(p => p.brand).filter(Boolean))];
     
     brandVisibilityContainer.innerHTML = brands.map(brand => {
         const brandProducts = products.filter(p => p.brand === brand);
         const isAllHidden = brandProducts.length > 0 && brandProducts.every(p => p.is_hidden);
         
-        const badgeClass = isAllHidden ? 'badge-hidden' : 'badge-visible';
+        const badgeClass = isAllHidden ? 'bg-red-900/30 text-red-400 border-red-800' : 'bg-emerald-900/30 text-emerald-400 border-emerald-800';
         const badgeText = isAllHidden ? 'Tersembunyi' : 'Tampil';
         
         return `
-            <div style="border: 1px solid var(--border); padding: 1rem; border-radius: 8px; display: flex; flex-direction: column; gap: 0.5rem; min-width: 200px;">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <strong>${brand}</strong>
-                    <span class="${badgeClass}">${badgeText}</span>
+            <div class="border border-slate-700 bg-slate-800/50 p-4 rounded-xl flex flex-col gap-3 min-w-[200px]">
+                <div class="flex justify-between items-center">
+                    <strong class="text-slate-200">${brand}</strong>
+                    <span class="inline-flex items-center gap-x-1.5 py-1 px-2.5 rounded-full text-xs font-medium border ${badgeClass}">${badgeText}</span>
                 </div>
-                <button class="btn ${isAllHidden ? 'btn-success' : 'btn-danger'} btn-block" style="margin-top: 0.5rem; font-size: 1rem;" onclick="window.toggleBrandVisibility('${brand}', ${!isAllHidden})">
+                <button class="w-full py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent ${isAllHidden ? 'bg-emerald-600 text-white hover:bg-emerald-700' : 'bg-red-600 text-white hover:bg-red-700'}" onclick="window.toggleBrandVisibility('${brand}', ${!isAllHidden})">
                     ${isAllHidden ? '<i class="fa-solid fa-eye"></i> Tampilkan' : '<i class="fa-solid fa-eye-slash"></i> Sembunyikan'}
                 </button>
             </div>
@@ -251,32 +250,35 @@ function renderTable() {
     }
 
     if (filteredProducts.length === 0) {
-        productTableBody.innerHTML = '<tr><td colspan="7" style="text-align:center; color:#888;">Belum ada produk untuk filter ini.</td></tr>';
+        productTableBody.innerHTML = '<tr><td colspan="7" class="text-center py-4 text-slate-500">Belum ada produk untuk filter ini.</td></tr>';
         return;
     }
 
     productTableBody.innerHTML = filteredProducts.map(product => {
-        const badgeClass = product.is_hidden ? 'badge-hidden' : 'badge-visible';
+        const badgeClass = product.is_hidden ? 'bg-red-900/30 text-red-400' : 'bg-emerald-900/30 text-emerald-400';
         const badgeText = product.is_hidden ? 'Tersembunyi' : 'Tampil';
         
         return `
-        <tr>
-            <td><img src="${product.image_url || 'https://via.placeholder.com/50'}" class="prod-thumb" alt="${product.name}"></td>
-            <td>${product.brand || '-'}</td>
-            <td><strong>${product.name}</strong></td>
-            <td><span style="background:#e2e8f0; padding:4px 8px; border-radius:4px; font-size:0.85rem;">${product.category || '-'}</span></td>
-            <td>${formatRupiah(product.price)}</td>
-            <td><span class="${badgeClass}">${badgeText}</span></td>
-            <td class="action-btns">
-                <button class="btn-icon ${product.is_hidden ? 'btn-success' : 'btn-secondary'}" onclick="window.toggleProductVisibility('${product.id}', ${product.is_hidden})" title="${product.is_hidden ? 'Tampilkan' : 'Sembunyikan'}"><i class="fa-solid ${product.is_hidden ? 'fa-eye' : 'fa-eye-slash'}"></i></button>
-                <button class="btn-icon btn-edit" onclick="window.editProduct('${product.id}')" title="Edit"><i class="fa-solid fa-pen"></i></button>
-                <button class="btn-icon btn-danger" onclick="window.deleteProduct('${product.id}')" title="Hapus"><i class="fa-solid fa-trash"></i></button>
+        <tr class="hover:bg-slate-800/50">
+            <td class="px-6 py-4 whitespace-nowrap"><img src="${product.image_url || 'https://via.placeholder.com/50'}" class="h-12 w-12 object-cover rounded-lg border border-slate-700" alt="${product.name}"></td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-300">${product.brand || '-'}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-white">${product.name}</td>
+            <td class="px-6 py-4 whitespace-nowrap"><span class="bg-slate-800 border border-slate-700 text-slate-300 py-1 px-2.5 rounded text-xs">${product.category || '-'}</span></td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-300">${formatRupiah(product.price)}</td>
+            <td class="px-6 py-4 whitespace-nowrap"><span class="inline-flex items-center gap-1.5 py-1 px-2 rounded-full text-xs font-medium ${badgeClass}">${badgeText}</span></td>
+            <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                <button class="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-transparent ${product.is_hidden ? 'text-emerald-400 hover:bg-emerald-400/10' : 'text-slate-400 hover:bg-slate-800'}" onclick="window.toggleProductVisibility('${product.id}', ${product.is_hidden})" title="${product.is_hidden ? 'Tampilkan' : 'Sembunyikan'}"><i class="fa-solid ${product.is_hidden ? 'fa-eye' : 'fa-eye-slash'}"></i></button>
+                <button class="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-transparent text-blue-400 hover:bg-blue-400/10" onclick="window.editProduct('${product.id}')" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                <button class="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-transparent text-red-400 hover:bg-red-400/10" onclick="window.deleteProduct('${product.id}')" title="Hapus"><i class="fa-solid fa-trash"></i></button>
             </td>
         </tr>
     `}).join('');
 }
 
-brandFilter.addEventListener('change', renderTable);
+brandFilter.addEventListener('change', () => {
+    updateCategoryDatalist();
+    renderTable();
+});
 categoryFilter.addEventListener('change', renderTable);
 sortFilter.addEventListener('change', renderTable);
 
@@ -286,20 +288,24 @@ function updateCategoryDatalist() {
     brandFilter.innerHTML = brands.map(brand => `<option value="${brand}">${brand}</option>`).join('');
     if (brands.includes(currentBrand)) brandFilter.value = currentBrand;
 
-    const categories = ['Semua', ...new Set(products.map(p => p.category).filter(Boolean))];
+    // Kategori hanya berdasarkan brand yang dipilih
+    let productsForCategory = products;
+    if (brandFilter.value !== 'Semua') {
+        productsForCategory = products.filter(p => p.brand === brandFilter.value);
+    }
+    const categories = ['Semua', ...new Set(productsForCategory.map(p => p.category).filter(Boolean))];
     const currentCategory = categoryFilter.value;
     categoryFilter.innerHTML = categories.map(cat => `<option value="${cat}">${cat}</option>`).join('');
     if (categories.includes(currentCategory)) categoryFilter.value = currentCategory;
+    else categoryFilter.value = 'Semua';
 
-    // Update datalist for modal
     const brandDatalist = document.getElementById('brandList');
     brandDatalist.innerHTML = brands.filter(b => b !== 'Semua').map(brand => `<option value="${brand}"></option>`).join('');
     bannerBrandList.innerHTML = brands.filter(b => b !== 'Semua').map(brand => `<option value="${brand}"></option>`).join('');
     categoryList.innerHTML = categories.filter(c => c !== 'Semua').map(cat => `<option value="${cat}"></option>`).join('');
 }
 
-
-// --- Modal Logic ---
+// --- Modal Logic using Preline JS API ---
 function openModal(editData = null) {
     productForm.reset();
     existingImageUrl = null;
@@ -327,11 +333,11 @@ function openModal(editData = null) {
         fId.value = '';
     }
     
-    productModal.style.display = 'flex';
+    HSOverlay.open(document.querySelector('#productModal'));
 }
 
 function closeModal() {
-    productModal.style.display = 'none';
+    HSOverlay.close(document.querySelector('#productModal'));
 }
 
 // Fungsi Handle File Gambar (Browse & Paste)
@@ -342,8 +348,6 @@ function handleFile(file) {
             fImage.value = '';
             return;
         }
-
-        // Memasukkan file ke input secara programatis agar terbaca saat disubmit
         const dt = new DataTransfer();
         dt.items.add(file);
         fImage.files = dt.files;
@@ -359,12 +363,10 @@ function handleFile(file) {
     }
 }
 
-// Preview Gambar Saat Dipilih Manual
 fImage.addEventListener('change', (e) => {
     handleFile(e.target.files[0]);
 });
 
-// Simpan Data (Tambah / Edit)
 productForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     saveProductBtn.disabled = true;
@@ -380,17 +382,14 @@ productForm.addEventListener('submit', async (e) => {
         let finalImageUrl = existingImageUrl;
         const file = fImage.files[0];
 
-        // Upload ke Storage jika ada foto baru
         if (file) {
             const fileName = `${Date.now()}-${file.name.replace(/[^a-zA-Z0-9.\-]/g, '_')}`;
-            
             const { data: uploadData, error: uploadError } = await supabase.storage
                 .from('product-images')
                 .upload(fileName, file);
                 
             if (uploadError) throw uploadError;
 
-            // Ambil public URL
             const { data: publicUrlData } = supabase.storage
                 .from('product-images')
                 .getPublicUrl(fileName);
@@ -401,11 +400,9 @@ productForm.addEventListener('submit', async (e) => {
         const payload = { brand, name, category, price, image_url: finalImageUrl };
 
         if (id) {
-            // Edit
             const { error: updateError } = await supabase.from('products').update(payload).eq('id', id);
             if (updateError) throw updateError;
         } else {
-            // Tambah
             const { error: insertError } = await supabase.from('products').insert([payload]);
             if (insertError) throw insertError;
         }
@@ -422,7 +419,6 @@ productForm.addEventListener('submit', async (e) => {
     }
 });
 
-// Hapus Produk
 window.deleteProduct = async (id) => {
     if (confirm('Apakah Anda yakin ingin menghapus produk ini? Tindakan ini tidak dapat dibatalkan.')) {
         try {
@@ -438,15 +434,9 @@ window.deleteProduct = async (id) => {
 
 window.toggleBrandVisibility = async (brand, hide) => {
     try {
-        const { error } = await supabase
-            .from('products')
-            .update({ is_hidden: hide })
-            .eq('brand', brand);
-            
+        const { error } = await supabase.from('products').update({ is_hidden: hide }).eq('brand', brand);
         if (error) throw error;
-        
-        alert(`Brand ${brand} berhasil ${hide ? 'disembunyikan' : 'ditampilkan'}`);
-        fetchProducts(); // Refresh the list
+        fetchProducts();
     } catch (error) {
         console.error('Error toggling brand visibility:', error);
         alert('Gagal mengubah visibilitas brand.');
@@ -455,14 +445,9 @@ window.toggleBrandVisibility = async (brand, hide) => {
 
 window.toggleProductVisibility = async (id, currentStatus) => {
     try {
-        const { error } = await supabase
-            .from('products')
-            .update({ is_hidden: !currentStatus })
-            .eq('id', id);
-            
+        const { error } = await supabase.from('products').update({ is_hidden: !currentStatus }).eq('id', id);
         if (error) throw error;
-        
-        fetchProducts(); // Refresh the list
+        fetchProducts();
     } catch (error) {
         console.error('Error toggling product visibility:', error);
         alert('Gagal mengubah visibilitas produk.');
@@ -474,29 +459,18 @@ window.editProduct = (id) => {
     if (product) openModal(product);
 };
 
-// Event Listeners Modal
-openAddModalBtn.addEventListener('click', () => openModal());
-closeModalBtn.addEventListener('click', closeModal);
-cancelModalBtn.addEventListener('click', closeModal);
-productModal.addEventListener('click', (e) => {
-    if (e.target === productModal) closeModal();
-});
-
-// Eksekusi saat start
 init();
 
-// Handle Paste Gambar dari Clipboard (Ctrl+V)
 document.addEventListener('paste', (e) => {
-    // Hanya proses paste jika modal sedang terbuka
-    if (productModal.style.display === 'flex') {
+    if (productModal.classList.contains('open')) {
         const items = e.clipboardData.items;
         for (let i = 0; i < items.length; i++) {
             if (items[i].type.indexOf('image') !== -1) {
                 const file = items[i].getAsFile();
                 if (file) {
-                    e.preventDefault(); // Mencegah paste default jika terdeteksi gambar
+                    e.preventDefault();
                     handleFile(file);
-                    break; // Hanya ambil satu gambar
+                    break;
                 }
             }
         }
@@ -505,7 +479,7 @@ document.addEventListener('paste', (e) => {
 
 // --- Voucher Management Logic ---
 async function fetchVouchers() {
-    voucherTableBody.innerHTML = '<tr><td colspan="4" style="text-align:center;">Memuat data...</td></tr>';
+    voucherTableBody.innerHTML = '<tr><td colspan="4" class="text-center py-4 text-slate-500">Memuat data...</td></tr>';
     const { data, error } = await supabase.from('vouchers').select('*').order('code');
     if (error) {
         console.error(error);
@@ -518,21 +492,21 @@ async function fetchVouchers() {
 
 function renderVoucherTable() {
     if (vouchers.length === 0) {
-        voucherTableBody.innerHTML = '<tr><td colspan="4" style="text-align:center; color:#888;">Belum ada voucher.</td></tr>';
+        voucherTableBody.innerHTML = '<tr><td colspan="4" class="text-center py-4 text-slate-500">Belum ada voucher.</td></tr>';
         return;
     }
     voucherTableBody.innerHTML = vouchers.map(v => {
-        const badgeClass = v.is_active ? 'badge-visible' : 'badge-hidden';
+        const badgeClass = v.is_active ? 'bg-emerald-900/30 text-emerald-400' : 'bg-red-900/30 text-red-400';
         const badgeText = v.is_active ? 'Aktif' : 'Nonaktif';
         return `
-        <tr>
-            <td><strong>${v.code}</strong></td>
-            <td>${v.discount_percent}%</td>
-            <td><span class="${badgeClass}">${badgeText}</span></td>
-            <td class="action-btns">
-                <button class="btn-icon ${v.is_active ? 'btn-success' : 'btn-secondary'}" onclick="window.toggleVoucher('${v.id}', ${v.is_active})" title="${v.is_active ? 'Nonaktifkan' : 'Aktifkan'}"><i class="fa-solid ${v.is_active ? 'fa-check' : 'fa-power-off'}"></i></button>
-                <button class="btn-icon btn-edit" onclick="window.editVoucher('${v.id}')" title="Edit"><i class="fa-solid fa-pen"></i></button>
-                <button class="btn-icon btn-danger" onclick="window.deleteVoucher('${v.id}')" title="Hapus"><i class="fa-solid fa-trash"></i></button>
+        <tr class="hover:bg-slate-800/50">
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-white">${v.code}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-300">${v.discount_percent}%</td>
+            <td class="px-6 py-4 whitespace-nowrap"><span class="inline-flex items-center gap-1.5 py-1 px-2 rounded-full text-xs font-medium ${badgeClass}">${badgeText}</span></td>
+            <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                <button class="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-transparent ${v.is_active ? 'text-emerald-400 hover:bg-emerald-400/10' : 'text-slate-400 hover:bg-slate-800'}" onclick="window.toggleVoucher('${v.id}', ${v.is_active})" title="${v.is_active ? 'Nonaktifkan' : 'Aktifkan'}"><i class="fa-solid ${v.is_active ? 'fa-check' : 'fa-power-off'}"></i></button>
+                <button class="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-transparent text-blue-400 hover:bg-blue-400/10" onclick="window.editVoucher('${v.id}')" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                <button class="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-transparent text-red-400 hover:bg-red-400/10" onclick="window.deleteVoucher('${v.id}')" title="Hapus"><i class="fa-solid fa-trash"></i></button>
             </td>
         </tr>
     `}).join('');
@@ -551,11 +525,11 @@ function openVoucherModal(editData = null) {
         vId.value = '';
         vStatus.value = 'true';
     }
-    voucherModal.style.display = 'flex';
+    HSOverlay.open(document.querySelector('#voucherModal'));
 }
 
 function closeVoucherModal() {
-    voucherModal.style.display = 'none';
+    HSOverlay.close(document.querySelector('#voucherModal'));
 }
 
 voucherForm.addEventListener('submit', async (e) => {
@@ -569,18 +543,16 @@ voucherForm.addEventListener('submit', async (e) => {
     const payload = { code, discount_percent, is_active };
     try {
         if (id) {
-            const { error } = await supabase.from('vouchers').update(payload).eq('id', id);
-            if (error) throw error;
+            await supabase.from('vouchers').update(payload).eq('id', id);
         } else {
-            const { error } = await supabase.from('vouchers').insert([payload]);
-            if (error) throw error;
+            await supabase.from('vouchers').insert([payload]);
         }
         closeVoucherModal();
         fetchVouchers();
     } catch (error) {
         console.error(error);
         if (error.code === '23505') alert('Kode voucher sudah ada!');
-        else alert('Gagal menyimpan voucher: ' + (error.message || 'Error tidak diketahui dari database.'));
+        else alert('Gagal menyimpan voucher.');
     } finally {
         saveVoucherBtn.disabled = false;
         saveVoucherBtn.textContent = 'Simpan Data';
@@ -589,16 +561,14 @@ voucherForm.addEventListener('submit', async (e) => {
 
 window.deleteVoucher = async (id) => {
     if (confirm('Yakin ingin menghapus voucher ini?')) {
-        const { error } = await supabase.from('vouchers').delete().eq('id', id);
-        if (error) alert('Gagal menghapus voucher.');
-        else fetchVouchers();
+        await supabase.from('vouchers').delete().eq('id', id);
+        fetchVouchers();
     }
 };
 
 window.toggleVoucher = async (id, currentStatus) => {
-    const { error } = await supabase.from('vouchers').update({ is_active: !currentStatus }).eq('id', id);
-    if (error) alert('Gagal mengubah status voucher.');
-    else fetchVouchers();
+    await supabase.from('vouchers').update({ is_active: !currentStatus }).eq('id', id);
+    fetchVouchers();
 };
 
 window.editVoucher = (id) => {
@@ -606,13 +576,9 @@ window.editVoucher = (id) => {
     if (v) openVoucherModal(v);
 };
 
-openAddVoucherModalBtn.addEventListener('click', () => openVoucherModal());
-closeVoucherModalBtn.addEventListener('click', closeVoucherModal);
-cancelVoucherModalBtn.addEventListener('click', closeVoucherModal);
-
 // --- Banner Management Logic ---
 async function fetchBanners() {
-    bannerTableBody.innerHTML = '<tr><td colspan="4" style="text-align:center;">Memuat data...</td></tr>';
+    bannerTableBody.innerHTML = '<tr><td colspan="4" class="text-center py-4 text-slate-500">Memuat data...</td></tr>';
     const { data, error } = await supabase.from('brand_banners').select('*').order('brand');
     if (error) {
         console.error(error);
@@ -625,21 +591,21 @@ async function fetchBanners() {
 
 function renderBannerTable() {
     if (banners.length === 0) {
-        bannerTableBody.innerHTML = '<tr><td colspan="4" style="text-align:center; color:#888;">Belum ada banner.</td></tr>';
+        bannerTableBody.innerHTML = '<tr><td colspan="4" class="text-center py-4 text-slate-500">Belum ada banner.</td></tr>';
         return;
     }
     bannerTableBody.innerHTML = banners.map(b => {
-        const badgeClass = b.is_active ? 'badge-visible' : 'badge-hidden';
+        const badgeClass = b.is_active ? 'bg-emerald-900/30 text-emerald-400' : 'bg-red-900/30 text-red-400';
         const badgeText = b.is_active ? 'Aktif' : 'Nonaktif';
         return `
-        <tr>
-            <td><strong>${b.brand}</strong></td>
-            <td>${b.message}</td>
-            <td><span class="${badgeClass}">${badgeText}</span></td>
-            <td class="action-btns">
-                <button class="btn-icon ${b.is_active ? 'btn-success' : 'btn-secondary'}" onclick="window.toggleBanner('${b.id}', ${b.is_active})" title="${b.is_active ? 'Nonaktifkan' : 'Aktifkan'}"><i class="fa-solid ${b.is_active ? 'fa-check' : 'fa-power-off'}"></i></button>
-                <button class="btn-icon btn-edit" onclick="window.editBanner('${b.id}')" title="Edit"><i class="fa-solid fa-pen"></i></button>
-                <button class="btn-icon btn-danger" onclick="window.deleteBanner('${b.id}')" title="Hapus"><i class="fa-solid fa-trash"></i></button>
+        <tr class="hover:bg-slate-800/50">
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-white">${b.brand}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-300">${b.message}</td>
+            <td class="px-6 py-4 whitespace-nowrap"><span class="inline-flex items-center gap-1.5 py-1 px-2 rounded-full text-xs font-medium ${badgeClass}">${badgeText}</span></td>
+            <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                <button class="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-transparent ${b.is_active ? 'text-emerald-400 hover:bg-emerald-400/10' : 'text-slate-400 hover:bg-slate-800'}" onclick="window.toggleBanner('${b.id}', ${b.is_active})" title="${b.is_active ? 'Nonaktifkan' : 'Aktifkan'}"><i class="fa-solid ${b.is_active ? 'fa-check' : 'fa-power-off'}"></i></button>
+                <button class="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-transparent text-blue-400 hover:bg-blue-400/10" onclick="window.editBanner('${b.id}')" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                <button class="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-transparent text-red-400 hover:bg-red-400/10" onclick="window.deleteBanner('${b.id}')" title="Hapus"><i class="fa-solid fa-trash"></i></button>
             </td>
         </tr>
     `}).join('');
@@ -658,11 +624,11 @@ function openBannerModal(editData = null) {
         bId.value = '';
         bStatus.value = 'true';
     }
-    bannerModal.style.display = 'flex';
+    HSOverlay.open(document.querySelector('#bannerModal'));
 }
 
 function closeBannerModal() {
-    bannerModal.style.display = 'none';
+    HSOverlay.close(document.querySelector('#bannerModal'));
 }
 
 bannerForm.addEventListener('submit', async (e) => {
@@ -676,17 +642,15 @@ bannerForm.addEventListener('submit', async (e) => {
     const payload = { brand, message, is_active };
     try {
         if (id) {
-            const { error } = await supabase.from('brand_banners').update(payload).eq('id', id);
-            if (error) throw error;
+            await supabase.from('brand_banners').update(payload).eq('id', id);
         } else {
-            const { error } = await supabase.from('brand_banners').insert([payload]);
-            if (error) throw error;
+            await supabase.from('brand_banners').insert([payload]);
         }
         closeBannerModal();
         fetchBanners();
     } catch (error) {
         console.error(error);
-        alert('Gagal menyimpan banner: ' + (error.message || 'Error tidak diketahui.'));
+        alert('Gagal menyimpan banner.');
     } finally {
         saveBannerBtn.disabled = false;
         saveBannerBtn.textContent = 'Simpan Data';
@@ -695,16 +659,14 @@ bannerForm.addEventListener('submit', async (e) => {
 
 window.deleteBanner = async (id) => {
     if (confirm('Yakin ingin menghapus banner ini?')) {
-        const { error } = await supabase.from('brand_banners').delete().eq('id', id);
-        if (error) alert('Gagal menghapus banner.');
-        else fetchBanners();
+        await supabase.from('brand_banners').delete().eq('id', id);
+        fetchBanners();
     }
 };
 
 window.toggleBanner = async (id, currentStatus) => {
-    const { error } = await supabase.from('brand_banners').update({ is_active: !currentStatus }).eq('id', id);
-    if (error) alert('Gagal mengubah status banner.');
-    else fetchBanners();
+    await supabase.from('brand_banners').update({ is_active: !currentStatus }).eq('id', id);
+    fetchBanners();
 };
 
 window.editBanner = (id) => {
@@ -712,13 +674,9 @@ window.editBanner = (id) => {
     if (b) openBannerModal(b);
 };
 
-openAddBannerModalBtn.addEventListener('click', () => openBannerModal());
-closeBannerModalBtn.addEventListener('click', closeBannerModal);
-cancelBannerModalBtn.addEventListener('click', closeBannerModal);
-
 // --- Ticker Management Logic ---
 async function fetchTickers() {
-    tickerTableBody.innerHTML = '<tr><td colspan="4" style="text-align:center;">Memuat data...</td></tr>';
+    tickerTableBody.innerHTML = '<tr><td colspan="4" class="text-center py-4 text-slate-500">Memuat data...</td></tr>';
     const { data, error } = await supabase.from('news_ticker').select('*').order('sort_order');
     if (error) {
         console.error(error);
@@ -731,21 +689,21 @@ async function fetchTickers() {
 
 function renderTickerTable() {
     if (tickers.length === 0) {
-        tickerTableBody.innerHTML = '<tr><td colspan="4" style="text-align:center; color:#888;">Belum ada pesan ticker.</td></tr>';
+        tickerTableBody.innerHTML = '<tr><td colspan="4" class="text-center py-4 text-slate-500">Belum ada pesan ticker.</td></tr>';
         return;
     }
     tickerTableBody.innerHTML = tickers.map(t => {
-        const badgeClass = t.is_active ? 'badge-visible' : 'badge-hidden';
+        const badgeClass = t.is_active ? 'bg-emerald-900/30 text-emerald-400' : 'bg-red-900/30 text-red-400';
         const badgeText = t.is_active ? 'Aktif' : 'Nonaktif';
         return `
-        <tr>
-            <td><strong>${t.sort_order}</strong></td>
-            <td>${t.message}</td>
-            <td><span class="${badgeClass}">${badgeText}</span></td>
-            <td class="action-btns">
-                <button class="btn-icon ${t.is_active ? 'btn-success' : 'btn-secondary'}" onclick="window.toggleTicker('${t.id}', ${t.is_active})" title="${t.is_active ? 'Nonaktifkan' : 'Aktifkan'}"><i class="fa-solid ${t.is_active ? 'fa-check' : 'fa-power-off'}"></i></button>
-                <button class="btn-icon btn-edit" onclick="window.editTicker('${t.id}')" title="Edit"><i class="fa-solid fa-pen"></i></button>
-                <button class="btn-icon btn-danger" onclick="window.deleteTicker('${t.id}')" title="Hapus"><i class="fa-solid fa-trash"></i></button>
+        <tr class="hover:bg-slate-800/50">
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-white">${t.sort_order}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-300">${t.message}</td>
+            <td class="px-6 py-4 whitespace-nowrap"><span class="inline-flex items-center gap-1.5 py-1 px-2 rounded-full text-xs font-medium ${badgeClass}">${badgeText}</span></td>
+            <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                <button class="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-transparent ${t.is_active ? 'text-emerald-400 hover:bg-emerald-400/10' : 'text-slate-400 hover:bg-slate-800'}" onclick="window.toggleTicker('${t.id}', ${t.is_active})" title="${t.is_active ? 'Nonaktifkan' : 'Aktifkan'}"><i class="fa-solid ${t.is_active ? 'fa-check' : 'fa-power-off'}"></i></button>
+                <button class="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-transparent text-blue-400 hover:bg-blue-400/10" onclick="window.editTicker('${t.id}')" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                <button class="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-transparent text-red-400 hover:bg-red-400/10" onclick="window.deleteTicker('${t.id}')" title="Hapus"><i class="fa-solid fa-trash"></i></button>
             </td>
         </tr>
     `}).join('');
@@ -765,11 +723,11 @@ function openTickerModal(editData = null) {
         tOrder.value = tickers.length > 0 ? Math.max(...tickers.map(t => t.sort_order)) + 1 : 1;
         tStatus.value = 'true';
     }
-    tickerModal.style.display = 'flex';
+    HSOverlay.open(document.querySelector('#tickerModal'));
 }
 
 function closeTickerModal() {
-    tickerModal.style.display = 'none';
+    HSOverlay.close(document.querySelector('#tickerModal'));
 }
 
 tickerForm.addEventListener('submit', async (e) => {
@@ -783,17 +741,15 @@ tickerForm.addEventListener('submit', async (e) => {
     const payload = { message, sort_order, is_active };
     try {
         if (id) {
-            const { error } = await supabase.from('news_ticker').update(payload).eq('id', id);
-            if (error) throw error;
+            await supabase.from('news_ticker').update(payload).eq('id', id);
         } else {
-            const { error } = await supabase.from('news_ticker').insert([payload]);
-            if (error) throw error;
+            await supabase.from('news_ticker').insert([payload]);
         }
         closeTickerModal();
         fetchTickers();
     } catch (error) {
         console.error(error);
-        alert('Gagal menyimpan ticker: ' + (error.message || 'Error tidak diketahui.'));
+        alert('Gagal menyimpan ticker.');
     } finally {
         saveTickerBtn.disabled = false;
         saveTickerBtn.textContent = 'Simpan Data';
@@ -802,23 +758,17 @@ tickerForm.addEventListener('submit', async (e) => {
 
 window.deleteTicker = async (id) => {
     if (confirm('Yakin ingin menghapus pesan ticker ini?')) {
-        const { error } = await supabase.from('news_ticker').delete().eq('id', id);
-        if (error) alert('Gagal menghapus ticker.');
-        else fetchTickers();
+        await supabase.from('news_ticker').delete().eq('id', id);
+        fetchTickers();
     }
 };
 
 window.toggleTicker = async (id, currentStatus) => {
-    const { error } = await supabase.from('news_ticker').update({ is_active: !currentStatus }).eq('id', id);
-    if (error) alert('Gagal mengubah status ticker.');
-    else fetchTickers();
+    await supabase.from('news_ticker').update({ is_active: !currentStatus }).eq('id', id);
+    fetchTickers();
 };
 
 window.editTicker = (id) => {
     const t = tickers.find(x => x.id == id);
     if (t) openTickerModal(t);
 };
-
-openAddTickerModalBtn.addEventListener('click', () => openTickerModal());
-closeTickerModalBtn.addEventListener('click', closeTickerModal);
-cancelTickerModalBtn.addEventListener('click', closeTickerModal);

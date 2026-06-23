@@ -1244,3 +1244,31 @@ body {
     from { transform: translateX(0); }
     to   { transform: translateX(-50%); }
 }
+
+/* Method Options (Pickup / Delivery) */
+.method-options {
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+}
+.method-btn {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid rgba(238, 160, 254, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-muted);
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.method-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+.method-btn.active {
+    background: var(--gradient-active);
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 0 10px rgba(26, 41, 245, 0.5);
+}
