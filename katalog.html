@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog - Eramel</title>
+    <meta name="description" content="Lihat katalog produk Eramel. Filter berdasarkan brand dan kategori, lalu pesan langsung via WhatsApp.">
+    <meta property="og:title" content="Katalog - Eramel">
+    <meta property="og:description" content="Lihat katalog produk Eramel. Filter berdasarkan brand dan kategori, lalu pesan langsung via WhatsApp.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Menggunakan font dan CSS eksternal -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./output.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/editors-note">
+    <style>
+        #particle-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Place it behind all content */
+        }
+    </style>
+    <script>
+        function scrollFilter(id, amount) {
+            document.getElementById(id).scrollBy({ left: amount, behavior: 'smooth' });
+        }
+    </script>
+<link rel="icon" type="image/png" href="./32x32.png">
+</head>
+<a href="#main-content" class="skip-to-content">Langsung ke konten</a>
+<a
+  href="https://wa.me/62881080611461?text=Hai%20MinMel%2C%20Mau%20pesan%20dong!"
+  class="wa-float"
+  target="_blank"
+  aria-label="Chat WhatsApp"
+>
+  <span class="wa-label">Chat MinMel</span>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+<button
+    class="scroll-top-btn"
+    id="scrollTopBtn"
+    aria-label="Scroll to top"
+    onclick="window.scrollTo({top:0, behavior:'smooth'})"
+>
+    <svg xmlns="http://www.w3.org/2000/svg"
+     width="24"
+     height="24"
+     viewBox="0 0 24 24"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="2.5"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+    <path d="M18 15L12 9L6 15"/>
+</svg>
+</button>
+<script>
+    const waLabel = document.querySelector('.wa-label');
+    setTimeout(() => waLabel.classList.add('visible'), 500);
+    setTimeout(() => waLabel.classList.remove('visible'), 5500);
+</script>
+<body>
+<div class="aurora">
+    <div class="aurora-1"></div>
+    <div class="aurora-2"></div>
+    <div class="aurora-3"></div>
+</div>
+
+
+    <canvas id="particle-canvas"></canvas>
+
+
+<header>
+        <div class="header-left">
+            <a href="index.html" aria-label="Kembali ke beranda Eramel">
+                <img src="./logo.png" alt="Eramel Logo" class="header-logo" />
+            </a>
+            <span class="tenant-chip" id="tenantChip"></span>
+        </div>
+    <div class="header-center">
+        <div class="search-container">
+            <i class="fa-solid fa-search search-icon"></i>
+            <input type="text" id="searchInput" class="search-input" placeholder="Cari produk atau brand...">
+        </div>
+    </div>
+    <div class="header-right">
+        <button class="cart-btn" id="cartOpenBtn" aria-label="Keranjang Belanja">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+    </div>
+</header>
+
+
+
+<main class="container" id="main-content">
+        <div class="filter-section">
+            <div class="brand-wrapper" id="brandWrapper">
+                <div class="categories" id="brandContainer"></div>
+            </div>
+            <div class="categories-wrapper">
+                <button class="scroll-btn" onclick="scrollFilter('categoryContainer', -200)">&#8249;</button>
+                <div class="categories" id="categoryContainer"></div>
+                <button class="scroll-btn" onclick="scrollFilter('categoryContainer', 200)">&#8250;</button>
+            </div>
+        </div>
+
+        <!-- Fitur 1: Brand Banner -->
+        <div id="brandBanner" class="brand-banner" style="display: none;">
+            <i class="fa-solid fa-circle-info banner-icon"></i>
+            <span id="brandBannerText"></span>
+        </div>
+
+        <div class="product-grid" id="productGrid">
+            <!-- Kartu Produk Dimuat di Sini -->
+        </div>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Keranjang Belanja</h2>
+            <button class="close-cart" id="cartCloseBtn"><i class="fa-solid fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItemsContainer"></div>
+        <div class="cart-footer" id="cartFooter" style="display: none;">
+            <div class="cart-summary" style="width: 100%; margin-bottom: 1.25rem;">
+                <div class="summary-row" style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; color: var(--text-muted); font-size: 0.9rem;">
+                    <span>Subtotal:</span>
+                    <span id="cartSubtotalValue">Rp 0</span>
+                </div>
+                <div class="summary-row" style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; color: var(--text-muted); font-size: 0.9rem;">
+                    <span>Diskon (<span id="voucherDiscountLabel">0%</span>):</span>
+                    <span id="cartDiscountValue">- Rp 0</span>
+                </div>
+                <div class="summary-row" style="display: flex; justify-content: space-between; font-size: 1.25rem; font-weight: 700; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 0.5rem; margin-top: 0.5rem;">
+                    <span>Total:</span>
+                    <span id="cartTotalValue">Rp 0</span>
+                </div>
+            </div>
+            <div class="cart-voucher-section">
+                <label for="cartVoucher">Punya kode voucher?</label>
+                <div class="voucher-control">
+                    <input type="text" id="cartVoucher" class="cart-input voucher-input" placeholder="Masukkan kode" autocomplete="off" spellcheck="false">
+                    <button type="button" class="voucher-apply-btn" id="applyVoucherBtn">Terapkan</button>
+                </div>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn" disabled>Lanjut Pembayaran</button>
+        </div>
+    </div>
+
+    <!-- Checkout Prompt Modal (Full Form) -->
+    <div class="custom-alert-overlay" id="checkoutPromptOverlay" style="align-items: flex-start; padding-top: 5vh; overflow-y: auto;">
+        <div class="custom-alert-box" style="margin-bottom: 5vh;">
+            <h3 class="alert-title" style="margin-bottom: 1.5rem;">Lengkapi Pesanan</h3>
+            <div class="cart-form" style="margin-bottom: 0;">
+                <div class="form-group-cart">
+                    <label>Metode Pesanan (Wajib)</label>
+                    <div class="method-options">
+                        <button type="button" class="method-btn" id="btnPickup">Pickup</button>
+                        <button type="button" class="method-btn" id="btnDelivery">Delivery</button>
+                    </div>
+                </div>
+                <div class="form-group-cart">
+                    <label for="custName">Nama</label>
+                    <input type="text" id="custName" class="cart-input" placeholder="Nama kamu" required>
+                </div>
+                <div class="form-group-cart">
+                    <label for="custOutlet">Outlet</label>
+                    <div class="outlet-autocomplete">
+                        <input type="text" id="custOutlet" class="cart-input" placeholder="Ketik nama outlet/cabang..." autocomplete="off" required>
+                        <ul id="outletSuggestions" class="outlet-suggestions"></ul>
+                    </div>
+                </div>
+                <div class="form-group-cart">
+                    <label for="custNotes">Notes</label>
+                    <textarea id="custNotes" class="cart-input" rows="2" placeholder="Catatan tambahan... (opsional)"></textarea>
+                </div>
+            </div>
+            <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                <button class="alert-close-btn btn-cancel" id="promptCancelBtn" style="flex: 1;">Batal</button>
+                <button class="alert-close-btn" id="promptSubmitBtn" style="flex: 1;">Pesan Sekarang</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Alert Modal -->
+    <div class="custom-alert-overlay" id="customAlertOverlay" role="alert" aria-live="assertive">
+        <div class="custom-alert-box">
+            <i class="fa-solid fa-circle-exclamation alert-icon"></i>
+            <h3 class="alert-title">Perhatian</h3>
+            <p class="alert-message" id="customAlertMessage">Pesan error di sini.</p>
+            <button class="alert-close-btn" id="customAlertCloseBtn">Mengerti</button>
+        </div>
+    </div>
+
+    <!-- Fitur 2: News Ticker Footer -->
+    <div id="newsTicker" class="news-ticker" style="display: none;">
+        <div class="ticker-scroll-area">
+            <div class="ticker-content" id="tickerContent"></div>
+        </div>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+    <script>
+        // Proteksi Konten
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        document.addEventListener('dragstart', e => e.preventDefault());
+        document.addEventListener('keydown', (e) => {
+            if (
+                (e.ctrlKey && ['s','u','a','c','p'].includes(e.key.toLowerCase())) ||
+                e.key === 'F12' ||
+                (e.ctrlKey && e.shiftKey && ['i','j','c'].includes(e.key.toLowerCase()))
+            ) {
+                e.preventDefault();
+            }
+        });
+
+        // Particle background script
+        const canvas = document.getElementById('particle-canvas');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        let particlesArray;
+
+        class Particle {
+            constructor(x, y, directionY, size, color) {
+                this.x = x;
+                this.y = y;
+                this.directionY = directionY;
+                this.size = size;
+                this.color = color;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+            }
+            update() {
+                this.y += this.directionY;
+                if (this.y < 0) {
+                    this.y = canvas.height + 10;
+                    this.x = Math.random() * canvas.width;
+                }
+                this.draw();
+            }
+        }
+
+        function initParticles() {
+            particlesArray = [];
+            let numberOfParticles = 120;
+            for (let i = 0; i < numberOfParticles; i++) {
+                let size = (Math.random() * 1.5) + 0.5;
+                let x = Math.random() * canvas.width;
+                let y = Math.random() * canvas.height;
+                let directionY = (Math.random() * -0.3) - 0.1;
+                let color = `rgba(255, 255, 255, ${Math.random() * 0.4 + 0.2})`;
+                particlesArray.push(new Particle(x, y, directionY, size, color));
+            }
+        }
+
+        function animateParticles() {
+            requestAnimationFrame(animateParticles);
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let i = 0; i < particlesArray.length; i++) {
+                particlesArray[i].update();
+            }
+        }
+
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            initParticles();
+            animateParticles();
+        }
+
+        const _mainHeader = document.querySelector('header');
+        if (_mainHeader) _mainHeader.classList.add('header-pinned', 'header-visible');
+
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (!header.classList.contains('header-pinned')) {
+                if (window.scrollY > 150) {
+                    header.classList.add('header-visible');
+                } else {
+                    header.classList.remove('header-visible');
+                }
+            }
+            const scrollBtn = document.getElementById('scrollTopBtn');
+            scrollBtn.classList.toggle('visible', window.scrollY > 200);
+        });
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            initParticles();
+        });
+
+
+    </script>
+    <script src="https://unpkg.com/lenis@1.3.25/dist/lenis.min.js"></script>
+    <script>
+        if (window.Lenis && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            window.lenis = new Lenis({ duration: 1.1, smoothWheel: true });
+            const lenisRaf = (time) => { window.lenis.raf(time); requestAnimationFrame(lenisRaf); };
+            requestAnimationFrame(lenisRaf);
+        }
+    </script>
+    <script src="./node_modules/preline/dist/preline.js"></script>
+</body>
+</html>

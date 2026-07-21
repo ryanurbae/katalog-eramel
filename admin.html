@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard - Katalog Eramel</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./output.css">
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Outfit', sans-serif; }
         /* Dropzone styles needed for the file upload */
         .dropzone { position: relative; width: 100%; min-height: 180px; border: 2px dashed #475569; border-radius: 12px; display: flex; justify-content: center; align-items: center; text-align: center; padding: 1rem; cursor: pointer; transition: all 0.3s ease; margin-top: 0.5rem; background: rgba(30,41,59,0.5); overflow: hidden; }
         .dropzone.dragover { border-style: solid; background: rgba(59,130,246,0.1); border-color: #3b82f6; }
@@ -16,6 +16,32 @@
         .dropzone-content { pointer-events: none; display: flex; flex-direction: column; align-items: center; z-index: 1; }
         .image-preview { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #1e293b; z-index: 5; display: flex; justify-content: center; align-items: center; overflow: hidden; }
         .image-preview img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* Toggle on/off untuk visibilitas per-produk */
+        .prod-toggle {
+            position: relative;
+            width: 44px;
+            height: 24px;
+            border-radius: 999px;
+            background: #475569;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            transition: background .2s ease;
+            flex-shrink: 0;
+        }
+        .prod-toggle.on { background: #22c55e; }
+        .prod-toggle-knob {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #fff;
+            transition: transform .2s ease;
+        }
+        .prod-toggle.on .prod-toggle-knob { transform: translateX(20px); }
     </style>
     <link rel="icon" type="image/png" href="./32x32.png">
 </head>
@@ -37,7 +63,7 @@
                     <label for="loginPassword" class="block text-sm font-medium mb-2 dark:text-white">Password</label>
                     <input type="password" id="loginPassword" class="py-3 px-4 block w-full border-slate-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-slate-700 dark:text-slate-400 dark:focus:ring-slate-600" required placeholder="••••••••">
                 </div>
-                <button type="submit" id="loginBtn" class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
+                <button type="submit" id="loginBtn" class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-[#1B62F1] text-white hover:bg-[#1550d0] transition-colors disabled:opacity-50 disabled:pointer-events-none">
                     Masuk
                 </button>
             </form>
@@ -47,22 +73,28 @@
     <!-- Dashboard View -->
     <div id="dashboardView" class="hidden min-h-screen flex">
         <!-- Sidebar -->
-        <aside class="w-64 bg-slate-900 border-r border-slate-800 flex flex-col flex-shrink-0">
-            <div class="px-6 py-5 border-b border-slate-800">
+        <aside class="w-64 bg-[#0f0f1a] border-r border-[#1a1a2e] flex flex-col flex-shrink-0">
+            <div class="px-6 py-5 border-b border-[#1a1a2e]">
                 <h2 class="text-xl font-bold text-white tracking-wide">Katalog Admin</h2>
             </div>
-            <nav class="p-4 flex flex-col gap-2 flex-grow">
-                <button id="menuProducts" class="sidebar-menu-btn flex items-center gap-x-3.5 py-2.5 px-3 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800 focus:outline-none focus:bg-slate-800 w-full text-left bg-slate-800 text-white border-l-4 border-blue-600">
+            <nav class="p-4 flex flex-col gap-1 flex-grow">
+                <button id="menuProducts" class="sidebar-menu-btn flex items-center gap-x-3.5 py-2.5 px-3 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-[#1a1a2e] focus:outline-none focus:bg-[#1a1a2e] w-full text-left bg-[#1a1a2e] text-white border-l-4 border-[#1B62F1]">
                     <i class="fa-solid fa-box w-5"></i> Data Produk
                 </button>
-                <button id="menuVouchers" class="sidebar-menu-btn flex items-center gap-x-3.5 py-2.5 px-3 rounded-lg text-sm text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none focus:bg-slate-800 w-full text-left">
+                <button id="menuVouchers" class="sidebar-menu-btn flex items-center gap-x-3.5 py-2.5 px-3 rounded-lg text-sm text-slate-400 hover:text-white hover:bg-[#1a1a2e] focus:outline-none focus:bg-[#1a1a2e] w-full text-left">
                     <i class="fa-solid fa-ticket w-5"></i> Voucher Diskon
                 </button>
-                <button id="menuBanners" class="sidebar-menu-btn flex items-center gap-x-3.5 py-2.5 px-3 rounded-lg text-sm text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none focus:bg-slate-800 w-full text-left">
+                <button id="menuBanners" class="sidebar-menu-btn flex items-center gap-x-3.5 py-2.5 px-3 rounded-lg text-sm text-slate-400 hover:text-white hover:bg-[#1a1a2e] focus:outline-none focus:bg-[#1a1a2e] w-full text-left">
                     <i class="fa-solid fa-flag w-5"></i> Banner Brand
                 </button>
-                <button id="menuTickers" class="sidebar-menu-btn flex items-center gap-x-3.5 py-2.5 px-3 rounded-lg text-sm text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none focus:bg-slate-800 w-full text-left">
+                <button id="menuTickers" class="sidebar-menu-btn flex items-center gap-x-3.5 py-2.5 px-3 rounded-lg text-sm text-slate-400 hover:text-white hover:bg-[#1a1a2e] focus:outline-none focus:bg-[#1a1a2e] w-full text-left">
                     <i class="fa-solid fa-bullhorn w-5"></i> News Ticker
+                </button>
+                <button id="menuTenants" class="sidebar-menu-btn flex items-center gap-x-3.5 py-2.5 px-3 rounded-lg text-sm text-slate-400 hover:text-white hover:bg-[#1a1a2e] focus:outline-none focus:bg-[#1a1a2e] w-full text-left">
+                    <i class="fa-solid fa-store w-5"></i> Daftar Tenant
+                </button>
+                <button id="menuSettings" class="sidebar-menu-btn flex items-center gap-x-3.5 py-2.5 px-3 rounded-lg text-sm text-slate-400 hover:text-white hover:bg-[#1a1a2e] focus:outline-none focus:bg-[#1a1a2e] w-full text-left">
+                    <i class="fa-solid fa-cog w-5"></i> Pengaturan Sistem
                 </button>
             </nav>
             <div class="p-4 mt-auto">
@@ -73,23 +105,16 @@
         </aside>
 
         <!-- Main Content -->
-        <main class="flex-grow p-4 sm:p-6 lg:p-8 overflow-y-auto bg-slate-950">
+        <main class="flex-grow p-4 sm:p-6 lg:p-8 overflow-y-auto bg-[#0a0a12]">
             <!-- VIEW PRODUK -->
             <div id="productsDashboard">
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
                     <h2 class="text-2xl font-bold text-white">Daftar Produk</h2>
-                    <button id="openAddModalBtn" class="py-2.5 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700" data-hs-overlay="#productModal">
+                    <button id="openAddModalBtn" class="py-2.5 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-[#1B62F1] text-white hover:bg-[#1550d0] transition-colors">
                         <i class="fa-solid fa-plus"></i> Tambah Produk
                     </button>
                 </div>
-                
-                <div class="mb-8 bg-slate-900 border border-slate-800 p-6 rounded-xl shadow-sm">
-                    <h3 class="mb-4 text-lg font-semibold text-white">Kelola Visibilitas Brand</h3>
-                    <div id="brandVisibilityContainer" class="flex flex-wrap gap-4">
-                        <!-- Brand visibility cards will be loaded here -->
-                    </div>
-                </div>
-                
+
                 <div class="mb-6 flex flex-wrap gap-4 items-end">
                     <div>
                         <label for="brandFilter" class="block text-sm font-medium mb-2 text-slate-300">Filter Brand:</label>
@@ -143,7 +168,7 @@
             <div id="vouchersDashboard" class="hidden">
                 <div class="flex justify-between items-center mb-8">
                     <h2 class="text-2xl font-bold text-white">Daftar Voucher</h2>
-                    <button id="openAddVoucherModalBtn" class="py-2.5 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700" data-hs-overlay="#voucherModal">
+                    <button id="openAddVoucherModalBtn" class="py-2.5 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-[#1B62F1] text-white hover:bg-[#1550d0] transition-colors">
                         <i class="fa-solid fa-plus"></i> Tambah Voucher
                     </button>
                 </div>
@@ -168,7 +193,7 @@
             <div id="bannersDashboard" class="hidden">
                 <div class="flex justify-between items-center mb-8">
                     <h2 class="text-2xl font-bold text-white">Daftar Banner Brand</h2>
-                    <button id="openAddBannerModalBtn" class="py-2.5 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700" data-hs-overlay="#bannerModal">
+                    <button id="openAddBannerModalBtn" class="py-2.5 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-[#1B62F1] text-white hover:bg-[#1550d0] transition-colors">
                         <i class="fa-solid fa-plus"></i> Tambah Banner
                     </button>
                 </div>
@@ -193,7 +218,7 @@
             <div id="tickersDashboard" class="hidden">
                 <div class="flex justify-between items-center mb-4">
                     <h2 class="text-2xl font-bold text-white">Daftar News Ticker</h2>
-                    <button id="openAddTickerModalBtn" class="py-2.5 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700" data-hs-overlay="#tickerModal">
+                    <button id="openAddTickerModalBtn" class="py-2.5 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-[#1B62F1] text-white hover:bg-[#1550d0] transition-colors">
                         <i class="fa-solid fa-plus"></i> Tambah Pesan
                     </button>
                 </div>
@@ -214,8 +239,53 @@
                     </div>
                 </div>
             </div>
+
+            <!-- VIEW TENANTS -->
+            <div id="tenantsDashboard" class="hidden">
+                <div class="flex justify-between items-center mb-8">
+                    <h2 class="text-2xl font-bold text-white">Daftar Tenant (Brand)</h2>
+                    <button id="openAddTenantModalBtn" class="py-2.5 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-[#1B62F1] text-white hover:bg-[#1550d0] transition-colors">
+                        <i class="fa-solid fa-plus"></i> Tambah Tenant
+                    </button>
+                </div>
+                <p class="mb-8 text-sm text-slate-400">Atur brand yang tampil di landing page. Nonaktifkan <span class="text-white">is_visible</span> untuk menyembunyikan tombol tenant (seperti Kopi Kenangan &amp; Fore).</p>
+                <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-sm">
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-slate-800">
+                            <thead class="bg-slate-800/50">
+                                <tr>
+                                    <th scope="col" class="px-6 py-4 text-left text-xs font-semibold text-slate-400 uppercase tracking-wider">Brand</th>
+                                    <th scope="col" class="px-6 py-4 text-left text-xs font-semibold text-slate-400 uppercase tracking-wider">Aksen</th>
+                                    <th scope="col" class="px-6 py-4 text-left text-xs font-semibold text-slate-400 uppercase tracking-wider">Status</th>
+                                    <th scope="col" class="px-6 py-4 text-right text-xs font-semibold text-slate-400 uppercase tracking-wider">Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tenantTableBody" class="divide-y divide-slate-800"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VIEW SETTINGS -->
+            <div id="settingsDashboard" class="hidden">
+                <div class="flex justify-between items-center mb-8">
+                    <h2 class="text-2xl font-bold text-white">Pengaturan Sistem</h2>
+                </div>
+                <p class="mb-8 text-sm text-slate-400">Atur konfigurasi global aplikasi.</p>
+
+                <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-sm p-6">
+                    <div class="flex items-center justify-between max-w-lg">
+                        <div>
+                            <h3 class="text-lg font-medium text-white">Metode Delivery</h3>
+                            <p class="text-sm text-slate-400 mt-1">Mengaktifkan atau menonaktifkan metode pesanan Delivery di halaman katalog.</p>
+                        </div>
+                        <button type="button" id="deliveryToggleBtn" class="prod-toggle" role="switch" aria-checked="false" title="Aktifkan/Nonaktifkan Delivery">
+                            <span class="prod-toggle-knob"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </main>
-    </div>
 
     <!-- Product Modal -->
     <div id="productModal" class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none [--overlay-backdrop:static]" data-hs-overlay-keyboard="false">
@@ -386,6 +456,58 @@
                 <div class="flex justify-end items-center gap-x-2 py-3 px-4 border-t border-slate-700">
                     <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-slate-700 bg-slate-800 text-slate-300 shadow-sm hover:bg-slate-700 disabled:opacity-50 disabled:pointer-events-none" data-hs-overlay="#tickerModal">Batal</button>
                     <button type="submit" form="tickerForm" id="saveTickerBtn" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">Simpan Data</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tenant Modal -->
+    <div id="tenantModal" class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none [--overlay-backdrop:static]" data-hs-overlay-keyboard="false">
+        <div class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-sm sm:w-full m-3 sm:mx-auto min-h-[calc(100%-3.5rem)] flex items-center">
+            <div class="w-full flex flex-col bg-slate-900 border border-slate-700 shadow-sm rounded-xl pointer-events-auto">
+                <div class="flex justify-between items-center py-3 px-4 border-b border-slate-700">
+                    <h3 id="tenantModalTitle" class="font-bold text-white">Tambah Tenant</h3>
+                    <button type="button" class="flex justify-center items-center size-7 text-sm font-semibold rounded-full border border-transparent text-slate-400 hover:bg-slate-800 disabled:opacity-50 disabled:pointer-events-none" data-hs-overlay="#tenantModal">
+                        <span class="sr-only">Close</span>
+                        <i class="fa-solid fa-times"></i>
+                    </button>
+                </div>
+                <div class="p-4 overflow-y-auto">
+                    <form id="tenantForm" class="space-y-4">
+                        <input type="hidden" id="tenantId">
+                        <div>
+                            <label class="block text-sm font-medium mb-2 text-white">Slug (URL)</label>
+                            <input type="text" id="tSlug" class="py-3 px-4 block w-full border-slate-700 bg-slate-800 text-slate-300 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500" required autocomplete="off" placeholder="janji-jiwa">
+                            <small class="text-slate-400">Dipakai di URL: katalog.html?tenant=<span id="tSlugPreview">...</span></small>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2 text-white">Nama Tampilan</label>
+                            <input type="text" id="tName" class="py-3 px-4 block w-full border-slate-700 bg-slate-800 text-slate-300 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500" required placeholder="Janji Jiwa">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2 text-white">Brand (harus sama dengan products.brand)</label>
+                            <input type="text" id="tBrand" class="py-3 px-4 block w-full border-slate-700 bg-slate-800 text-slate-300 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500" required placeholder="Janji Jiwa">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2 text-white">URL Logo (opsional)</label>
+                            <input type="text" id="tLogo" class="py-3 px-4 block w-full border-slate-700 bg-slate-800 text-slate-300 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500" placeholder="https://...">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2 text-white">Warna Aksen</label>
+                            <input type="color" id="tAccent" class="py-2 px-2 block w-full border-slate-700 bg-slate-800 rounded-lg" value="#1B62F1">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2 text-white">Tampil di Landing</label>
+                            <select id="tVisible" class="py-3 px-4 block w-full border-slate-700 bg-slate-800 text-slate-300 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500" required>
+                                <option value="true">Ya (Tampil)</option>
+                                <option value="false">Tidak (Sembunyi)</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="flex justify-end items-center gap-x-2 py-3 px-4 border-t border-slate-700">
+                    <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-slate-700 bg-slate-800 text-slate-300 shadow-sm hover:bg-slate-700 disabled:opacity-50 disabled:pointer-events-none" data-hs-overlay="#tenantModal">Batal</button>
+                    <button type="submit" form="tenantForm" id="saveTenantBtn" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">Simpan Data</button>
                 </div>
             </div>
         </div>

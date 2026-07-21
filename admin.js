@@ -77,11 +77,33 @@ const tMessage = document.getElementById('tMessage');
 const tOrder = document.getElementById('tOrder');
 const tStatus = document.getElementById('tStatus');
 
+// DOM Elements - Tenants
+const menuTenants = document.getElementById('menuTenants');
+const tenantsDashboard = document.getElementById('tenantsDashboard');
+const tenantTableBody = document.getElementById('tenantTableBody');
+const tenantForm = document.getElementById('tenantForm');
+const tenantModalTitle = document.getElementById('tenantModalTitle');
+const saveTenantBtn = document.getElementById('saveTenantBtn');
+const tTenantId = document.getElementById('tenantId');
+const tSlug = document.getElementById('tSlug');
+const tSlugPreview = document.getElementById('tSlugPreview');
+const tName = document.getElementById('tName');
+const tBrand = document.getElementById('tBrand');
+const tLogo = document.getElementById('tLogo');
+const tAccent = document.getElementById('tAccent');
+const tVisible = document.getElementById('tVisible');
+
+// DOM Elements - Settings
+const menuSettings = document.getElementById('menuSettings');
+const settingsDashboard = document.getElementById('settingsDashboard');
+const deliveryToggleBtn = document.getElementById('deliveryToggleBtn');
+
 // State
 let products = [];
 let vouchers = [];
 let banners = [];
 let tickers = [];
+let tenants = [];
 let existingImageUrl = null;
 
 // --- Helpers ---
@@ -142,15 +164,15 @@ logoutBtn.addEventListener('click', async () => {
 
 // --- Menu Navigation ---
 function switchTab(activeMenu, activeDashboard, fetchCallback) {
-    const menus = [menuProducts, menuVouchers, menuBanners, menuTickers];
+    const menus = [menuProducts, menuVouchers, menuBanners, menuTickers, menuTenants, menuSettings];
     menus.forEach(menu => {
-        menu.classList.remove('bg-slate-800', 'text-white', 'border-blue-600');
+        menu.classList.remove('bg-[#1a1a2e]', 'text-white', 'border-[#1B62F1]');
         menu.classList.add('text-slate-400', 'border-transparent');
     });
     activeMenu.classList.remove('text-slate-400', 'border-transparent');
-    activeMenu.classList.add('bg-slate-800', 'text-white', 'border-blue-600');
-    
-    const dashboards = [productsDashboard, vouchersDashboard, bannersDashboard, tickersDashboard];
+    activeMenu.classList.add('bg-[#1a1a2e]', 'text-white', 'border-[#1B62F1]');
+
+    const dashboards = [productsDashboard, vouchersDashboard, bannersDashboard, tickersDashboard, tenantsDashboard, settingsDashboard];
     dashboards.forEach(dash => {
         if (dash !== activeDashboard) {
             dash.classList.add('hidden', 'opacity-0');
@@ -158,7 +180,7 @@ function switchTab(activeMenu, activeDashboard, fetchCallback) {
             dash.style.display = 'none';
         }
     });
-    
+
     activeDashboard.style.display = 'block';
     activeDashboard.classList.remove('hidden');
     
@@ -175,6 +197,61 @@ menuProducts.addEventListener('click', () => switchTab(menuProducts, productsDas
 menuVouchers.addEventListener('click', () => switchTab(menuVouchers, vouchersDashboard, fetchVouchers));
 menuBanners.addEventListener('click', () => switchTab(menuBanners, bannersDashboard, fetchBanners));
 menuTickers.addEventListener('click', () => switchTab(menuTickers, tickersDashboard, fetchTickers));
+menuTenants.addEventListener('click', () => switchTab(menuTenants, tenantsDashboard, fetchTenants));
+menuSettings.addEventListener('click', () => switchTab(menuSettings, settingsDashboard, fetchSettings));
+
+tSlug.addEventListener('input', () => {
+    tSlugPreview.textContent = tSlug.value.trim() || '...';
+});
+
+// --- Settings Logic ---
+async function fetchSettings() {
+    const { data, error } = await supabase.from('settings').select('*');
+    if (error) {
+        console.error('Error fetching settings:', error);
+        return;
+    }
+    const deliverySetting = data.find(s => s.key === 'delivery_method_enabled');
+    if (deliverySetting) {
+        const isEnabled = deliverySetting.value === 'true' || deliverySetting.value === true;
+        if (isEnabled) {
+            deliveryToggleBtn.classList.add('on');
+            deliveryToggleBtn.setAttribute('aria-checked', 'true');
+        } else {
+            deliveryToggleBtn.classList.remove('on');
+            deliveryToggleBtn.setAttribute('aria-checked', 'false');
+        }
+    }
+}
+
+deliveryToggleBtn.addEventListener('click', async () => {
+    const isCurrentlyOn = deliveryToggleBtn.classList.contains('on');
+    const newState = !isCurrentlyOn;
+
+    // Optimistic UI update
+    if (newState) {
+        deliveryToggleBtn.classList.add('on');
+    } else {
+        deliveryToggleBtn.classList.remove('on');
+    }
+    deliveryToggleBtn.setAttribute('aria-checked', newState.toString());
+
+    const { error } = await supabase.from('settings')
+        .update({ value: newState })
+        .eq('key', 'delivery_method_enabled');
+
+    if (error) {
+        console.error('Error updating delivery setting:', error);
+        alert('Gagal menyimpan pengaturan Delivery! Pesan: ' + error.message);
+        // Revert UI
+        if (isCurrentlyOn) {
+            deliveryToggleBtn.classList.add('on');
+        } else {
+            deliveryToggleBtn.classList.remove('on');
+        }
+        deliveryToggleBtn.setAttribute('aria-checked', isCurrentlyOn.toString());
+    }
+});
 
 // --- Dashboard Logic ---
 async function fetchProducts() {
@@ -188,39 +265,13 @@ async function fetchProducts() {
 
     if (error) {
         console.error(error);
-        alert('Gagal mengambil data produk!');
+        alert('Tidak bisa mengambil data produk. Cek koneksi internet lalu coba lagi.');
         return;
     }
     
     products = data || [];
-    renderBrandVisibility();
     renderTable();
     updateCategoryDatalist();
-}
-
-function renderBrandVisibility() {
-    const brandVisibilityContainer = document.getElementById('brandVisibilityContainer');
-    const brands = [...new Set(products.map(p => p.brand).filter(Boolean))];
-    
-    brandVisibilityContainer.innerHTML = brands.map(brand => {
-        const brandProducts = products.filter(p => p.brand === brand);
-        const isAllHidden = brandProducts.length > 0 && brandProducts.every(p => p.is_hidden);
-        
-        const badgeClass = isAllHidden ? 'bg-red-900/30 text-red-400 border-red-800' : 'bg-emerald-900/30 text-emerald-400 border-emerald-800';
-        const badgeText = isAllHidden ? 'Tersembunyi' : 'Tampil';
-        
-        return `
-            <div class="border border-slate-700 bg-slate-800/50 p-4 rounded-xl flex flex-col gap-3 min-w-[200px]">
-                <div class="flex justify-between items-center">
-                    <strong class="text-slate-200">${brand}</strong>
-                    <span class="inline-flex items-center gap-x-1.5 py-1 px-2.5 rounded-full text-xs font-medium border ${badgeClass}">${badgeText}</span>
-                </div>
-                <button class="w-full py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent ${isAllHidden ? 'bg-emerald-600 text-white hover:bg-emerald-700' : 'bg-red-600 text-white hover:bg-red-700'}" onclick="window.toggleBrandVisibility('${brand}', ${!isAllHidden})">
-                    ${isAllHidden ? '<i class="fa-solid fa-eye"></i> Tampilkan' : '<i class="fa-solid fa-eye-slash"></i> Sembunyikan'}
-                </button>
-            </div>
-        `;
-    }).join('');
 }
 
 function renderTable() {
@@ -267,7 +318,7 @@ function renderTable() {
             <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-300">${formatRupiah(product.price)}</td>
             <td class="px-6 py-4 whitespace-nowrap"><span class="inline-flex items-center gap-1.5 py-1 px-2 rounded-full text-xs font-medium ${badgeClass}">${badgeText}</span></td>
             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                <button class="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-transparent ${product.is_hidden ? 'text-emerald-400 hover:bg-emerald-400/10' : 'text-slate-400 hover:bg-slate-800'}" onclick="window.toggleProductVisibility('${product.id}', ${product.is_hidden})" title="${product.is_hidden ? 'Tampilkan' : 'Sembunyikan'}"><i class="fa-solid ${product.is_hidden ? 'fa-eye' : 'fa-eye-slash'}"></i></button>
+                <button type="button" class="prod-toggle ${product.is_hidden ? '' : 'on'}" role="switch" aria-checked="${!product.is_hidden}" onclick="window.toggleProductVisibility('${product.id}', ${product.is_hidden})" title="${product.is_hidden ? 'Tampilkan' : 'Sembunyikan'}"><span class="prod-toggle-knob"></span></button>
                 <button class="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-transparent text-blue-400 hover:bg-blue-400/10" onclick="window.editProduct('${product.id}')" title="Edit"><i class="fa-solid fa-pen"></i></button>
                 <button class="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-transparent text-red-400 hover:bg-red-400/10" onclick="window.deleteProduct('${product.id}')" title="Hapus"><i class="fa-solid fa-trash"></i></button>
             </td>
@@ -339,6 +390,8 @@ function openModal(editData = null) {
 function closeModal() {
     HSOverlay.close(document.querySelector('#productModal'));
 }
+
+openAddModalBtn.addEventListener('click', () => openModal());
 
 // Fungsi Handle File Gambar (Browse & Paste)
 function handleFile(file) {
@@ -412,7 +465,7 @@ productForm.addEventListener('submit', async (e) => {
 
     } catch (error) {
         console.error("Gagal menyimpan produk: ", error);
-        alert('Terjadi kesalahan saat menyimpan produk.');
+        alert('Gagal menyimpan produk. Pastikan semua kolom terisi dengan benar.');
     } finally {
         saveProductBtn.disabled = false;
         saveProductBtn.textContent = 'Simpan Data';
@@ -420,7 +473,7 @@ productForm.addEventListener('submit', async (e) => {
 });
 
 window.deleteProduct = async (id) => {
-    if (confirm('Apakah Anda yakin ingin menghapus produk ini? Tindakan ini tidak dapat dibatalkan.')) {
+    if (confirm('Hapus produk ini? Tindakan ini tidak bisa dibatalkan.')) {
         try {
             const { error } = await supabase.from('products').delete().eq('id', id);
             if (error) throw error;
@@ -429,17 +482,6 @@ window.deleteProduct = async (id) => {
             console.error('Gagal menghapus produk: ', error);
             alert('Terjadi kesalahan saat menghapus produk.');
         }
-    }
-};
-
-window.toggleBrandVisibility = async (brand, hide) => {
-    try {
-        const { error } = await supabase.from('products').update({ is_hidden: hide }).eq('brand', brand);
-        if (error) throw error;
-        fetchProducts();
-    } catch (error) {
-        console.error('Error toggling brand visibility:', error);
-        alert('Gagal mengubah visibilitas brand.');
     }
 };
 
@@ -483,7 +525,7 @@ async function fetchVouchers() {
     const { data, error } = await supabase.from('vouchers').select('*').order('code');
     if (error) {
         console.error(error);
-        alert('Gagal mengambil data voucher!');
+        alert('Tidak bisa mengambil data voucher. Cek koneksi lalu coba lagi.');
         return;
     }
     vouchers = data || [];
@@ -532,6 +574,8 @@ function closeVoucherModal() {
     HSOverlay.close(document.querySelector('#voucherModal'));
 }
 
+document.getElementById('openAddVoucherModalBtn').addEventListener('click', () => openVoucherModal());
+
 voucherForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     saveVoucherBtn.disabled = true;
@@ -552,7 +596,7 @@ voucherForm.addEventListener('submit', async (e) => {
     } catch (error) {
         console.error(error);
         if (error.code === '23505') alert('Kode voucher sudah ada!');
-        else alert('Gagal menyimpan voucher.');
+        else         alert('Gagal menyimpan voucher. Pastikan kode belum dipakai.');
     } finally {
         saveVoucherBtn.disabled = false;
         saveVoucherBtn.textContent = 'Simpan Data';
@@ -560,7 +604,7 @@ voucherForm.addEventListener('submit', async (e) => {
 });
 
 window.deleteVoucher = async (id) => {
-    if (confirm('Yakin ingin menghapus voucher ini?')) {
+    if (confirm('Hapus voucher ini?')) {
         await supabase.from('vouchers').delete().eq('id', id);
         fetchVouchers();
     }
@@ -582,7 +626,7 @@ async function fetchBanners() {
     const { data, error } = await supabase.from('brand_banners').select('*').order('brand');
     if (error) {
         console.error(error);
-        alert('Gagal mengambil data banner!');
+        alert('Tidak bisa mengambil data banner. Cek koneksi lalu coba lagi.');
         return;
     }
     banners = data || [];
@@ -631,6 +675,8 @@ function closeBannerModal() {
     HSOverlay.close(document.querySelector('#bannerModal'));
 }
 
+document.getElementById('openAddBannerModalBtn').addEventListener('click', () => openBannerModal());
+
 bannerForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     saveBannerBtn.disabled = true;
@@ -658,7 +704,7 @@ bannerForm.addEventListener('submit', async (e) => {
 });
 
 window.deleteBanner = async (id) => {
-    if (confirm('Yakin ingin menghapus banner ini?')) {
+    if (confirm('Hapus banner ini?')) {
         await supabase.from('brand_banners').delete().eq('id', id);
         fetchBanners();
     }
@@ -680,7 +726,7 @@ async function fetchTickers() {
     const { data, error } = await supabase.from('news_ticker').select('*').order('sort_order');
     if (error) {
         console.error(error);
-        alert('Gagal mengambil data ticker!');
+        alert('Tidak bisa mengambil data ticker. Cek koneksi lalu coba lagi.');
         return;
     }
     tickers = data || [];
@@ -730,6 +776,8 @@ function closeTickerModal() {
     HSOverlay.close(document.querySelector('#tickerModal'));
 }
 
+document.getElementById('openAddTickerModalBtn').addEventListener('click', () => openTickerModal());
+
 tickerForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     saveTickerBtn.disabled = true;
@@ -757,7 +805,7 @@ tickerForm.addEventListener('submit', async (e) => {
 });
 
 window.deleteTicker = async (id) => {
-    if (confirm('Yakin ingin menghapus pesan ticker ini?')) {
+    if (confirm('Hapus pesan ticker ini?')) {
         await supabase.from('news_ticker').delete().eq('id', id);
         fetchTickers();
     }
@@ -771,4 +819,152 @@ window.toggleTicker = async (id, currentStatus) => {
 window.editTicker = (id) => {
     const t = tickers.find(x => x.id == id);
     if (t) openTickerModal(t);
+};
+
+// --- Tenant Management Logic ---
+// Pemetaan brand tenant -> brand produk di DB (sama seperti di app.js)
+// agar cascade hide/unhide mengenai produk yang brand-nya beda penulisan.
+const TENANT_BRAND_ALIAS = {
+    'tomoro': 'Tomoro Coffee',
+    'fore': 'Fore Coffee',
+};
+
+async function fetchTenants() {
+    tenantTableBody.innerHTML = '<tr><td colspan="4" class="text-center py-4 text-slate-500">Memuat data...</td></tr>';
+    const { data, error } = await supabase.from('tenants').select('*').order('sort_order');
+    if (error) {
+        console.error(error);
+        alert('Tidak bisa mengambil data tenant. Cek koneksi lalu coba lagi.');
+        return;
+    }
+    tenants = data || [];
+    renderTenantTable();
+}
+
+function renderTenantTable() {
+    if (tenants.length === 0) {
+        tenantTableBody.innerHTML = '<tr><td colspan="4" class="text-center py-4 text-slate-500">Belum ada tenant.</td></tr>';
+        return;
+    }
+    tenantTableBody.innerHTML = tenants.map(t => {
+        const badgeClass = t.is_visible ? 'bg-emerald-900/30 text-emerald-400' : 'bg-red-900/30 text-red-400';
+        const badgeText = t.is_visible ? 'Tampil' : 'Sembunyi';
+        return `
+        <tr class="hover:bg-slate-800/50">
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-300">${t.brand || '-'}</td>
+            <td class="px-6 py-4 whitespace-nowrap"><span class="inline-block size-5 rounded" style="background:${t.accent || '#1B62F1'}"></span></td>
+            <td class="px-6 py-4 whitespace-nowrap"><span class="inline-flex items-center gap-1.5 py-1 px-2 rounded-full text-xs font-medium ${badgeClass}">${badgeText}</span></td>
+            <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                <button class="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-transparent ${t.is_visible ? 'text-slate-400 hover:bg-slate-800' : 'text-emerald-400 hover:bg-emerald-400/10'}" onclick="window.toggleTenant('${t.slug}', ${t.is_visible})" title="${t.is_visible ? 'Sembunyikan' : 'Tampilkan'}"><i class="fa-solid ${t.is_visible ? 'fa-eye-slash' : 'fa-eye'}"></i></button>
+                <button class="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-transparent text-blue-400 hover:bg-blue-400/10" onclick="window.editTenant('${t.slug}')" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                <button class="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-transparent text-red-400 hover:bg-red-400/10" onclick="window.deleteTenant('${t.slug}')" title="Hapus"><i class="fa-solid fa-trash"></i></button>
+            </td>
+        </tr>
+        `;
+    }).join('');
+}
+
+function openTenantModal(editData = null) {
+    tenantForm.reset();
+    if (editData) {
+        tenantModalTitle.textContent = 'Edit Tenant';
+        tTenantId.value = editData.slug;
+        tSlug.value = editData.slug;
+        tSlug.readOnly = true;
+        tName.value = editData.name;
+        tBrand.value = editData.brand;
+        tLogo.value = editData.logo_url || '';
+        tAccent.value = editData.accent || '#1B62F1';
+        tVisible.value = editData.is_visible.toString();
+    } else {
+        tenantModalTitle.textContent = 'Tambah Tenant';
+        tTenantId.value = '';
+        tSlug.readOnly = false;
+        tSlug.value = '';
+        tAccent.value = '#1B62F1';
+        tVisible.value = 'true';
+    }
+    tSlugPreview.textContent = tSlug.value.trim() || '...';
+    HSOverlay.open(document.querySelector('#tenantModal'));
+}
+
+function closeTenantModal() {
+    HSOverlay.close(document.querySelector('#tenantModal'));
+}
+
+document.getElementById('openAddTenantModalBtn').addEventListener('click', () => openTenantModal());
+
+tenantForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    saveTenantBtn.disabled = true;
+    saveTenantBtn.textContent = 'Menyimpan...';
+    const slug = tSlug.value.trim();
+    const payload = {
+        slug,
+        name: tName.value.trim(),
+        brand: tBrand.value.trim(),
+        logo_url: tLogo.value.trim() || null,
+        accent: tAccent.value,
+        is_visible: tVisible.value === 'true'
+    };
+    try {
+        if (tTenantId.value) {
+            const { error } = await supabase.from('tenants').update(payload).eq('slug', slug);
+            if (error) throw error;
+        } else {
+            const { error } = await supabase.from('tenants').insert([payload]);
+            if (error) throw error;
+        }
+        closeTenantModal();
+        fetchTenants();
+    } catch (error) {
+        console.error(error);
+        if (error.code === '23505') alert('Slug sudah ada!');
+        else alert('Gagal menyimpan tenant.');
+    } finally {
+        saveTenantBtn.disabled = false;
+        saveTenantBtn.textContent = 'Simpan Data';
+    }
+});
+
+window.deleteTenant = async (slug) => {
+    if (confirm('Hapus tenant ini? Semua produk terkait juga akan disembunyikan.')) {
+        const { error } = await supabase.from('tenants').delete().eq('slug', slug);
+        if (error) {
+            console.error(error);
+            alert('Gagal menghapus tenant.');
+            return;
+        }
+        fetchTenants();
+    }
+};
+
+window.toggleTenant = async (slug, currentStatus) => {
+    try {
+        const newVisible = !currentStatus;
+        const { error } = await supabase.from('tenants').update({ is_visible: newVisible }).eq('slug', slug);
+        if (error) throw error;
+
+        // Cascade: semua produk brand ini ikut hidden/unhidden
+        const t = tenants.find(x => x.slug === slug);
+        if (t) {
+            const brands = [t.brand];
+            if (TENANT_BRAND_ALIAS[t.slug]) brands.push(TENANT_BRAND_ALIAS[t.slug]);
+            const { error: perr } = await supabase
+                .from('products')
+                .update({ is_hidden: !newVisible })
+                .in('brand', brands);
+            if (perr) throw perr;
+        }
+
+        fetchTenants();
+    } catch (error) {
+        console.error('Error toggling tenant visibility:', error);
+        alert('Gagal mengubah visibilitas tenant.');
+    }
+};
+
+window.editTenant = (slug) => {
+    const t = tenants.find(x => x.slug === slug);
+    if (t) openTenantModal(t);
 };

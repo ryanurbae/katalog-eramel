@@ -1,0 +1,6039 @@
+[
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Sarinah Malang",
+    "address": "Ground Floor,Jl.Jend.Basuki Rachmat 2A",
+    "lat": -7.981156,
+    "lng": 112.630642,
+    "phone": "+628111927343",
+    "hours": "07:00-24:00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Citraland Semarang",
+    "address": "Ground Floor, Jl. Simpang Lima Raya No. 1",
+    "lat": -6.989375,
+    "lng": 110.424192,
+    "phone": "+628111927347",
+    "hours": "07:00-22:00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Breakfast",
+      "McDelivery",
+      "Indoor Playground"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Tebet Shophouse",
+    "address": "Jl. Prof. Dr. Soepomo SH, No. 55, Tebet",
+    "lat": -6.2321,
+    "lng": 106.845578,
+    "phone": "+628111927366",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Breakfast",
+      "McDelivery"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Bintaro",
+    "address": "Bintaro Jaya Sektor IX",
+    "lat": -6.281053,
+    "lng": 106.713148,
+    "phone": "+628111927370",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "McCafe",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Bumi Serpong Damai",
+    "address": "Jl.  Raya Teras Bukit No.614 Sektor VII, Bumi Serpong Damai, Banten",
+    "lat": -6.280514,
+    "lng": 106.661962,
+    "phone": "+628111927377",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "McCafe",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Dufan",
+    "address": "Jl. Lodan Timur No. 7, Dunia Fantasi (WAHANA RAMA SHINTA)",
+    "lat": -6.124325,
+    "lng": 106.832053,
+    "phone": "+628111927392",
+    "hours": "10:00-18:00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Plaza Sentral",
+    "address": "Ground Floor,Jl.Jend. Sudirman,Kav.47-48",
+    "lat": -6.217448,
+    "lng": 106.816539,
+    "phone": "+628111927394",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Breakfast",
+      "McDelivery"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Kemang",
+    "address": "Jl. Kemang Raya No. 10",
+    "lat": -6.257512,
+    "lng": 106.814512,
+    "phone": "+628111927398",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "McCafe",
+      "Breakfast",
+      "McDelivery",
+      "Indoor Playground",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Plasa Marina",
+    "address": "Jl. Raya Margorejo Indah No. 97-99, Surabaya",
+    "lat": -7.316256,
+    "lng": 112.7482195,
+    "phone": "+628111927402",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "McDelivery",
+      "Indoor Playground"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's S'house Pondok Indah",
+    "address": "Jl. Metro Pondok Indah Plaza I, Blok UA. Kav. 33-34, Pondok Indah",
+    "lat": -6.283864,
+    "lng": 106.780467,
+    "phone": "+628111927414",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "McCafe",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Hero Padjajaran Bogor ",
+    "address": "Jl. Raya Padjajaran",
+    "lat": -6.607231,
+    "lng": 106.809767,
+    "phone": "+628111927427",
+    "hours": "07:00-23:00 WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Breakfast",
+      "McDelivery"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Gas Station Cibubur ",
+    "address": "Jl. Raya Akses Baru, BUPERTA, Cibubur",
+    "lat": -6.370378,
+    "lng": 106.896842,
+    "phone": "+628111927435",
+    "hours": "09:00-22:00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Drive Thru",
+      "McCafe",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Batam Harmoni S'house ",
+    "address": "Jln Imam Bonjol Blok F 1-2 Komplek Hotel Harmoni Sei Jodoh Batam Island 24932",
+    "lat": 1.149722,
+    "lng": 104.006944,
+    "phone": "+628111927441",
+    "hours": "07:00-22:00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Breakfast",
+      "McDelivery",
+      "Indoor Playground"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Java Supermall",
+    "address": "Java Supermal Lantai 1, Jl. MT. Haryono, 992-994",
+    "lat": -7.006297,
+    "lng": 110.432553,
+    "phone": "+628111927443",
+    "hours": "07:00-22:00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Kuta Square",
+    "address": "Komplek Pertokoan Kuta Square, Jl. Bakung Sari I, Blok A/2",
+    "lat": -8.723731,
+    "lng": 115.1714195,
+    "phone": "+628111927446",
+    "hours": "07:00-24:00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Breakfast",
+      "McDelivery"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Graha Cijantung",
+    "address": "Jl. Kenari, Komplek Kopassus",
+    "lat": -6.312033,
+    "lng": 106.861789,
+    "phone": "+628111927452",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Plaza Tanjung Karang  ",
+    "address": "Jl.RA. Kartini No. 21",
+    "lat": -5.419948,
+    "lng": 105.252256,
+    "phone": "+628111927458",
+    "hours": "07:00-24:00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Mal Ratu Indah",
+    "address": "Mal Ratu Indah.   Jl.Dr.Sam Ratulangi No. 35, Sulawesi Selatan",
+    "lat": -5.153189,
+    "lng": 119.416659,
+    "phone": "+628111927464",
+    "hours": "08:00-24:00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Ancol Pantai Timur",
+    "address": "Jl. Lodan No. 7, Ancol Timur",
+    "lat": -6.120042,
+    "lng": 106.849681,
+    "phone": "+628111927466",
+    "hours": "08:00-24:00 WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Breakfast",
+      "McDelivery"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Mayjen Sungkono",
+    "address": "Jl.Mayjend Sungkono 153,Sblh Taman Makam Pahlawan",
+    "lat": -7.2887,
+    "lng": 112.706592,
+    "phone": "+628111927468",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "McCafe",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Pasir Kaliki",
+    "address": "Jl. Pasir Kaliki No. 121 - 123, Bandung",
+    "lat": -6.906147,
+    "lng": 107.597244,
+    "phone": "+628111927470",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Sanur Bali",
+    "address": "Jl. By Pass Ngurah Rai 109, Sanur, Bali",
+    "lat": -8.682528,
+    "lng": 115.259572,
+    "phone": "+628111927472",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Cilinaya Lombok",
+    "address": "Jl. Pejanggik Kompleks Mataram Mall, Mataram, Nusa Tenggara Barat.",
+    "lat": -8.587234,
+    "lng": 116.119681,
+    "phone": "+628111927474",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Sidoarjo",
+    "address": "Jl. Pahlawan No 1, Depan GOR",
+    "lat": -7.449223,
+    "lng": 112.703923,
+    "phone": "+628111927478",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Darmo Surabaya",
+    "address": "Jl. Raya Darmo No. 43",
+    "lat": -7.282314,
+    "lng": 112.740692,
+    "phone": "+628111927480",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "McDelivery",
+      "Indoor Playground"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Basuki Rahmat Surabaya",
+    "address": "Jl. Basuki Rachmat No. 21-23",
+    "lat": -7.264284,
+    "lng": 112.741467,
+    "phone": "+628111927488",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Drive Thru",
+      "McCafe",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Jimbaran",
+    "address": "Jl. Uluwatu II No. 01. Jimbaran, Bali",
+    "lat": -8.781678,
+    "lng": 115.1784,
+    "phone": "+628111927492",
+    "hours": "09:00-22:00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Drive Thru",
+      "McCafe",
+      "Breakfast",
+      "McDelivery"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Plaza Millenium Medan",
+    "address": "Plaza Milenium, Lt. 1,Jl.Kapten Muslim No. 111",
+    "lat": 3.599373,
+    "lng": 98.644487,
+    "phone": "+628111927494",
+    "hours": "09:00-22:00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "McDelivery"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Central Plaza Samarinda",
+    "address": "Samarinda Central Plaza, Jl. Pulau Irian No. 1",
+    "lat": -0.503475,
+    "lng": 117.154864,
+    "phone": "+628111927496",
+    "hours": "07:00-24:00 WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Kopo Mas Bandung",
+    "address": "Komplek Ruko Kopo Mas Regency, Jl. Kopo No 618",
+    "lat": -6.959592,
+    "lng": 107.580084,
+    "phone": "+628111927498",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Green Garden",
+    "address": "Perumahan Green Garden Blok I - 9,  No. 1 - 2,Kedoya Utara Kebon Jeruk",
+    "lat": -6.16577,
+    "lng": 106.762712,
+    "phone": "+628111927511",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Breakfast",
+      "McDelivery",
+      "Indoor Playground"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's ADA Swalayan Semarang",
+    "address": "Jl. Setiabudi No. 221 - 225",
+    "lat": -7.061156,
+    "lng": 110.413187,
+    "phone": "+628111927513",
+    "hours": "07:00-24:00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Breakfast",
+      "McDelivery"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Sri Ratu Kediri",
+    "address": "Sri Ratu Mall, Jl. Hayam Wuruk No. 46, Kediri",
+    "lat": -7.814619,
+    "lng": 112.015578,
+    "phone": "+628111927515",
+    "hours": "07:00-24:00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Breakfast",
+      "McDelivery",
+      "Indoor Playground"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Mulyo Sari Surabaya",
+    "address": "Jl. Raya Mulyosari, Komplek Ruko Central Park",
+    "lat": -7.266734,
+    "lng": 112.796409,
+    "phone": "+628111927519",
+    "hours": "09:00-23:00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Sudirman Jogja",
+    "address": "Jl. Jendral Sudirman 38",
+    "lat": -7.783295,
+    "lng": 110.371673,
+    "phone": "+628111927525",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Sukabumi Indah Plaza ",
+    "address": "Jl. R.E. Martadinata 25",
+    "lat": -6.92007,
+    "lng": 106.930128,
+    "phone": "+628111927527",
+    "hours": "09:00-22:00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Drive Thru",
+      "McDelivery"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Mal Daan Mogot",
+    "address": "Jl. Raya Daanmogot km 16",
+    "lat": -6.151109,
+    "lng": 106.714503,
+    "phone": "+628111927533",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Breakfast",
+      "McDelivery",
+      "Indoor Playground"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Ruko Sudirman Palembang",
+    "address": "Jl. Jendral Sudirman No. 149",
+    "lat": -2.974217,
+    "lng": 104.752473,
+    "phone": "+628111927535",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Simpang Dago",
+    "address": "Jl. Ir. H. Juanda no 181,Simpang Dago",
+    "lat": -6.884925,
+    "lng": 107.61352,
+    "phone": "+628111927537",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Drive Thru",
+      "McCafe",
+      "Breakfast",
+      "McDelivery"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Senayan Trade Center",
+    "address": "Sport Trade Center, Shopping Mall, Lantai LG, Jl. Asia Afrika Pintu IX Senayan",
+    "lat": -6.227717,
+    "lng": 106.798398,
+    "phone": "+628111927547",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "McCafe",
+      "Breakfast",
+      "McDelivery"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Duren Sawit ",
+    "address": "Jl. Radin Inten, Duren Sawit ",
+    "lat": -6.227353,
+    "lng": 106.922856,
+    "phone": "+628111927559",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Alam Sutera",
+    "address": "Jl. Alam Sutera Bulevard Kav. 2",
+    "lat": -6.244614,
+    "lng": 106.649822,
+    "phone": "+628111927561",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "McCafe",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Lodaya Bogor",
+    "address": "Jl. Raya Padjajaran 21 C",
+    "lat": -6.59232,
+    "lng": 106.804837,
+    "phone": "+628111927563",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "McCafe",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Pondok Cabe",
+    "address": "Jl. RE Martadinata, Perempatan Lampu Merah Gaplek No. 45 Pamulang 15417",
+    "lat": -6.346797,
+    "lng": 106.749614,
+    "phone": "+628111927565",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Medan Tasbi",
+    "address": "Jl. Gagak Hitam, Ring Road ,Tasbi 2",
+    "lat": 3.567859,
+    "lng": 98.625762,
+    "phone": "+628111927567",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Shinta Tangerang",
+    "address": "Jl. Teuku Umar No. 1 RT. 4 RW 3 Kel. Karawaci Tangerang Banten",
+    "lat": -6.195042,
+    "lng": 106.623478,
+    "phone": "+628111927569",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Kebo Iwa",
+    "address": "Jl. Kebo Iwa Selatan No 177X Denpasar",
+    "lat": -8.637017,
+    "lng": 115.185589,
+    "phone": "+628111927573",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "McCafe",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Rungkut",
+    "address": "Jl. Raya Rungkut Madya No. 57-59 Surabaya",
+    "lat": -7.331073,
+    "lng": 112.77575,
+    "phone": "+628111927649",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Graha Family",
+    "address": "Middle Ring Road Pintu Barat Graha Family Surabaya",
+    "lat": -7.288253,
+    "lng": 112.678831,
+    "phone": "+628111927651",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "McCafe",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Cinere",
+    "address": "Jl. Cinere Raya No. 1 Pangkalan jati Limo Depok 16513",
+    "lat": -6.323894,
+    "lng": 106.783903,
+    "phone": "+628111927653",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Megamas Beach Front Manado",
+    "address": "Jl. Boulevard 2 Megamas Manado",
+    "lat": 1.487098,
+    "lng": 124.834456,
+    "phone": "+628111927655",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "McCafe",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Hayam Wuruk",
+    "address": "Jl. Hayam Wuruk No. 34 - 34A",
+    "lat": -6.160762,
+    "lng": 106.819703,
+    "phone": "+628111927657",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "McCafe",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Kelapa Gading",
+    "address": "Jl. Bulevar Artha Gading Kav. D-01, Jakarta Utara",
+    "lat": -6.14675,
+    "lng": 106.896414,
+    "phone": "+628111927659",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "McCafe",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Gading Serpong",
+    "address": "Jl. Boulevard Gading Serpong, Kav. Rotunda No.2, Tangerang",
+    "lat": -6.228992,
+    "lng": 106.634817,
+    "phone": "+628111927661",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Sukahati Cibinong",
+    "address": "Jl. Tegar Beriman/ Jl. Sukahati Cibinong Kabupaten Bogor",
+    "lat": -6.483087,
+    "lng": 106.81827,
+    "phone": "+628111927663",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Kota Harapan Indah",
+    "address": "Kota Harapan Indah, Jl. Harapan Indah Raya, Bekasi Utara",
+    "lat": -6.191317,
+    "lng": 106.976328,
+    "phone": "+628111927665",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "McCafe",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Arion Mall",
+    "address": "Arion Mall, Ground Floor, Jl. Pemuda Rawamangun, Jakarta Timur",
+    "lat": -6.194006,
+    "lng": 106.890025,
+    "phone": "+628111927668",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Taman Alfa",
+    "address": "Jl. Joglo Raya (Taman Alfa) depan giant, kebon jeruk",
+    "lat": -6.218687,
+    "lng": 106.754037,
+    "phone": "+628111927670",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Waru Sidoardjo",
+    "address": "Jl. S. Parman No. 4 Waru Sidoarjo",
+    "lat": -7.364762,
+    "lng": 112.7286,
+    "phone": "+628111927672",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Plaza Cibubur",
+    "address": "Jl. Alternatif Cibubur KM 2-3 Bekasi",
+    "lat": -6.375775,
+    "lng": 106.915237,
+    "phone": "+628111927682",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Lippo Cikarang",
+    "address": "Jl. MH Thamrin Kav 106 Cikarang",
+    "lat": -6.32727,
+    "lng": 107.126987,
+    "phone": "+628111927684",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's The Plaza Balikpapan",
+    "address": "Plaza Balikpapan, Jl Sudirman No 1",
+    "lat": -1.277759,
+    "lng": 116.838639,
+    "phone": "+628111927686",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Depok Town Center",
+    "address": "Jl. Raya Sawangan No 1 Depok",
+    "lat": -6.395039,
+    "lng": 106.793192,
+    "phone": "+628111927689",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Pasar Festival",
+    "address": "Jl HR Rasuna Said No 9 Jakarta Selatan",
+    "lat": -6.220825,
+    "lng": 106.832675,
+    "phone": "+628111927691",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "McCafe",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Pandanaran Semarang",
+    "address": "Jl. Pandanaran No 44, Semarang",
+    "lat": -6.986303,
+    "lng": 110.414112,
+    "phone": "+628111927693",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Kartini Cirebon",
+    "address": "Jl. RA Kartini No. 33-35",
+    "lat": -6.711434,
+    "lng": 108.555634,
+    "phone": "+628111927713",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Citra Raya Cikupa",
+    "address": "Citra Raya Food Festival Jl. Raya Serang, km. 14.7, Tangerang",
+    "lat": -6.230378,
+    "lng": 106.520844,
+    "phone": "+628118076469",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's MT Haryono Malang",
+    "address": "Jl. MT Haryono No 115",
+    "lat": -7.946861,
+    "lng": 112.6127,
+    "phone": "+628111927715",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Lippo St Mark Square Karawaci",
+    "address": "Jl.Boulevard Jendral Sudirman No.1298, Kel.Bencongan,Kec.Kelap Dua",
+    "lat": -6.227231,
+    "lng": 106.604631,
+    "phone": "+628111927724",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "McCafe",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Sutoyo Tegal",
+    "address": "Jl. Mayjend Sutoyo No 54",
+    "lat": -6.869067,
+    "lng": 109.128584,
+    "phone": "+628111927721",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "McCafe",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Salemba Raya",
+    "address": "Jl. Salemba Raya Kav. 31 RT 01/ RW 05 Kelurahan Paseban, Kecamatan Senen",
+    "lat": -6.194873,
+    "lng": 106.850317,
+    "phone": "+628111927735",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Party Room",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Nangka Denpasar",
+    "address": "Jl. Gatot Subroto No. 238",
+    "lat": -8.635278,
+    "lng": 115.22272,
+    "phone": "+628111927741",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Pettarani Makassar",
+    "address": "Jl. Pangeran Pettarani No 20",
+    "lat": -5.146153,
+    "lng": 119.438592,
+    "phone": "+628111927737",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "McCafe",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Alaudin",
+    "address": "Jl.Sultan Alauddin No 255 Plaza Boulevar makassar",
+    "lat": -5.179242,
+    "lng": 119.440162,
+    "phone": "+628111927556",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Padang A.Yani",
+    "address": "Jl. Bandar Damar No 18",
+    "lat": -0.943306,
+    "lng": 100.355887,
+    "phone": "+628119790244",
+    "hours": "07:00-00:00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Plaza Surabaya",
+    "address": "Jl. Pemuda No.27-31 Surabaya",
+    "lat": -7.265203,
+    "lng": 112.748695,
+    "phone": "+628119790220",
+    "hours": "07:00-01:00 WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Jati Asih Bekasi",
+    "address": "Jati asih Jl wibawa mukti 2",
+    "lat": -6.295792,
+    "lng": 106.958742,
+    "phone": "+628119790248",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Ciceri Serang",
+    "address": "Jl. A. Yani, RT 002/ RW 06 Sumur Pecung,  Serang",
+    "lat": -6.120194,
+    "lng": 106.171569,
+    "phone": "+628111849265",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Sunset Star",
+    "address": "Jl. Sunset Road Simpang Dewi Sri, Ruko Sunset Star unit DA",
+    "lat": -8.700092,
+    "lng": 115.177892,
+    "phone": "+628119790242",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "McCafe",
+      "Breakfast",
+      "McDelivery"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Citra Garden",
+    "address": "Citra Garden City, Komp Perum Citra 6 Blok L3 Kecamatan Kalideres, Jakarta Barat",
+    "lat": -6.129164,
+    "lng": 106.715433,
+    "phone": "+628111849263",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's R. Sukamto Palembang",
+    "address": "Jl. R. Sukamto No.90A Palembang",
+    "lat": -2.9519,
+    "lng": 104.762233,
+    "phone": "+628118076118",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Graha Raya Tangerang",
+    "address": "Jl. Boulevard Raya Blok MD No.7 Graha Raya Bintaro Tangerang",
+    "lat": -6.240211,
+    "lng": 106.675967,
+    "phone": "+628111584357",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Meutia Bekasi",
+    "address": "Jl. Raya Cut Meutia Blok A No 1 & 2 , Kel Sepanjang Jaya, Kec Narogong, Bekasi Timur",
+    "lat": -6.260778,
+    "lng": 107.001144,
+    "phone": "+628119524758",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Juanda Sidoarjo",
+    "address": "Jl Raya Pabean No. 6 Sedati Juanda Sidoardjo",
+    "lat": -7.369119,
+    "lng": 112.763703,
+    "phone": "+628111466083",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Puri Indah",
+    "address": "Jl Puri Indah blok U1 No 1 Puri Kembangan Jakarta Barat",
+    "lat": -6.187589,
+    "lng": 106.737958,
+    "phone": "+628118608614",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "McCafe",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Juanda Bogor",
+    "address": "Jl. Ir H Juanda Bogor No 50",
+    "lat": -6.601236,
+    "lng": 106.794647,
+    "phone": "+628119524756",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's BSD Sunburst",
+    "address": "BSD Sun Burst CBD Office Park II.18 Tangerang",
+    "lat": -6.299372,
+    "lng": 106.664322,
+    "phone": "+628119527946",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "McCafe",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Danau Sunter",
+    "address": "Jl. Sunter Agung Utara Blok U 2 No 1, Jakarta Utara",
+    "lat": -6.14076035,
+    "lng": 106.8840329,
+    "phone": "+628118467098",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "McCafe",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Grand Wisata Bekasi",
+    "address": "Jl Festival Boulevard Grand Wisata Bekasi",
+    "lat": -6.275164,
+    "lng": 107.045181,
+    "phone": "+628111584355",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "McCafe",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Bojongsari Depok",
+    "address": "Jl. Raya Bojong sari No 48, Bojong sari Depok. ",
+    "lat": -6.404886,
+    "lng": 106.741944,
+    "phone": "+628118456049",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Jombor Sleman",
+    "address": "Jl Magelang Km 6.3 Jombor Melati Sleman",
+    "lat": -7.748739,
+    "lng": 110.361861,
+    "phone": "+628118608612",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Karang Satria",
+    "address": "Jl Raya Karang Satria Mutiara Gading 2, Area Gading Teras",
+    "lat": -6.214181,
+    "lng": 107.035325,
+    "phone": "+628119529017",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Kelapa Dua",
+    "address": "Jl Akses UI No 59 Cimanggis Depok",
+    "lat": -6.354772,
+    "lng": 106.844414,
+    "phone": "+628119729351",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Cipayung",
+    "address": "Jl Raya Cipayung, Jakarta Timur",
+    "lat": -6.331386,
+    "lng": 106.888292,
+    "phone": "+628119462257",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Karang Mulya Tangerang",
+    "address": "Jl. Raden Saleh Karang Mulya Tangerang",
+    "lat": -6.203836,
+    "lng": 106.716553,
+    "phone": "+628111025029",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Grand Taruma Karawang",
+    "address": "Jl Tarumanegara Kav. 8 Karawang Barat",
+    "lat": -6.30611956,
+    "lng": 107.2773533,
+    "phone": "+628118453276",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Jatiwaringin Bekasi",
+    "address": "Jl. Raya Jatiwaringin RT.001 Rw.09 No.26 Jaticempaka PondokGede Bekasi",
+    "lat": -6.268281,
+    "lng": 106.911278,
+    "phone": "+628111903425",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Slamet Riyadi Solo",
+    "address": "Jl. Slamet Riyadi No. 112, Surakarta",
+    "lat": -7.57023238,
+    "lng": 110.8229863,
+    "phone": "+628118455776",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Teuku Umar Barat Bali",
+    "address": "Jl. Teuku Umar Barat No 241X, Denpasar - Bali",
+    "lat": -8.6820465,
+    "lng": 115.191633,
+    "phone": "+628111369484",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Jatiwarna Bekasi",
+    "address": "Jl. Raya Hankam No.31 Bekasi",
+    "lat": -6.311461,
+    "lng": 106.924136,
+    "phone": "+628111534025",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Duta Garden",
+    "address": "Jl Husein Sastra Negara B3 Juru mudi Tangerang",
+    "lat": -6.143031,
+    "lng": 106.682006,
+    "phone": "+628111900755",
+    "hours": "07:00-24:00 WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Emerald",
+    "address": "Jl. Rasuna Said CBD Emerald Bintaro Blok CE/A Bintaro Jaya Tangerang Selatan",
+    "lat": -6.272094,
+    "lng": 106.698381,
+    "phone": "+628119407162",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "McCafe",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Soekarno Hatta Bandung",
+    "address": "Jl. Soekarno Hatta no.611 RT.01 RW 01 Kel. Sekejati Kec. Buahbatu",
+    "lat": -6.939578,
+    "lng": 107.662964,
+    "phone": "+628111534653",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Manyar Kertoarjo Surabaya",
+    "address": "Raya Manyar Kertoarjo no 15",
+    "lat": -7.27935011,
+    "lng": 112.7653576,
+    "phone": "+628111540689",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "McCafe",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Menjangan Tangerang",
+    "address": "Jl. Ki Hajar Dewantara, Sawah Lama Ciputat, Tangerang Selatan",
+    "lat": -6.295317,
+    "lng": 106.734867,
+    "phone": "+628111549426",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Jababeka II Cikarang",
+    "address": "Jl. Niaga Raya Metro Boulevard Kav CC3C Jababeka II",
+    "lat": -6.30084536,
+    "lng": 107.1516219,
+    "phone": "+628111369482",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "McCafe",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Cibitung",
+    "address": "Jl. Imam Bonjol KM 44, Raya Cibitung-Bekasi, Telaga Asih, Cikarang Barat",
+    "lat": -6.269622,
+    "lng": 107.088719,
+    "phone": "+628118821716",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Cipondoh Tangerang",
+    "address": "Jl. KH Hasim Hasari No. 90 Cipondoh, Tangerang Banten",
+    "lat": -6.188542,
+    "lng": 106.664975,
+    "phone": "+628111542996",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Jl Panjang",
+    "address": "Jl Panjang No 16, Kebon Jeruk, Jakarta Barat",
+    "lat": -6.19934596,
+    "lng": 106.7694258,
+    "phone": "+628118464437",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Simpang Dewa Ruci",
+    "address": "Jl By Pass Ngurah Rai No 168, Kuta, Bali",
+    "lat": -8.73111922,
+    "lng": 115.1789462,
+    "phone": "+628111549497",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Bandung Buah Batu",
+    "address": "Jl. Buah Batu no 161",
+    "lat": -6.938986,
+    "lng": 107.625117,
+    "phone": "+628111927410",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Pekayon",
+    "address": "Jl Pekayon Raya No 66 Kel Pekayon Bekasi Selatan",
+    "lat": -6.26939415,
+    "lng": 106.9812629,
+    "phone": "+628118468765",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Bintara Bekasi",
+    "address": "Jl. Bintara Raya No 17",
+    "lat": -6.23284511,
+    "lng": 106.9652104,
+    "phone": "+628119457823",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Serpong Jaya Tangerang",
+    "address": "Jl Perumahan Serpong Jaya Kav A01 Babakan Tangerang Pamulang, Tangerang Selatan 15314",
+    "lat": -6.346486,
+    "lng": 106.699367,
+    "phone": "+628119469065",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Bogor-Semplak",
+    "address": "Jl. Raya semplak",
+    "lat": -6.564022,
+    "lng": 106.763094,
+    "phone": "+628118692820",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "McDelivery"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Gresik GKB",
+    "address": "Jl Sumatra No 4 Perum Gresik Kota Baru (GKB)",
+    "lat": -7.159239,
+    "lng": 112.618625,
+    "phone": "+628119530770",
+    "hours": "07:00-00:00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Larangan Indah",
+    "address": "Jl HOS Cokroaminoto Ciledug Tangerang",
+    "lat": -6.231172,
+    "lng": 106.727808,
+    "phone": "+628119469831",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Ciputat Shophouse",
+    "address": "Jl H Ruko Juanda No 364 Ciputat",
+    "lat": -6.311339,
+    "lng": 106.754381,
+    "phone": "+628119534309",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Cideng",
+    "address": "Jl Cideng Barat No 55-56 Jakarta Pusat",
+    "lat": -6.173397,
+    "lng": 106.811111,
+    "phone": "+628111935359",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "McDelivery"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Jakarta Fatmawati",
+    "address": "Jl. RS Fatmawati no 25",
+    "lat": -6.277925,
+    "lng": 106.797644,
+    "phone": "+628118174080",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "McCafe",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Jakarta Otista",
+    "address": "JL OTTO ISKANDARDINATA KAV 125-127 JAKTIM",
+    "lat": -6.237119,
+    "lng": 106.869008,
+    "phone": "+628118162857",
+    "hours": "07:00-24:00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Bekasi Mustika Jaya Setu",
+    "address": "Jl. H. Djole RT 14 RW 06 Kelurahan Pedurenan Kecamatan Mustika Jaya, Bekasi",
+    "lat": -6.321222,
+    "lng": 107.015836,
+    "phone": "+628111934619",
+    "hours": "06:00-24:00 WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Yogyakarta Ambarukmo",
+    "address": "jl. Laksda Adi Sucipto 23-25",
+    "lat": -7.783089,
+    "lng": 110.407019,
+    "phone": "+628118162853",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Jakarta Pahlawan Revolusi ",
+    "address": "Jl Revolusi No 122-123 Pondok Bambu",
+    "lat": -6.238669,
+    "lng": 106.899711,
+    "phone": "+628118176951",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Kedaton Lampung",
+    "address": "Jl ZA Pagar Alam No 3 Kedaton Bandar Lampung",
+    "lat": -5.379717,
+    "lng": 105.253664,
+    "phone": "+628118108632",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Majapahit Semarang",
+    "address": "JL.Brigjen Sudiarto 326 B-C",
+    "lat": -7.008433,
+    "lng": 110.464497,
+    "phone": "+628118114938",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Grand Kota Bintang",
+    "address": "Jl. KH Noer Ali Kalimalang Bekasi",
+    "lat": -6.249061,
+    "lng": 106.956839,
+    "phone": "+628118253839",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Cibiru Bandung",
+    "address": "Jl.A.H.Nasution",
+    "lat": -6.934467,
+    "lng": 107.7178,
+    "phone": "+628118114736",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Pekanbaru-Sudirman (telkom)",
+    "address": "JL.Jendral Sudirman No.117 Pekanbaru",
+    "lat": 0.534133,
+    "lng": 101.447914,
+    "phone": "+628118679625",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Strada Tangerang",
+    "address": "Jl.Daan Mogot No.42 Tangerang",
+    "lat": -6.171644,
+    "lng": 106.631544,
+    "phone": "+628118339868",
+    "hours": "10:00-22:00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Tangerang SDC",
+    "address": "Summarecon Digital Center, Garden Pads 02 SDC Jl Scientia Boulevard Tangerang",
+    "lat": -6.258214,
+    "lng": 106.616289,
+    "phone": "+628118283251",
+    "hours": "09:00-22:00 WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "McDelivery"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Summarecon- Bekasi",
+    "address": "Jl.Boulevard Selatan, La Terrazza Summarecon Bekasi",
+    "lat": -6.227886,
+    "lng": 106.997617,
+    "phone": "+628118673375",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Sangkuriang-Cimahi",
+    "address": "Jl. Sangkuriang No.1 Cimahi",
+    "lat": -6.869628,
+    "lng": 107.5346,
+    "phone": "+628118696481",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Sidoarjo-Taman Geluran",
+    "address": "Jl. Raya Geluran Sidoarjo",
+    "lat": -7.356561,
+    "lng": 112.69295,
+    "phone": "+628118693417",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Transmart Cempaka Putih",
+    "address": "Transmart Lantai GF, Jalan Ahmad Yani Kav 83, Cempaka Putih, Jakarta Pusat",
+    "lat": -6.168769,
+    "lng": 106.877322,
+    "phone": "+628118624988",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "McDelivery"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Bogor-Kota Wisata Cibubur",
+    "address": "Area komersial blok SJ perumahan kota wisata cibubur, kel desa Ciangsana, Kec Gunung Putri ",
+    "lat": -6.349878,
+    "lng": 106.960853,
+    "phone": "+628118696700",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Jakarta-TB Simatupang",
+    "address": "Jl. Nangka RT 06 RW 05 Tanjung Barat Jagakarsa Jakarta Selatan",
+    "lat": -6.303814,
+    "lng": 106.847978,
+    "phone": "+628118698570",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "McCafe",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Wiyung Surabaya",
+    "address": "Jl Raya Babatan No 640",
+    "lat": -7.309967,
+    "lng": 112.679617,
+    "phone": "+628118822574",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's SM Raja Medan",
+    "address": "Jl. SM.Raja No. 140 Simp. Pelangi Medan",
+    "lat": 3.562858,
+    "lng": 98.692722,
+    "phone": "+628118757689",
+    "hours": "03:00-01:00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Gambir-Jakarta",
+    "address": "Jalan Merdeka Timur Stasiun Gambir Jakarta Pusat",
+    "lat": -6.176667,
+    "lng": 106.830783,
+    "phone": "+628118757730",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "McDelivery"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Solo - Park",
+    "address": "The Park Mall jln IR Soekarno Madegondo Grogol Sukoharjo",
+    "lat": -7.598481,
+    "lng": 110.815656,
+    "phone": "+628118827499",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Pamularsih",
+    "address": "Jl. Pamularsih No.54, Kel Salaman Mloyo",
+    "lat": -6.988917,
+    "lng": 110.394328,
+    "phone": "+628118849886",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Puri Surya Jaya-Sidoarjo",
+    "address": "Jl. Taman Gerbang Utama Kav 1  Puri Surya Jaya Sidoarjo",
+    "lat": -7.395783,
+    "lng": 112.727936,
+    "phone": "+628118849920",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Yogyakarta-Kaliurang",
+    "address": "Jln. Kaliurang km 5.5 Mbarek, Sleman",
+    "lat": -7.762522,
+    "lng": 110.379772,
+    "phone": "+628111786136",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Edutown-Tangerang",
+    "address": "Jl. BSD Raya Utama No 22",
+    "lat": -6.300228,
+    "lng": 106.640839,
+    "phone": "+628118403622",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Sriwijaya-Lombok",
+    "address": "Jl. Sriwijaya no 98 Pagesangan Timur",
+    "lat": -8.594647,
+    "lng": 116.11245,
+    "phone": "+628118406046",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Lenteng Agung",
+    "address": "Jl. Raya Lenteng Agung No.12 Kel. Lenteng Agung, Kec. Jagakarsa.Jakarta Selatan",
+    "lat": -6.331542,
+    "lng": 106.835842,
+    "phone": "+628119921166",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Ciater Raya Tangerang",
+    "address": "Jl. Ciater Raya No. 29 Serpong Kota Tangerang Selatan",
+    "lat": -6.314539,
+    "lng": 106.700361,
+    "phone": "+628111797482",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Hos Cokroaminoto",
+    "address": "Jl Hos Cokroaminoto no 464 Ubung Kaja Denpasar",
+    "lat": -8.613542,
+    "lng": 115.193208,
+    "phone": "+628111794235",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Muara Karang",
+    "address": "Jln. Pluit Karang Barat No. 49, Muara Karang, Jakarta Utara",
+    "lat": -6.1158,
+    "lng": 106.774808,
+    "phone": "+628111905341",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Galuh Mas-Karawang",
+    "address": "Jl. Arteri Galuh Mas, CBD Galuh Mas Kav XIIIC No. 5 & 6",
+    "lat": -6.329319,
+    "lng": 107.29615,
+    "phone": "+628111983735",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Sesetan Bali",
+    "address": "Jalan Raya Sesetan no 369 Denpasar Bali",
+    "lat": -8.703378,
+    "lng": 115.219811,
+    "phone": "+628111916847",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Metland Transyogi",
+    "address": "Jl. Taman Kota Metropolitan Cileungsi",
+    "lat": -6.404806,
+    "lng": 106.976583,
+    "phone": "+628118423585",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Batam Centre",
+    "address": "Komp. Fanindo Sanctuary Garden, Jl Ahmad Yani No 1, Teluk Tering, Batam Kota",
+    "lat": 1.121272,
+    "lng": 104.049739,
+    "phone": "+628118773668",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Ceger Pondok Aren",
+    "address": "Jl. Ceger Raya No. 11 Rt. 01 RW. 11 Jurang Mangu Barat Pondok Aren Tangerang Selatan",
+    "lat": -6.262833,
+    "lng": 106.727983,
+    "phone": "+628119305536",
+    "hours": "09:00-22:00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Ngaliyan - Semarang",
+    "address": "Jl.Prof Hamka No 105, Semarang",
+    "lat": -7001922,
+    "lng": 110340581,
+    "phone": "+628119393344",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Jakarta Garden City-Jakarta",
+    "address": "Komplek Garden City, Jalan Raya Cakung Cilincing ( Cacing  Raya ) KM 0,5 Cakung, Jakarta Timur 13160",
+    "lat": -6175589,
+    "lng": 106956397,
+    "phone": "+628119883017",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Dramaga Bogor",
+    "address": "Jl. Raya Dramaga Rt 01/01 Desa Dramaga Kel. Dramaga Kab.Bogor",
+    "lat": -6.570072,
+    "lng": 106.738797,
+    "phone": "+628118067228",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "McCafe",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Jember- Jl Hayam wuruk",
+    "address": "Jl Hayam Wuruk Jember no.40 Sempusari Kaliwates Jember",
+    "lat": -8.184294,
+    "lng": 113.665869,
+    "phone": "+628118073914",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "McDelivery",
+      "Indoor Playground"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Cilegon",
+    "address": "Jl. Ahmad Yani No. 2 Cilegon",
+    "lat": -6.024339,
+    "lng": 106.068417,
+    "phone": "+628118066198",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Jatipadang",
+    "address": "Jl. Raya Ragunan No.B6, Jati Padang, Ps. Minggu, Kota Jakarta Selatan, DKI Jakarta",
+    "lat": -6.286274,
+    "lng": 106.831174,
+    "phone": "+628118005197",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Breakfast",
+      "McDelivery"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's PalMerah",
+    "address": "Jl. Palmerah Barat No 110",
+    "lat": -6.207331,
+    "lng": 106.791094,
+    "phone": "+6281197101069",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Deltamas Cikarang",
+    "address": "Jl Deltamas Boulevard, Greenland Square Block BA-01 Intersection",
+    "lat": -6.365345,
+    "lng": 107.17888,
+    "phone": "+6281196203237",
+    "hours": "06:00-24:00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Binjai",
+    "address": "Jl Soekarno Hatta No. 53 Tanah Tinggi Binjai Timur, Binjai",
+    "lat": 3.608659,
+    "lng": 98.499612,
+    "phone": "+6281196207231",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Daya Makasar",
+    "address": "Jl. Perintis Kemerdekaan KM 13 Daya Makasar",
+    "lat": -5.119867,
+    "lng": 119.509251,
+    "phone": "+628111559484",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Balikpapan Baru",
+    "address": "Jl.MT Haryono,Kelurahan Damai Balikpapan Baru",
+    "lat": -1.242034,
+    "lng": 116.872489,
+    "phone": "+6281113104125",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Rest Area KM 57",
+    "address": "Jl. Tol Jakarta Ã- Cikampek KM 57, Karawang",
+    "lat": -6.3669,
+    "lng": 107.360421,
+    "phone": "+ 6281113105739",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "McDelivery"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Antasari Lampung",
+    "address": "Jl.Pangeran Antasari no 100 ,Jagabaya III Way Halim",
+    "lat": -5.40537,
+    "lng": 105.277165,
+    "phone": "+626281113502979",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "McDelivery"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Talaga Bestari",
+    "address": "Jl. Jungle Boulevard, Talaga Bestari, Cibadak, Cikupa, Tangerang",
+    "lat": -6.200423,
+    "lng": 106.48066,
+    "phone": "+6281113105737",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Sultan Agung",
+    "address": "JL. Sultan Agung no. 24 Yogyakarta",
+    "lat": -7.801881,
+    "lng": 110.374652,
+    "phone": "+6281197006401",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "McDelivery",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Singaraja Bali",
+    "address": "Jl. Ngurah rai no. 53 Singaraja - Bali",
+    "lat": -8.115158,
+    "lng": 115.091489,
+    "phone": "+628111794235",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Marelan",
+    "address": "Jl. Marelan raya, pasar 1 Medan Sumatra Utara",
+    "lat": 3.690538,
+    "lng": 98.65623,
+    "phone": "+6281113201815",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Hasyim Ashari",
+    "address": "Jl KH Hasyim Ashari no 08, kelurahan Nerotog, Kecamatan Pinang, Tangerang",
+    "lat": -6.209086,
+    "lng": 106.687977,
+    "phone": "+6281196202200",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Perdatam",
+    "address": "Jl Raya Pasar Minggu RT 008 RW 02 Pancoran,Jakarta Selatan",
+    "lat": -6.250209,
+    "lng": 106.842889,
+    "phone": "081196212782",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Jati Bengkulu",
+    "address": "Jl Jati Bengkulu No. 01A rt 8 rw 2 Kel Sawah Lebar, Kec Ratu Agung, Kota Bengkulu",
+    "lat": -3.796652,
+    "lng": 102.272952,
+    "phone": "081196009625",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Sipin Jambi",
+    "address": "Jl Soemantri Brojonegoro No 54, Kota Jambi",
+    "lat": -1.610528,
+    "lng": 103.5962,
+    "phone": "081113012011",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Banjarmasin",
+    "address": "Jl A Yani KM 2,5 rt 12 rw 02 Kel Sungai Lebar Kec Banjarmasin Tengah",
+    "lat": -3.326767,
+    "lng": 114.606134,
+    "phone": "081196009407",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald’s Citra 7",
+    "address": "Jl. Citra 7, Blok B.02 No. 28 - 31, Perumahan Citra 7, Citra Garden City, Kalideres, Jakarta Barat",
+    "lat": -6.14662,
+    "lng": 106.700723,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Magnolia Residence Tangerang",
+    "address": "Jl. Gatot Subroto Km. 6,8 Jatake, Jatiuwung - Magnolia Residence Tangerang",
+    "lat": -6.200463,
+    "lng": 106.574884,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Kemiling Lampung",
+    "address": "Jl. Teuku Cik Ditiro Blok H-3 No. 05  Rt.016 LK.1 Kel Beringin Raya Kemiling Bandar lampung",
+    "lat": -5.398022,
+    "lng": 105.212257,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald’s Ryacudu",
+    "address": "Jl. HM Ryacudu, Rt.44/12 Kelurahan 7 Ulu, Kecamatan Seberang Ulu 1 Palembang",
+    "lat": -2.997788,
+    "lng": 104.76719,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Grand Batavia",
+    "address": "Perumahan Grand Batavia Sindangsari, Kec. Ps. Kemis, Tangerang, Banten",
+    "lat": -6.138959,
+    "lng": 106.541526,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's  WJ Lalamentik Kupang",
+    "address": "Jl. WJ Lalamentik, Kupang, NTT",
+    "lat": -10.173582,
+    "lng": 123.613652,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Sudirman Madiun",
+    "address": "Jl. Panglima Sudirman nomor 93 Kota Madiun",
+    "lat": -7.631427,
+    "lng": 111.523391,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's  Juanda Bekasi Timur",
+    "address": "Jl. Ir. Juanda No. 22 Bekasi Timur (Samping Stasiun Bekasi Timur)",
+    "lat": -6.247837,
+    "lng": 107.018504,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Karebosi Link Makassar",
+    "address": "Jl. Jenderal Achmad Yani, Lapangan Karebosi, Kelurahan Baru, Kecamatan Ujung pandang",
+    "lat": -5.133206,
+    "lng": 119.411154,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "McCafe",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Shell Gas station Rest Area KM 21",
+    "address": "Rest Area Tol jagorawi KM21, Bojong Nangka, Kec. Gunung Putri, Bogor, Jawa Barat",
+    "lat": -6.434664,
+    "lng": 106.893662,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Self-Order Kiosk"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Veteran Purwakarta",
+    "address": "Jl. Veteran Nagri Kaler No 18 Purwakarta",
+    "lat": -6.527389,
+    "lng": 107.447472,
+    "phone": "14045",
+    "hours": "08:00-24:00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Hertasning Gowa",
+    "address": "Jl. Tun Abdul Razak, Tombolo Somba Opu , Gowa",
+    "lat": -5.180442,
+    "lng": 119.466558,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Tabanan",
+    "address": "Jl. Ir. Soekarno By Pass Kediri Tabanan",
+    "lat": -8.551735,
+    "lng": 115.13062,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "The Kings Shopping Center",
+    "address": "Jl. Kepatihan No 11 - 17",
+    "lat": -6.922841,
+    "lng": 107.604889,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Breakfast",
+      "McDelivery",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonalds Chatib Sulaiman",
+    "address": "JL  Chatib Sulaiman",
+    "lat": -0.91184,
+    "lng": 100.355933,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Summarecon Bandung",
+    "address": "Jl Magna Raya, Rancabolang - Gedebage",
+    "lat": -6.957241,
+    "lng": 107.690091,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Telkom Cilegon",
+    "address": "JL. Raya Anyer Warnasari,Citangkil",
+    "lat": -6.01171,
+    "lng": 106.01205,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Rest Area KM 726B",
+    "address": "Rest Area KM 726B Tol Surabaya - Mojokerto",
+    "lat": -7.375806,
+    "lng": 112.553352,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Sunandar Priyo Malang",
+    "address": "Jl. Sunandar Priyo Sudarmo No 11  Malang",
+    "lat": -7.956398,
+    "lng": 112.644144,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonalds Tangcity Mall",
+    "address": "Jl. Jendral Sudirman No.1 , Cikokol",
+    "lat": -6.193671,
+    "lng": 106.633473,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Margonda",
+    "address": "Jl. Margonda Raya No.229, Beji, Jabodetabek",
+    "lat": -6.382449,
+    "lng": 106.829564,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Indoor Playground",
+      "Party Room",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Drive Thru Pemuda",
+    "address": "Jln.Pemuda no.19 Ramawangun",
+    "lat": -6.192868,
+    "lng": 106.881649,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "McCafe",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Summarecon Mutiara Makassar",
+    "address": "Jl Mutiara Boulevard",
+    "lat": -5.07839,
+    "lng": 119.50365,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Hb Jassin Gorontalo",
+    "address": "Jl. Hb Jassin no 33 Gorontalo",
+    "lat": 0.544528,
+    "lng": 123.054338,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Pancing Medan",
+    "address": "Jln.Williem Iskandar,Indra kasih,Kec.Medan Tembung,Kota Medan Sumatera Utara",
+    "lat": 3.6182891,
+    "lng": 98.7073385,
+    "phone": "14045",
+    "hours": "07.00-23.00 WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Brigjen Darsono",
+    "address": "Jl Brigjen Darsono - Cirebon",
+    "lat": -6.73215207,
+    "lng": 108.54070394,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Sultan Hassanudin Blok M",
+    "address": "Jl. Sultan Hasanudin No.53 - 54 , Melawai Jakarta Selatan",
+    "lat": -6.24215838,
+    "lng": 106.8021101,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Banjar Baru",
+    "address": "Jl A Yani KM 34 RT 2 RW 2 Loktabat Utara, Kec. Banjarbaru Utara, Kota Banjar Baru, Kalimantan Selatan",
+    "lat": -3.44254,
+    "lng": 114.825303,
+    "phone": "14045",
+    "hours": "16:00-05:00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's K-Walk Manado",
+    "address": "Jl. AA Maramis, Paniki Bawah  - Kecamatan Mapanget",
+    "lat": 1.503223,
+    "lng": 124.900394,
+    "phone": "14045",
+    "hours": "Always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Kramat Raya Kwitang",
+    "address": "Jl. Kramat Raya No 104, Kwitang Jakarta Pusat",
+    "lat": -6.183577,
+    "lng": 106.843022,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Mal Panakkukang",
+    "address": "Jl.Boulevard kompleks panakkukang mas Makassar",
+    "lat": -5.1583507,
+    "lng": 119.4477117,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Breakfast",
+      "Birthday Party",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Sultan Hasanuddin Makassar",
+    "address": "Jl. Sultan Hasanuddin No.33",
+    "lat": -5.141328,
+    "lng": 119.410802,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Sedayu City",
+    "address": "Jl. Sedayu Boulevard Kav Bigbox  No 30-32",
+    "lat": -6.182629,
+    "lng": 106.947666,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Meruya Ilir",
+    "address": "Jl. Meruya Ilir No. 19 ,kel. Meruya Utara, Jakarta Barat",
+    "lat": -6.197259,
+    "lng": 106.74823,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Edi Sabara Kendari",
+    "address": "Jl. Edi Sabara-Made Sabara Kelurahan Korumba, Kecamatan Madonga",
+    "lat": -3.975,
+    "lng": 122.521613,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Jaya Imperial Park",
+    "address": "Jl. Raya Mauk No.km 11, Sepatan",
+    "lat": -6.125505,
+    "lng": 106.5854559,
+    "phone": "14045",
+    "hours": "05:00-11:00 WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Gandaria Pasar Rebo",
+    "address": "Jl. Raya Bogor Km. 28 RT. 008 RW. 07, Pekayon, Pasar Rebo",
+    "lat": -6.3523263,
+    "lng": 106.8636291,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Citra Grand City Palembang",
+    "address": "Citra Grand City Palembang Blok B 01 No. 01 95/20",
+    "lat": -2.929652,
+    "lng": 104.682831,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Tambak",
+    "address": "Jl. Tambak No 15 - 17 , Pengangsaan Kec Menteng",
+    "lat": -6.203934,
+    "lng": 106.849815,
+    "phone": "14045",
+    "hours": "06.00-24.00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Tentara Pelajar Magelang",
+    "address": "Jl. Tentara Pelajar Magelang N0 65 Magelang",
+    "lat": -7.48596,
+    "lng": 110.215667,
+    "phone": "14045",
+    "hours": "07.00-21.00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Breakfast",
+      "Birthday Party",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Bandung Electronic Centre",
+    "address": "Jalan Purnawarman No 13 - 15",
+    "lat": -6.907978,
+    "lng": 107.60894,
+    "phone": "14045",
+    "hours": "10.00-22.00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Breakfast",
+      "McDelivery",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Djuanda Tasikmalaya",
+    "address": "Jalan Ir H Djuanda No 8",
+    "lat": -7.306109,
+    "lng": 108.204043,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's MH Muhidin Pangkal Pinang",
+    "address": "Jl Mayor Hj Muhidin Pangkal Pinang",
+    "lat": -2.132907,
+    "lng": 106.109101,
+    "phone": "14045",
+    "hours": "07.00-21.00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Sunter Barat",
+    "address": "Jl Danau Sunter Barat Blok A3 No 36 Kelurahan Sunter Agung Kecamatan Tanjung priok",
+    "lat": -6.14565,
+    "lng": 106.8581,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Menara Tendean",
+    "address": "Jl. Kapten Tendean No.20, RT.1/RW.2, Kuningan Barat, Kec. Mampang Prapatan",
+    "lat": -6.2397603,
+    "lng": 106.8277574,
+    "phone": "081119388901",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Breakfast",
+      "Birthday Party",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Kenten Palembang",
+    "address": "JL. HM Noerdin Pandji, Suka Maju, Kec. Sako, Kota Palembang, Sumatera Selatan",
+    "lat": -2.919444,
+    "lng": 104.7582751,
+    "phone": "+6281119340421",
+    "hours": "06.00-22.00 WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Telkom Legok Tangerang",
+    "address": "Jl. Raya Legok, Kab. Tangerang, RT.01 / RW 29, Kec, Kelapa Dua, Kel. Bojong Nangka",
+    "lat": -6.2573853,
+    "lng": 106.6053903,
+    "phone": "+6281119669101",
+    "hours": "06.00-22.00 WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Tomang Baru Square Tangerang",
+    "address": "Jl. Villa Tomang Baru, Kuta Jaya, Kec. Ps, Kemis, Kab. Tangerang, Banten",
+    "lat": -6.1571325,
+    "lng": 106.581982,
+    "phone": "+6281119383701",
+    "hours": "06.00-22.00 WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Padjajaran Pamulang",
+    "address": "Jl. Padjajaran Pamulang, Kel. Pamulang Barat, Kec. Pamulang, Kota Tangerang Selatan, Banten",
+    "lat": -6.339732,
+    "lng": 106.738264,
+    "phone": "+628118140571",
+    "hours": "06.00-22.00 WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald’s Juanda Palu",
+    "address": "Jl. Juanda, Kel. Lolu Utara, Kecamatan Palu timur, Kota Palu",
+    "lat": -0.8980761,
+    "lng": 119.8852464,
+    "phone": "08111800521",
+    "hours": "06.00 - 22.00 WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald’s Merr Surabaya",
+    "address": "Jl. Dr. Ir. H. Soekarno 218A, Kota Surabaya",
+    "lat": -7.295142,
+    "lng": 112.78112,
+    "phone": "08111803471",
+    "hours": "06.00-22.00 WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's S Parman Samarinda",
+    "address": "Jl. Mayor Jendral S Parman No 3, Temindung Permai, Kec. Sungai Pinang",
+    "lat": -0.479971,
+    "lng": 117.15593,
+    "phone": "08118155846",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Parung",
+    "address": "Jl. Raya Parung, Kp. Lebak Wangi RT 02/RW 02, Kel. Parung, Kec. Parung, Kab. Bogor",
+    "lat": -6.437696,
+    "lng": 106.734414,
+    "phone": "081119340411",
+    "hours": "06.00 - 21.00 WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Kiara Artha",
+    "address": "Jl. Ibrahim Adjie No 60 -78",
+    "lat": -6.916353,
+    "lng": 107.642866,
+    "phone": "08118021501",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Benteng Pancasila",
+    "address": "Jl. Benteng Pancasila RT 004 RW 002 Kel. Meri, Kec. Kranggan. Mojokerto",
+    "lat": -7.472003,
+    "lng": 112.447059,
+    "phone": "081119388701",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Kakialy Ambon",
+    "address": "Jl. Benteng kapaha, Desa / Kelurahan Uritetu, Kecamatan Sirimau, Kota Ambon",
+    "lat": -3.694242,
+    "lng": 128.185587,
+    "phone": "081119355022",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Telkom Monginsidi Medan",
+    "address": "Jl. Monginsidi No. 6",
+    "lat": 3.571371,
+    "lng": 98.670153,
+    "phone": "081119368671",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Yos Sudarso Palangkaraya",
+    "address": "Jl. Yos Sudarso Nomor 104",
+    "lat": -2.221933,
+    "lng": 113.886052,
+    "phone": "+628111968681",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Sentul City",
+    "address": "Jl. MH Thamrin Kav no 9 Sentul City Rt1/1 Desa Cipabuan, Kec Babakan Madang",
+    "lat": -6.5452102,
+    "lng": 106.7855546,
+    "phone": "08111041251",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Kosambi Karawang",
+    "address": "Jl. Raya Kosambi RT 12 RW 03 Duren Karawang Timur Karawang",
+    "lat": -6.3672002,
+    "lng": 107.3666132,
+    "phone": "+628119814761",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Podomoro Park",
+    "address": "Jl. Podomoro Boulevard Utara no 1, Kel. Lengkong Kec. Bojongsoang",
+    "lat": -6.975,
+    "lng": 107.636,
+    "phone": "+6281110609051",
+    "hours": "06.00 - 22.00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Sambiroto Semarang",
+    "address": "Jl. Kompol R Sukanto No 48 RT 11/ RW 03",
+    "lat": -7.031634,
+    "lng": 110.458251,
+    "phone": "+628113240161",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Tentara Pelajar Semarang",
+    "address": "Jl. Tentara Pelajar No 52 - RT 04 / RW 03",
+    "lat": -7.00921,
+    "lng": 110.437179,
+    "phone": "+628113240151",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Citra Harmoni Sidoarjo",
+    "address": "Jl. Raya Trosobo KM 22",
+    "lat": -7.373316387,
+    "lng": 112.6404986,
+    "phone": "+628111060791",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Kenjeran Surabaya",
+    "address": "Jl. Dr. Ir. Soekarno No 6",
+    "lat": -7.251869,
+    "lng": 112.783359,
+    "phone": "+628111060791",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Batakan Balikpapan",
+    "address": "Jl. Mulawarman Batakan",
+    "lat": -1.236833,
+    "lng": 116.950225,
+    "phone": "+628117989991",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Untung Suropati Samarinda",
+    "address": "Jl. Untung Suropati, Karang Asam Ulu",
+    "lat": -0.525526,
+    "lng": 117.114738,
+    "phone": "+628113240171",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Kota Baru Parahyangan",
+    "address": "Jl. Parahyangan Kavling 5B Nomor 1",
+    "lat": -6.866792,
+    "lng": 107.472933,
+    "phone": "+628117989991",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Telkom Diponegoro Bandung",
+    "address": "Jl. Dipenogoro, Cihaur Geulis",
+    "lat": -6.9013462,
+    "lng": 107.6185825,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Ciputra International",
+    "address": "Jl. Lingkar Luar Barat Block A1, Cengkareng, Ciputra International",
+    "lat": -6.174159,
+    "lng": 106.728769,
+    "phone": "+6281110673201",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Ungaran",
+    "address": "Jl. Diponegoro no 82, RT 05/RW 01",
+    "lat": -7.139619,
+    "lng": 110.405355,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Kudus",
+    "address": "Jl. Jepara Dukuh Jember",
+    "lat": -6.803558,
+    "lng": 110.826937,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Rajawali Surabaya",
+    "address": "Jl. Rajawali no 57",
+    "lat": -7.2350574,
+    "lng": 112.7329408,
+    "phone": "+628118369202",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Surya Sumantri",
+    "address": "Jl. Surya Sumantri, Sukawarna Kec.Sukajadi",
+    "lat": -6.885926,
+    "lng": 107.581382,
+    "phone": "+628118728449",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Breakfast",
+      "McDelivery",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Boulevard Barat",
+    "address": "Jl. Boulevard Raya Blok XC 2A Kelapa Gading",
+    "lat": -6.1554701,
+    "lng": 106.8966765,
+    "phone": "+6281110677301",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Cisauk",
+    "address": "Jl. Raya Serpong Rumpin No 108  RT 5/ RW 1, Suradita, Kec. Cisauk, Kabupaten Tangerang",
+    "lat": -6.3453321,
+    "lng": 106.63779,
+    "phone": "+6281110677981",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Tigaraksa Tangerang",
+    "address": "Jl. Pemda Tigaraksa Kel. Matagara, Kec. Tigaraksa",
+    "lat": -6.255976,
+    "lng": 106.486927,
+    "phone": "+628118547731",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Godean",
+    "address": "Jl. Godean Sleman KM 4.7 - RT 06 Kelurahan Nogotirto Kecamatan Gamping - Sleman Yogyakarta",
+    "lat": -7.77847,
+    "lng": 110.338187,
+    "phone": "+6281936226147",
+    "hours": "09:00-05:00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Kartini Depok",
+    "address": "Jl. Raya Citayam Rt 03 Rw 02, Kelurahan Depok, Pancoran Mas, Depok",
+    "lat": -6.408614,
+    "lng": 106.8175973,
+    "phone": "+6281110671631",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Sudirman KM5 Palembang",
+    "address": "Jl. Kolonel H. Burlian KM5, Ario Kemuning, Kec. Kemuning",
+    "lat": -2.951956,
+    "lng": 104.73536,
+    "phone": "+6281110678791",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Diponegoro Lampung",
+    "address": "Jl. Pangerang Diponegoro, Kel. Gulak Galik Kec. Teluk Betung Utara",
+    "lat": -5.429772,
+    "lng": 105.261229,
+    "phone": "+628118578141",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Siliwangi Tasikmalaya",
+    "address": "Jl. Siliwangi No 77 Kelurahan Kahuripan Kecamatan Tawang",
+    "lat": -7.349433,
+    "lng": 108.222512,
+    "phone": "+628110678781",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Jatinangor",
+    "address": "Jl. Raya Jatinangor No 242, Sayang Kecamatan Jatinangor",
+    "lat": -6.928582,
+    "lng": 107.776747,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Arjosari",
+    "address": "Jl. Raya Bale Arjosari No 53",
+    "lat": -7.921908,
+    "lng": 112.652744,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's S. Parman Cilacap",
+    "address": "Jl. S. Parman No 58, Cilacap, Sidanegara Kec. Cilacap Tengah, Kab Cilacap",
+    "lat": -7.72353,
+    "lng": 109.013687,
+    "phone": "14045",
+    "hours": "09:00-05:00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Metro Lampung",
+    "address": "Jl. AH Nasution No. 71 Yosorejo, Metro Timur",
+    "lat": -5.111828,
+    "lng": 105.316241,
+    "phone": "+628118999601",
+    "hours": "09:00-05:00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Telkom Siliwangi Cianjur",
+    "address": "Jl. Siliwangi, Pamoyanan Kec Cianjur Kabupaten Cianjur, Jawa Barat 43212",
+    "lat": -6.8215531,
+    "lng": 107.1388728,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Pasirkoja Bandung",
+    "address": "Jl Soekarno Hatta No 128 - 130",
+    "lat": -6.928784,
+    "lng": 107.575436,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Centre Point PIK 2",
+    "address": "North Point Kav. Cc 07A Jl. MH Thamrin Kosambi, Kab. Tangerang",
+    "lat": -6.049178,
+    "lng": 106.695557,
+    "phone": "+628119023501",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Wiratno Tanjung Pinang",
+    "address": "Jl. Wiratno No.8, Kp. Baru, Kec. Tanjungpinang Bar., Kota Tanjung Pinang, Kepulauan Riau 29112",
+    "lat": 0.907395,
+    "lng": 104.452476,
+    "phone": "+628118766781",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Thehok Jambi",
+    "address": "Jl. Jend. Sudirman Talang Jauh, Kec Jelutung",
+    "lat": -1.603521,
+    "lng": 103.37114,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Sumedang",
+    "address": "Jl Prabu Gajah RT 003/ 007, Kelurahan Mekarjaya, Kecamatan Sumedang Utara, Kota Sumedang",
+    "lat": -6.842307,
+    "lng": 107.91657,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Mutiara Gading City",
+    "address": "Jl. Mutiara Gading City, Setia Asih. Kec. Tarumajaya Kab. Bekasi",
+    "lat": -6.1594092,
+    "lng": 107.0094095,
+    "phone": "+6281908883658",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Manahan Solo",
+    "address": "Jl. Adi Sucipto No 37 Kelurahan Kerten Kecamatan Laweyan",
+    "lat": -7.553706,
+    "lng": 110.7978185,
+    "phone": "+628119023471",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "McCafe",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Palopo",
+    "address": "Jl. Dr. Ratulangi No 78 Kel Salubulo, Kec Wara Utara, Kota Palopo Sulawesi Selatan",
+    "lat": -2.9901086,
+    "lng": 120.187612,
+    "phone": "+6281355170274",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Soeparno Purwokerto",
+    "address": "Jl. Dr. Soeparno No. 96. Limas Permai, Kelurahan Karang Wangkal Kecamatan Purwokerto Utara Kabupaten Banyumas. Jawa Tengah",
+    "lat": -7.41256,
+    "lng": 109.25385,
+    "phone": "+6281110678802",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Thamrin Jaya",
+    "address": "Jl. MH. Thamrin, Kebon Sirih, Kec. Menteng. Kota Jakarta Pusat",
+    "lat": -6.1862167,
+    "lng": 106.8228528,
+    "phone": "+6281110678921",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "McCafe",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Ujung Berung",
+    "address": "Jl. A.H Nasution No 133B, Cigending",
+    "lat": -6.913684,
+    "lng": 107.69842,
+    "phone": "14045",
+    "hours": "08.00 - 22.00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Breakfast",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Daan Mogot Baru",
+    "address": "Jl. Raya Daan Mogot, Wijaya Kusuma, Kec. Grogol Petamburan",
+    "lat": -6.388753,
+    "lng": 107.394,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Rest Area KM 62B",
+    "address": "Jl. Tol Jakarta-Cikampek No.KM62, Mekarjaya",
+    "lat": -6.388753,
+    "lng": 107.394,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Batoh Aceh",
+    "address": "Jl. Prof Dr Mr HT Muhammad Hasan, Gampong Batoh,kecamatan Lueng Bata, Banda Aceh",
+    "lat": 55.363,
+    "lng": 953.304,
+    "phone": "14045",
+    "hours": "16:30-05:00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Brawijaya Kediri",
+    "address": "Jl. Brawijaya No 21 , Kelurahan Pakelan, Kecamatan Kota.",
+    "lat": -7.814408,
+    "lng": 112.012,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's U Town Bintaro",
+    "address": "Jl. Boulevard UPJ,Jaya U Town Tangerang Selatan",
+    "lat": -6.291,
+    "lng": 106.726,
+    "phone": "+6281119805431",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Lembang",
+    "address": "JL. Raya Lembang No 274 - 276",
+    "lat": -6.805579,
+    "lng": 107.537791,
+    "phone": "628111040900",
+    "hours": "Temporarily Closed WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Panam",
+    "address": "Jl. HR Subrantas sebelah Starbucks Panam, Kelurahan Sidomulyo Kecamatan Tampan, Pekan Baru",
+    "lat": 0.46830943251745,
+    "lng": 101.41017224881703,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Simpang Tiga",
+    "address": "Jl. Jenderal Sudirman, Kel / Desa Simpang Tiga, Kec. Bukit Raya Kota Pekanbaru",
+    "lat": 0.47136163862657304,
+    "lng": 101.45433978530512,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Prabumulih",
+    "address": "Jl. Jenderal Sudirman No. 56. Muara Dua, Kec. Prabumulih",
+    "lat": -3.4170735720732743,
+    "lng": 104.25712473806242,
+    "phone": "+628117889561",
+    "hours": "09:00-03:00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Pekalongan",
+    "address": "Jl. Urip Sumoharjo No.58 Kelurahan Podosugih Kecamatan Pekalongan Barat",
+    "lat": -69.024,
+    "lng": 1.096,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Self-Order Kiosk"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Subang",
+    "address": "Jl. Otto Iskandardinata No 70",
+    "lat": -6.563642,
+    "lng": 107.766987,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Ternate",
+    "address": "Jl. Sultan M. Jhabir Sjah, Gamalama Kota Ternate",
+    "lat": 0.7928532110053871,
+    "lng": 127.39004468221123,
+    "phone": "+628111950141",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Tarakan",
+    "address": "Jl. Yos Sudarso. Kelurahan Karang Balik Kecamatan Tarakan Barat. Kalimantan Utara",
+    "lat": 3.305301,
+    "lng": 117.584761,
+    "phone": "+6281110691580",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "McDelivery",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Wolter Monginsidi Bitung",
+    "address": "Jl. Wolter Monginsidi Girian. Kelurahan. Girian Weru 1, Kec. Girian Bawah, Kota Bitung, Sulawesi Utara.",
+    "lat": 1.440141,
+    "lng": 125.131187,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Plaza Bintaro Jaya",
+    "address": "Jl. Bintaro Utama III,Bintaro Jaya Sektor  3A",
+    "lat": -6.272026,
+    "lng": 106.741759,
+    "phone": "+6285819721390",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Rest Area KM 14 Pinang Point",
+    "address": "Rest Area Km 14, Kunciran Jaya, Tangerang City, Banten",
+    "lat": -6.21379955108141,
+    "lng": 106.676766357672,
+    "phone": "+628111069930",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's AH. Nasution Medan",
+    "address": "Jl. AH. Nasution No. 59 Pangkalan Masyur, Medan",
+    "lat": 3.541223,
+    "lng": 98.663386,
+    "phone": "+6281110699651",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "McCafe",
+      "Breakfast",
+      "McDelivery",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Bontang",
+    "address": "Jl. Achmad Yani No 5. Kelurahan Api-Api Kecamatan Bontang Utara. Kalimantan Timur",
+    "lat": 0.1298186,
+    "lng": 117.4851622,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "McDelivery",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Banyuwangi",
+    "address": "JL. Jendral Ahmad Yani no 7 , Penganjuran, Tukangkayu, Kec.Banyuwangi ,Kabupaten Banyuwangi.",
+    "lat": -8.2167829,
+    "lng": 114.369907,
+    "phone": "+6281110693241",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Jebres Solo",
+    "address": "Jl. Ir Sutami No 93. Kelurahan Jebres Kecamatan Jebres. Surakarta 57126",
+    "lat": -7.5648781,
+    "lng": 110.8565089,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "McDelivery",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Down Town Alam Sutera",
+    "address": "JL. Sutera Boulevard Kav.11",
+    "lat": -6.22754,
+    "lng": 106.655209,
+    "phone": "+628111069930",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Cikarang International City",
+    "address": "Jl. Boulevard Cikarang International City (d/h Grand Cikarang City)",
+    "lat": -6.257056,
+    "lng": 107.166306,
+    "phone": "+6281266617878",
+    "hours": "06:00-24:00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "McDelivery",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Rest Area KM 88A",
+    "address": "Rest Area, Jl. Tol Purbaleunyi No.Km 88A, Sukajaya, Sukatani, Purwakarta Regency, Jawa Barat",
+    "lat": -6.602364,
+    "lng": 107.427241,
+    "phone": "+6285722200270",
+    "hours": "06:00-24:00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "McDelivery",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Duri",
+    "address": "Jl. Jend Sudirman, Rt 005/02 Babussalam, Kec. Mandau Kab. Bengkalis Prov. Riau",
+    "lat": 1.280975,
+    "lng": 101.19461,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's M-Toha",
+    "address": "Jl. Moh Toha No 96 -RT 001 /RW 008",
+    "lat": -6.1706503,
+    "lng": 106.6150152,
+    "phone": "+6281119613320",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Riverdale Cikarang",
+    "address": "Jl. Raya Fatahilah Desa Kalijaya Kec. Cikarang Barat,Kab. Bekasi",
+    "lat": -62.685713,
+    "lng": 107.1253,
+    "phone": "+6281317946969",
+    "hours": "09:00-24:00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "McDelivery",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Tulungagung",
+    "address": "Jl. Panglima Sudirman No 40 ,Kel.Kenayan , Kel/Desa Kenayan , Kec. Tulungagung, Kab. Tulungagung",
+    "lat": -8.058609,
+    "lng": 111.907163,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Rest Area KM 260B Brebes",
+    "address": "Jl. Rest Area KM 260B Brebes",
+    "lat": -6.905584,
+    "lng": 108.9832679,
+    "phone": "+628119805541",
+    "hours": "06:00-24:00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Garden Avenue",
+    "address": "Garden Avenue Square Blok West Wing 3 No. L5, Kec. Bengkong Sadai, Kota Batam, Kepulauan Riau",
+    "lat": 1.1553554108740367,
+    "lng": 104.04143724733652,
+    "phone": "081110110621",
+    "hours": "09:00-03:00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Ampera",
+    "address": "Jl. Ampera Raya RT. 005 RW 010, Cilandak Timur, Ps. Minggu",
+    "lat": -6.283302,
+    "lng": 1.068,
+    "phone": "6281119627741",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "McCafe",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service",
+      "EV Charging"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Tanjung Uncang",
+    "address": "Jalan Brigjen Katamso ( Simpang Basecamp ) Kelurahan Tanjung Uncang, Kecamatan Batu Aji, Kota Batam , Kepulauan Riau",
+    "lat": 1.0530833,
+    "lng": 103.9512131,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Jombang",
+    "address": "Jl. KH. Wahid Hasyim No 25 . Desa/Kelurahan Jombatan, Kecamatan Jombang.",
+    "lat": -7.552803,
+    "lng": 112.235523,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Batu",
+    "address": "JL IR Soekarno no 7 , beji Kecamatan Junrejo Kota Batu,  Jawa Timur",
+    "lat": -7.895355,
+    "lng": 112.553953,
+    "phone": "+6281110659411",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonalds Cibinong City Mall",
+    "address": "Cibinong City Mall GF B8, Jalan Raya Tegar Beriman No.1 Kabupaten Bogor, Jawa Barat",
+    "lat": -6.4843821,
+    "lng": 106.8405952,
+    "phone": "+6281119941571",
+    "hours": "09:00-24:00 WIB Senin - Minggu",
+    "facilities": [
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "McDelivery",
+      "Self-Order Kiosk"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Singkawang",
+    "address": "Jl. P.Diponegoro RT.048/RW 017 Desa Pasiran Kec. Singkawang Barat, Kota Singkawang, Prov.Kalimantan Barat",
+    "lat": 0.9016292,
+    "lng": 108.9827237,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "McDelivery",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Cikampek",
+    "address": "Jl. Jendral Ahmad Yani No.5, Dawuan Tengah, Kecamatan Cikampek. Kab. Karawang",
+    "lat": -6.4021839,
+    "lng": 107.4465669,
+    "phone": "+6282123915298",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Bumi Raya",
+    "address": "Jl. Major Alianyang, Kel Sungai Raya, Kec. Sungai Raya, Kabupaten Kubu Raya, Kalimantan Barat",
+    "lat": -0.0759483,
+    "lng": 109.3701486,
+    "phone": "+628115403590",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Pontianak",
+    "address": "Jl.Jenderal Ahmad Yani no.5, Kelurahan Benua Melayu Darat, Pontianak Selatan",
+    "lat": -0.036257,
+    "lng": 109.334076,
+    "phone": "+6281181381671",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Limo",
+    "address": "Jl Meruyung Raya RT 001 RW 007 Kelurahan Meruyung, Kecamatan Limo, Kota Depok",
+    "lat": -6.3745718,
+    "lng": 106.7715835,
+    "phone": "+6281111305565",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  },
+  {
+    "brand": "McDonald's",
+    "name": "McDonald's Bau Bau",
+    "address": "Jl. Sultan Hasanuddin, Kelurahan Batulo, Kecamatan Wolio, Kabupaten Bau Bau Prov. Sulawesi Tenggara",
+    "lat": -5.4602882,
+    "lng": 122.6189113,
+    "phone": "14045",
+    "hours": "always WIB Senin - Minggu",
+    "facilities": [
+      "24 hours",
+      "Wi-Fi",
+      "Drive Thru",
+      "Breakfast",
+      "Birthday Party",
+      "McDelivery",
+      "Indoor Playground",
+      "Party Room",
+      "Self-Order Kiosk",
+      "Table Service"
+    ]
+  }
+]
