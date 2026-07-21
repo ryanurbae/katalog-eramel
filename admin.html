@@ -288,12 +288,12 @@
         </main>
 
     <!-- Product Modal -->
-    <div id="productModal" class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none [--overlay-backdrop:static]" data-hs-overlay-keyboard="false">
+    <div id="productModal" class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none bg-black/60 [--overlay-backdrop:static]" role="dialog" aria-modal="true" aria-hidden="true">
         <div class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto min-h-[calc(100%-3.5rem)] flex items-center">
             <div class="w-full flex flex-col bg-slate-900 border border-slate-700 shadow-sm rounded-xl pointer-events-auto">
                 <div class="flex justify-between items-center py-3 px-4 border-b border-slate-700">
                     <h3 id="modalTitle" class="font-bold text-white">Tambah Produk Baru</h3>
-                    <button type="button" class="flex justify-center items-center size-7 text-sm font-semibold rounded-full border border-transparent text-slate-400 hover:bg-slate-800 disabled:opacity-50 disabled:pointer-events-none" data-hs-overlay="#productModal">
+                    <button type="button" class="flex justify-center items-center size-7 text-sm font-semibold rounded-full border border-transparent text-slate-400 hover:bg-slate-800 disabled:opacity-50 disabled:pointer-events-none" data-admin-overlay-close="#productModal">
                         <span class="sr-only">Close</span>
                         <i class="fa-solid fa-times"></i>
                     </button>
@@ -336,7 +336,7 @@
                     </form>
                 </div>
                 <div class="flex justify-end items-center gap-x-2 py-3 px-4 border-t border-slate-700">
-                    <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-slate-700 bg-slate-800 text-slate-300 shadow-sm hover:bg-slate-700 disabled:opacity-50 disabled:pointer-events-none" data-hs-overlay="#productModal">Batal</button>
+                    <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-slate-700 bg-slate-800 text-slate-300 shadow-sm hover:bg-slate-700 disabled:opacity-50 disabled:pointer-events-none" data-admin-overlay-close="#productModal">Batal</button>
                     <button type="submit" form="productForm" id="saveProductBtn" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">Simpan Data</button>
                 </div>
             </div>
@@ -344,12 +344,12 @@
     </div>
 
     <!-- Voucher Modal -->
-    <div id="voucherModal" class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none [--overlay-backdrop:static]" data-hs-overlay-keyboard="false">
+    <div id="voucherModal" class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none bg-black/60 [--overlay-backdrop:static]" role="dialog" aria-modal="true" aria-hidden="true">
         <div class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-sm sm:w-full m-3 sm:mx-auto min-h-[calc(100%-3.5rem)] flex items-center">
             <div class="w-full flex flex-col bg-slate-900 border border-slate-700 shadow-sm rounded-xl pointer-events-auto">
                 <div class="flex justify-between items-center py-3 px-4 border-b border-slate-700">
                     <h3 id="voucherModalTitle" class="font-bold text-white">Tambah Voucher</h3>
-                    <button type="button" class="flex justify-center items-center size-7 text-sm font-semibold rounded-full border border-transparent text-slate-400 hover:bg-slate-800 disabled:opacity-50 disabled:pointer-events-none" data-hs-overlay="#voucherModal">
+                    <button type="button" class="flex justify-center items-center size-7 text-sm font-semibold rounded-full border border-transparent text-slate-400 hover:bg-slate-800 disabled:opacity-50 disabled:pointer-events-none" data-admin-overlay-close="#voucherModal">
                         <span class="sr-only">Close</span>
                         <i class="fa-solid fa-times"></i>
                     </button>
@@ -375,7 +375,7 @@
                     </form>
                 </div>
                 <div class="flex justify-end items-center gap-x-2 py-3 px-4 border-t border-slate-700">
-                    <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-slate-700 bg-slate-800 text-slate-300 shadow-sm hover:bg-slate-700 disabled:opacity-50 disabled:pointer-events-none" data-hs-overlay="#voucherModal">Batal</button>
+                    <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-slate-700 bg-slate-800 text-slate-300 shadow-sm hover:bg-slate-700 disabled:opacity-50 disabled:pointer-events-none" data-admin-overlay-close="#voucherModal">Batal</button>
                     <button type="submit" form="voucherForm" id="saveVoucherBtn" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">Simpan Data</button>
                 </div>
             </div>
@@ -383,12 +383,12 @@
     </div>
 
     <!-- Banner Modal -->
-    <div id="bannerModal" class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none [--overlay-backdrop:static]" data-hs-overlay-keyboard="false">
+    <div id="bannerModal" class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none bg-black/60 [--overlay-backdrop:static]" role="dialog" aria-modal="true" aria-hidden="true">
         <div class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-sm sm:w-full m-3 sm:mx-auto min-h-[calc(100%-3.5rem)] flex items-center">
             <div class="w-full flex flex-col bg-slate-900 border border-slate-700 shadow-sm rounded-xl pointer-events-auto">
                 <div class="flex justify-between items-center py-3 px-4 border-b border-slate-700">
                     <h3 id="bannerModalTitle" class="font-bold text-white">Tambah Banner</h3>
-                    <button type="button" class="flex justify-center items-center size-7 text-sm font-semibold rounded-full border border-transparent text-slate-400 hover:bg-slate-800 disabled:opacity-50 disabled:pointer-events-none" data-hs-overlay="#bannerModal">
+                    <button type="button" class="flex justify-center items-center size-7 text-sm font-semibold rounded-full border border-transparent text-slate-400 hover:bg-slate-800 disabled:opacity-50 disabled:pointer-events-none" data-admin-overlay-close="#bannerModal">
                         <span class="sr-only">Close</span>
                         <i class="fa-solid fa-times"></i>
                     </button>
@@ -415,7 +415,7 @@
                     </form>
                 </div>
                 <div class="flex justify-end items-center gap-x-2 py-3 px-4 border-t border-slate-700">
-                    <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-slate-700 bg-slate-800 text-slate-300 shadow-sm hover:bg-slate-700 disabled:opacity-50 disabled:pointer-events-none" data-hs-overlay="#bannerModal">Batal</button>
+                    <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-slate-700 bg-slate-800 text-slate-300 shadow-sm hover:bg-slate-700 disabled:opacity-50 disabled:pointer-events-none" data-admin-overlay-close="#bannerModal">Batal</button>
                     <button type="submit" form="bannerForm" id="saveBannerBtn" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">Simpan Data</button>
                 </div>
             </div>
@@ -423,12 +423,12 @@
     </div>
 
     <!-- Ticker Modal -->
-    <div id="tickerModal" class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none [--overlay-backdrop:static]" data-hs-overlay-keyboard="false">
+    <div id="tickerModal" class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none bg-black/60 [--overlay-backdrop:static]" role="dialog" aria-modal="true" aria-hidden="true">
         <div class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-sm sm:w-full m-3 sm:mx-auto min-h-[calc(100%-3.5rem)] flex items-center">
             <div class="w-full flex flex-col bg-slate-900 border border-slate-700 shadow-sm rounded-xl pointer-events-auto">
                 <div class="flex justify-between items-center py-3 px-4 border-b border-slate-700">
                     <h3 id="tickerModalTitle" class="font-bold text-white">Tambah Pesan Ticker</h3>
-                    <button type="button" class="flex justify-center items-center size-7 text-sm font-semibold rounded-full border border-transparent text-slate-400 hover:bg-slate-800 disabled:opacity-50 disabled:pointer-events-none" data-hs-overlay="#tickerModal">
+                    <button type="button" class="flex justify-center items-center size-7 text-sm font-semibold rounded-full border border-transparent text-slate-400 hover:bg-slate-800 disabled:opacity-50 disabled:pointer-events-none" data-admin-overlay-close="#tickerModal">
                         <span class="sr-only">Close</span>
                         <i class="fa-solid fa-times"></i>
                     </button>
@@ -454,7 +454,7 @@
                     </form>
                 </div>
                 <div class="flex justify-end items-center gap-x-2 py-3 px-4 border-t border-slate-700">
-                    <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-slate-700 bg-slate-800 text-slate-300 shadow-sm hover:bg-slate-700 disabled:opacity-50 disabled:pointer-events-none" data-hs-overlay="#tickerModal">Batal</button>
+                    <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-slate-700 bg-slate-800 text-slate-300 shadow-sm hover:bg-slate-700 disabled:opacity-50 disabled:pointer-events-none" data-admin-overlay-close="#tickerModal">Batal</button>
                     <button type="submit" form="tickerForm" id="saveTickerBtn" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">Simpan Data</button>
                 </div>
             </div>
@@ -462,12 +462,12 @@
     </div>
 
     <!-- Tenant Modal -->
-    <div id="tenantModal" class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none [--overlay-backdrop:static]" data-hs-overlay-keyboard="false">
+    <div id="tenantModal" class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none bg-black/60 [--overlay-backdrop:static]" role="dialog" aria-modal="true" aria-hidden="true">
         <div class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-sm sm:w-full m-3 sm:mx-auto min-h-[calc(100%-3.5rem)] flex items-center">
             <div class="w-full flex flex-col bg-slate-900 border border-slate-700 shadow-sm rounded-xl pointer-events-auto">
                 <div class="flex justify-between items-center py-3 px-4 border-b border-slate-700">
                     <h3 id="tenantModalTitle" class="font-bold text-white">Tambah Tenant</h3>
-                    <button type="button" class="flex justify-center items-center size-7 text-sm font-semibold rounded-full border border-transparent text-slate-400 hover:bg-slate-800 disabled:opacity-50 disabled:pointer-events-none" data-hs-overlay="#tenantModal">
+                    <button type="button" class="flex justify-center items-center size-7 text-sm font-semibold rounded-full border border-transparent text-slate-400 hover:bg-slate-800 disabled:opacity-50 disabled:pointer-events-none" data-admin-overlay-close="#tenantModal">
                         <span class="sr-only">Close</span>
                         <i class="fa-solid fa-times"></i>
                     </button>
@@ -506,14 +506,13 @@
                     </form>
                 </div>
                 <div class="flex justify-end items-center gap-x-2 py-3 px-4 border-t border-slate-700">
-                    <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-slate-700 bg-slate-800 text-slate-300 shadow-sm hover:bg-slate-700 disabled:opacity-50 disabled:pointer-events-none" data-hs-overlay="#tenantModal">Batal</button>
+                    <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-slate-700 bg-slate-800 text-slate-300 shadow-sm hover:bg-slate-700 disabled:opacity-50 disabled:pointer-events-none" data-admin-overlay-close="#tenantModal">Batal</button>
                     <button type="submit" form="tenantForm" id="saveTenantBtn" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">Simpan Data</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="./node_modules/preline/dist/preline.js"></script>
     <script type="module" src="./admin.js"></script>
 </body>
 </html>

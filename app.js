@@ -126,6 +126,7 @@ function selectOutlet(o) {
     if (!o) return;
     custOutlet.value = o.name;
     outletSuggestions.classList.remove('show');
+    updateOrderDetailsState();
     custOutlet.focus();
 }
 
@@ -162,6 +163,7 @@ const customAlertCloseBtn = document.getElementById('customAlertCloseBtn');
 const checkoutPromptOverlay = document.getElementById('checkoutPromptOverlay');
 const promptCancelBtn = document.getElementById('promptCancelBtn');
 const promptSubmitBtn = document.getElementById('promptSubmitBtn');
+const checkoutRequirementHint = document.getElementById('checkoutRequirementHint');
 
 // Elemen untuk Toast Notifikasi
 let toastTimeout;
@@ -547,14 +549,34 @@ function validateCheckout() {
     }
 }
 
-// Input tidak lagi mempengaruhi status tombol cart utama, validasi dilakukan saat submit
-// custName.addEventListener('input', validateCheckout);
-// custOutlet.addEventListener('input', validateCheckout);
+function updateOrderDetailsState() {
+    const missingFields = [];
+    if (!orderMethod) missingFields.push('metode pesanan');
+    if (!custName.value.trim()) missingFields.push('nama');
+    if (!custOutlet.value.trim()) missingFields.push('outlet');
+
+    const isComplete = missingFields.length === 0;
+    const missingFieldText = missingFields.length > 1
+        ? `${missingFields.slice(0, -1).join(', ')} dan ${missingFields[missingFields.length - 1]}`
+        : missingFields[0];
+    promptSubmitBtn.disabled = !isComplete;
+    promptSubmitBtn.setAttribute('aria-disabled', String(!isComplete));
+    checkoutRequirementHint.classList.toggle('ready', isComplete);
+    checkoutRequirementHint.textContent = isComplete
+        ? 'Pesanan siap dikirim.'
+        : `Lengkapi ${missingFieldText} untuk melanjutkan.`;
+}
+
+custName.addEventListener('input', updateOrderDetailsState);
+custOutlet.addEventListener('input', updateOrderDetailsState);
 
 btnPickup.addEventListener('click', () => {
     orderMethod = 'Pickup';
     btnPickup.classList.add('active');
     btnDelivery.classList.remove('active');
+    btnPickup.setAttribute('aria-pressed', 'true');
+    btnDelivery.setAttribute('aria-pressed', 'false');
+    updateOrderDetailsState();
 });
 
 btnDelivery.addEventListener('click', () => {
@@ -562,6 +584,9 @@ btnDelivery.addEventListener('click', () => {
     orderMethod = 'Delivery';
     btnDelivery.classList.add('active');
     btnPickup.classList.remove('active');
+    btnDelivery.setAttribute('aria-pressed', 'true');
+    btnPickup.setAttribute('aria-pressed', 'false');
+    updateOrderDetailsState();
 });
 
 function updateCartUI() {
@@ -653,6 +678,7 @@ promptCancelBtn.addEventListener('click', () => {
 });
 
 checkoutBtn.addEventListener('click', () => {
+    updateOrderDetailsState();
     checkoutPromptOverlay.classList.add('show');
 });
 
@@ -797,6 +823,9 @@ promptSubmitBtn.addEventListener('click', async () => {
     orderMethod = '';
     btnPickup.classList.remove('active');
     btnDelivery.classList.remove('active');
+    btnPickup.setAttribute('aria-pressed', 'false');
+    btnDelivery.setAttribute('aria-pressed', 'false');
+    updateOrderDetailsState();
 
     checkoutPromptOverlay.classList.remove('show');
 

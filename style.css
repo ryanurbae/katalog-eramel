@@ -1057,13 +1057,33 @@ html{
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     box-shadow: 0 4px 16px rgba(27, 98, 241, 0.3);
 }
-.alert-close-btn:hover {
+.alert-close-btn:hover:not(:disabled) {
     background: #1550d0;
     box-shadow: 0 8px 24px rgba(27, 98, 241, 0.4);
     transform: translateY(-2px);
 }
-.alert-close-btn:active {
+.alert-close-btn:active:not(:disabled) {
     transform: translateY(0) scale(0.98);
+}
+
+.alert-close-btn:disabled {
+    background: rgba(148, 163, 184, 0.22);
+    color: rgba(255, 255, 255, 0.5);
+    box-shadow: none;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.checkout-requirement-hint {
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    line-height: 1.45;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.checkout-requirement-hint.ready {
+    color: #6ee7b7;
 }
 
 .btn-cancel {

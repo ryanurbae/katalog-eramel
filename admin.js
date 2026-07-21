@@ -1,4 +1,5 @@
 import { supabase } from "./supabase-config.js";
+import { closeAdminOverlay, initAdminOverlayCloseButtons, openAdminOverlay } from "./admin-overlay.js";
 
 // --- DOM Elements ---
 const loginView = document.getElementById('loginView');
@@ -110,6 +111,8 @@ let existingImageUrl = null;
 const formatRupiah = (number) => {
     return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(number);
 };
+
+initAdminOverlayCloseButtons();
 
 // --- Initialization ---
 async function init() {
@@ -384,11 +387,11 @@ function openModal(editData = null) {
         fId.value = '';
     }
     
-    HSOverlay.open(document.querySelector('#productModal'));
+    openAdminOverlay(productModal);
 }
 
 function closeModal() {
-    HSOverlay.close(document.querySelector('#productModal'));
+    closeAdminOverlay(productModal);
 }
 
 openAddModalBtn.addEventListener('click', () => openModal());
@@ -567,11 +570,11 @@ function openVoucherModal(editData = null) {
         vId.value = '';
         vStatus.value = 'true';
     }
-    HSOverlay.open(document.querySelector('#voucherModal'));
+    openAdminOverlay(voucherModal);
 }
 
 function closeVoucherModal() {
-    HSOverlay.close(document.querySelector('#voucherModal'));
+    closeAdminOverlay(voucherModal);
 }
 
 document.getElementById('openAddVoucherModalBtn').addEventListener('click', () => openVoucherModal());
@@ -668,11 +671,11 @@ function openBannerModal(editData = null) {
         bId.value = '';
         bStatus.value = 'true';
     }
-    HSOverlay.open(document.querySelector('#bannerModal'));
+    openAdminOverlay(bannerModal);
 }
 
 function closeBannerModal() {
-    HSOverlay.close(document.querySelector('#bannerModal'));
+    closeAdminOverlay(bannerModal);
 }
 
 document.getElementById('openAddBannerModalBtn').addEventListener('click', () => openBannerModal());
@@ -769,11 +772,11 @@ function openTickerModal(editData = null) {
         tOrder.value = tickers.length > 0 ? Math.max(...tickers.map(t => t.sort_order)) + 1 : 1;
         tStatus.value = 'true';
     }
-    HSOverlay.open(document.querySelector('#tickerModal'));
+    openAdminOverlay(tickerModal);
 }
 
 function closeTickerModal() {
-    HSOverlay.close(document.querySelector('#tickerModal'));
+    closeAdminOverlay(tickerModal);
 }
 
 document.getElementById('openAddTickerModalBtn').addEventListener('click', () => openTickerModal());
@@ -885,11 +888,11 @@ function openTenantModal(editData = null) {
         tVisible.value = 'true';
     }
     tSlugPreview.textContent = tSlug.value.trim() || '...';
-    HSOverlay.open(document.querySelector('#tenantModal'));
+    openAdminOverlay(document.querySelector('#tenantModal'));
 }
 
 function closeTenantModal() {
-    HSOverlay.close(document.querySelector('#tenantModal'));
+    closeAdminOverlay(document.querySelector('#tenantModal'));
 }
 
 document.getElementById('openAddTenantModalBtn').addEventListener('click', () => openTenantModal());

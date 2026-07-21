@@ -167,16 +167,16 @@
                 <div class="form-group-cart">
                     <label>Metode Pesanan (Wajib)</label>
                     <div class="method-options">
-                        <button type="button" class="method-btn" id="btnPickup">Pickup</button>
-                        <button type="button" class="method-btn" id="btnDelivery">Delivery</button>
+                        <button type="button" class="method-btn" id="btnPickup" aria-pressed="false">Pickup</button>
+                        <button type="button" class="method-btn" id="btnDelivery" aria-pressed="false">Delivery</button>
                     </div>
                 </div>
                 <div class="form-group-cart">
-                    <label for="custName">Nama</label>
+                    <label for="custName">Nama (Wajib)</label>
                     <input type="text" id="custName" class="cart-input" placeholder="Nama kamu" required>
                 </div>
                 <div class="form-group-cart">
-                    <label for="custOutlet">Outlet</label>
+                    <label for="custOutlet">Outlet (Wajib)</label>
                     <div class="outlet-autocomplete">
                         <input type="text" id="custOutlet" class="cart-input" placeholder="Ketik nama outlet/cabang..." autocomplete="off" required>
                         <ul id="outletSuggestions" class="outlet-suggestions"></ul>
@@ -187,9 +187,10 @@
                     <textarea id="custNotes" class="cart-input" rows="2" placeholder="Catatan tambahan... (opsional)"></textarea>
                 </div>
             </div>
+            <p class="checkout-requirement-hint" id="checkoutRequirementHint" aria-live="polite">Lengkapi metode pesanan, nama, dan outlet untuk melanjutkan.</p>
             <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
                 <button class="alert-close-btn btn-cancel" id="promptCancelBtn" style="flex: 1;">Batal</button>
-                <button class="alert-close-btn" id="promptSubmitBtn" style="flex: 1;">Pesan Sekarang</button>
+                <button class="alert-close-btn" id="promptSubmitBtn" style="flex: 1;" aria-describedby="checkoutRequirementHint" disabled>Pesan Sekarang</button>
             </div>
         </div>
     </div>
@@ -316,6 +317,5 @@
             requestAnimationFrame(lenisRaf);
         }
     </script>
-    <script src="./node_modules/preline/dist/preline.js"></script>
 </body>
 </html>
