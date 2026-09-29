@@ -3,6 +3,10 @@ import { fetchVisibleTenants } from "./tenants.js";
 
 let newsTickers = [];
 
+const localTenantLogos = {
+    fore: './assets/brands/fore.png'
+};
+
 async function renderTenants() {
     const grid = document.getElementById('tenantGrid');
     if (!grid) return;
@@ -15,8 +19,9 @@ async function renderTenants() {
 
     grid.innerHTML = tenants.map(t => {
         const accent = t.accent || '#1B62F1';
-        const logo = t.logo_url
-            ? `<img class="tenant-card-logo" src="${t.logo_url}" alt="${t.name}" onerror="this.remove()">`
+        const logoUrl = t.logo_url || localTenantLogos[t.slug];
+        const logo = logoUrl
+            ? `<img class="tenant-card-logo" src="${logoUrl}" alt="Logo ${t.name}" decoding="async" onerror="this.remove()">`
             : '';
         return `
             <a class="tenant-card" href="katalog.html?tenant=${encodeURIComponent(t.slug)}" style="--tc:${accent}">
